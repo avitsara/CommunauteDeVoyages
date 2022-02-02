@@ -17,3 +17,9 @@ base de données :
 ```
 docker-compose -f docker-compose.yaml up  
 ```
+
+# Usage  
+Se connecter à l'URL suivante :  
+```
+http://localhost:80/communautevoyage  
+```
