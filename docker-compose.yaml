@@ -14,11 +14,12 @@ services:
     ports:
       - "3306:3306"
     networks:
-      - ntwrkcm
+      - network
 
 #  elasticsearch:
-#    image:  'elasticsearch:7.17.0'
+#    image:  'docker.elastic.co/elasticsearch/elasticsearch:7.17.0'
 #    container_name: cm_elasticsearch_database
+#    restart: always
 #    volumes:
 #    - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
 #    ports:
@@ -29,20 +30,22 @@ services:
 #      ELASTIC_PASSWORD: changeme
 #      discovery.type: single-node
 #    networks:
-#      - ntwrkcm
-#  # Pour tester les requêtes elastic on va utiliser kibana 
+#      - network
+
+  # Pour tester les requêtes elastic on va utiliser kibana 
 #  kibana:
-#    image: 'kibana:7.17.0'
+#    image: 'docker.elastic.co/kibana/kibana:7.17.0'
 #    container_name: kibana
 #    hostname: kibana
+#    restart: always
 #    ports:
 #      - '5601:5601'
 #    depends_on:
 #      - elasticsearch
 #    networks:
-#      - ntwrkcm
+#      - network
 networks:
-  ntwrkcm:
+  network:
     driver: bridge
 volumes:
     mysql_data:

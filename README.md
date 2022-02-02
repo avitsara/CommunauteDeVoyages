@@ -1,4 +1,4 @@
-# CommunauteDeVoyages
+# CommunauteDeVoyages aka My Very Bad Trip  
 
 ## Description  
 Ce projet porte sur le développement d'une application web qui nous permet la planification de futurs voyages virtuels.   
@@ -10,8 +10,8 @@ Google trad | À modifier
 Symfony version : ?
 
 base de données :  
-- elasticsearch version ?
-- mysql version ?
+- elasticsearch version 7.17.0  
+- mysql version ?  
 
 # Deploy  
 ```
