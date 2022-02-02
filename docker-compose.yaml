@@ -1,0 +1,37 @@
+version: "3.8"
+services:
+  db:
+    image: mysql
+    container_name: cm_mysql_database
+    restart: always
+    volumes:
+        - db-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=helloworld123
+      - MYSQL_USER=cm-admin
+      - MYSQL_PASSWORD=cm123
+      - MYSQL_DATABASE=communaute_voyage
+    ports:
+      - "3306:3306"
+    networks:
+      - ntwrkcm
+
+  elasticsearch:
+    image:  docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    container_name: cm_elasticsearch_database
+    volumes:
+    - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      ELASTIC_PASSWORD: changeme
+      discovery.type: single-node
+    networks:
+      - ntwrkcm
+networks:
+  ntwrkcm:
+    driver: bridge
+volumes:
+    db-data:
