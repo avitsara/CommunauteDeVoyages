@@ -11,7 +11,6 @@ Symfony version : ?
 
 base de données :  
 - elasticsearch version 7.17.0  
-- mysql version ?  
 
 # Deploy  
 ```
