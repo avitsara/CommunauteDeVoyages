@@ -1,4 +1,10 @@
 {
+    "doctrine/inflector": {
+        "version": "2.0.4"
+    },
+    "nikic/php-parser": {
+        "version": "v4.13.2"
+    },
     "psr/cache": {
         "version": "3.0.0"
     },
@@ -93,6 +99,15 @@
     "symfony/http-kernel": {
         "version": "v6.0.4"
     },
+    "symfony/maker-bundle": {
+        "version": "1.36",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
+        }
+    },
     "symfony/polyfill-intl-grapheme": {
         "version": "v1.24.0"
     },
@@ -127,6 +142,25 @@
     "symfony/string": {
         "version": "v6.0.3"
     },
+    "symfony/translation-contracts": {
+        "version": "v3.0.0"
+    },
+    "symfony/twig-bridge": {
+        "version": "v6.0.3"
+    },
+    "symfony/twig-bundle": {
+        "version": "6.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "5.4",
+            "ref": "bffbb8f1a849736e64006735afae730cb428b6ff"
+        },
+        "files": [
+            "config/packages/twig.yaml",
+            "templates/base.html.twig"
+        ]
+    },
     "symfony/var-dumper": {
         "version": "v6.0.3"
     },
@@ -135,5 +169,8 @@
     },
     "symfony/yaml": {
         "version": "v6.0.3"
+    },
+    "twig/twig": {
+        "version": "v3.3.7"
     }
 }
