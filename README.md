@@ -23,3 +23,22 @@ Se connecter à l'URL suivante :
 ```
 http://localhost:80/communautevoyage  
 ```
+
+# Developpment
+
+# Warning   
+- Ne jamais pousser votre code sur main !  
+- Toujours vérifier de n'envoyer que les sources sur github.
+- On pourrait voir à envoyer les contenus des bases de données sur un google drive.  
+## Pousser une feature  
+```
+git checkout -b dev-[USERNAME]-[FEATURE_NAME]  
+git add .  
+git commit -m "[YOUR_COMMENT_ABOUT_THE_FEATURE]  
+git push  
+git checkout main  
+git pull  
+git checkout [YOUR_BRANCH_NAME]  
+git merge main [YOUR_BRANCH_NAME]  
+git push  
+```
