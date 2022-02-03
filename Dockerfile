@@ -16,3 +16,7 @@ RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 RUN git config --global user.email "you@example.com" \ 
     && git config --global user.name "Your Name"
+RUN apt install nodejs --yes
+RUN apt install npm --yes
+RUN npm install --save --global yarn
+RUN yarn
