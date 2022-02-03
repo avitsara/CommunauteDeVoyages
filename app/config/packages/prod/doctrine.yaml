@@ -1,0 +1,26 @@
+doctrine:
+    orm:
+        auto_generate_proxy_classes: false
+        query_cache_driver:
+            type: pool
+            pool: doctrine.system_cache_pool
+        result_cache_driver:
+            type: pool
+            pool: doctrine.result_cache_pool
+    dbal:
+        connections:
+            my_database:
+                driver: pdo_pgsql
+                port: 5432
+                dbname: communautevoyage
+                user: symfony
+                password: 123
+                charset: UTF8
+
+framework:
+    cache:
+        pools:
+            doctrine.result_cache_pool:
+                adapter: cache.app
+            doctrine.system_cache_pool:
+                adapter: cache.system

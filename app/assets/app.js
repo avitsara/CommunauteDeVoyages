@@ -12,5 +12,4 @@ import './styles/app-custom.scss'
 // start the Stimulus application
 import 'bootstrap';
 import bsCustomFileInput from 'bs-custom-file-input';
-console.log('hello world !')
-bsCustomFileInput.init();
+new bsCustomFileInput.init();

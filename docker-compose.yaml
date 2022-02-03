@@ -1,20 +1,18 @@
 version: "3.8"
 services:
   mysqldatabase:
-    image: mysql
+    image: mysql:5.7
     container_name: cm_mysql_database
     restart: always
     volumes:
-        - mysql_data:/var/lib/mysql
+        - ./mysql_data:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=helloworld123
-      - MYSQL_USER=cm-admin
-      - MYSQL_PASSWORD=cm123
-      - MYSQL_DATABASE=communaute_voyage
+      - MYSQL_DATABASE=communautevoyage
     ports:
       - "3306:3306"
     networks:
-      - network
+      - networkcustom
 
   symfony:
     container_name: cm_php_symfony
@@ -26,6 +24,8 @@ services:
       - ./app:/var/www/symfony_docker
     depends_on:
       - mysqldatabase
+    networks:
+      - networkcustom
 
   nginx:
     container_name: cm_webserver_nginx
@@ -37,7 +37,8 @@ services:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - symfony
-      - mysqldatabase
+    networks:
+      - networkcustom
 #  elasticsearch:
 #    image:  'docker.elastic.co/elasticsearch/elasticsearch:7.17.0'
 #    container_name: cm_elasticsearch_database
@@ -67,7 +68,6 @@ services:
 #    networks:
 #      - network
 networks:
-  network:
-    driver: bridge
+  networkcustom:
 volumes:
     mysql_data:
