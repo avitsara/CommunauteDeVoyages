@@ -51,26 +51,28 @@ class __TwigTemplate_f7f79b25c9c9f90ddb811896973f4f00dc0001c41e3a259c60976b9527a
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js\" integrity=\"sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13\" crossorigin=\"anonymous\"></script>
         <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\"></head>
 
+        <!-- Font Awesome -->
+        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css\" integrity=\"sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7\" crossorigin=\"anonymous\">
         <title>";
-        // line 13
+        // line 15
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
     </head>
     <body>
         ";
-        // line 16
-        $this->loadTemplate("core/menu.html.twig", "core/wrapper.html.twig", 16)->display($context);
-        // line 17
+        // line 18
+        $this->loadTemplate("core/menu.html.twig", "core/wrapper.html.twig", 18)->display($context);
+        // line 19
         echo "        <main>
             ";
-        // line 18
+        // line 20
         $this->displayBlock('body', $context, $blocks);
-        // line 19
+        // line 21
         echo "        </main>
         ";
-        // line 20
-        $this->loadTemplate("core/footer.html.twig", "core/wrapper.html.twig", 20)->display($context);
-        // line 21
+        // line 22
+        $this->loadTemplate("core/footer.html.twig", "core/wrapper.html.twig", 22)->display($context);
+        // line 23
         echo "    </body>
 </html>
 ";
@@ -79,7 +81,7 @@ class __TwigTemplate_f7f79b25c9c9f90ddb811896973f4f00dc0001c41e3a259c60976b9527a
 
     }
 
-    // line 13
+    // line 15
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -91,7 +93,7 @@ class __TwigTemplate_f7f79b25c9c9f90ddb811896973f4f00dc0001c41e3a259c60976b9527a
 
     }
 
-    // line 18
+    // line 20
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -115,7 +117,7 @@ class __TwigTemplate_f7f79b25c9c9f90ddb811896973f4f00dc0001c41e3a259c60976b9527a
 
     public function getDebugInfo()
     {
-        return array (  95 => 18,  83 => 13,  74 => 21,  72 => 20,  69 => 19,  67 => 18,  64 => 17,  62 => 16,  56 => 13,  42 => 1,);
+        return array (  97 => 20,  85 => 15,  76 => 23,  74 => 22,  71 => 21,  69 => 20,  66 => 19,  64 => 18,  58 => 15,  42 => 1,);
     }
 
     public function getSourceContext()
@@ -132,6 +134,8 @@ class __TwigTemplate_f7f79b25c9c9f90ddb811896973f4f00dc0001c41e3a259c60976b9527a
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js\" integrity=\"sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13\" crossorigin=\"anonymous\"></script>
         <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\"></head>
 
+        <!-- Font Awesome -->
+        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css\" integrity=\"sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7\" crossorigin=\"anonymous\">
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
