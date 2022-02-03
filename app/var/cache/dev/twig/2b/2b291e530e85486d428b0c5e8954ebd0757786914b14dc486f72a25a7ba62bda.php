@@ -27,6 +27,8 @@ class __TwigTemplate_aa7692c893771425fed5c18148d75aa74e785b8674fbc1243e46e1ecc41
         $this->parent = false;
 
         $this->blocks = [
+            'stylesheets' => [$this, 'block_stylesheets'],
+            'javascript' => [$this, 'block_javascript'],
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
         ];
@@ -43,36 +45,32 @@ class __TwigTemplate_aa7692c893771425fed5c18148d75aa74e785b8674fbc1243e46e1ecc41
 <html>
     <head>
         <meta charset=\"UTF-8\">
-
-        <!-- import jquery -->
-        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
-
-        <!-- import bootstrap -->
-        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js\" integrity=\"sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13\" crossorigin=\"anonymous\"></script>
-        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\"></head>
-
-        <!-- Font Awesome -->
-        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css\" integrity=\"sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7\" crossorigin=\"anonymous\">
-        <title>";
-        // line 15
+        ";
+        // line 5
+        $this->displayBlock('stylesheets', $context, $blocks);
+        // line 6
+        echo "        ";
+        $this->displayBlock('javascript', $context, $blocks);
+        // line 7
+        echo "        <title>";
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
     </head>
     <body>
         ";
-        // line 18
-        $this->loadTemplate("core/menu.html.twig", "core/wrapper.html.twig", 18)->display($context);
-        // line 19
+        // line 10
+        $this->loadTemplate("core/menu.html.twig", "core/wrapper.html.twig", 10)->display($context);
+        // line 11
         echo "        <main>
             ";
-        // line 20
+        // line 12
         $this->displayBlock('body', $context, $blocks);
-        // line 21
+        // line 13
         echo "        </main>
         ";
-        // line 22
-        $this->loadTemplate("core/footer.html.twig", "core/wrapper.html.twig", 22)->display($context);
-        // line 23
+        // line 14
+        $this->loadTemplate("core/footer.html.twig", "core/wrapper.html.twig", 14)->display($context);
+        // line 15
         echo "    </body>
 </html>
 ";
@@ -81,7 +79,35 @@ class __TwigTemplate_aa7692c893771425fed5c18148d75aa74e785b8674fbc1243e46e1ecc41
 
     }
 
-    // line 15
+    // line 5
+    public function block_stylesheets($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 6
+    public function block_javascript($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascript"));
+
+        echo " ";
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
+        echo " ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 7
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -93,7 +119,7 @@ class __TwigTemplate_aa7692c893771425fed5c18148d75aa74e785b8674fbc1243e46e1ecc41
 
     }
 
-    // line 20
+    // line 12
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -117,7 +143,7 @@ class __TwigTemplate_aa7692c893771425fed5c18148d75aa74e785b8674fbc1243e46e1ecc41
 
     public function getDebugInfo()
     {
-        return array (  97 => 20,  85 => 15,  76 => 23,  74 => 22,  71 => 21,  69 => 20,  66 => 19,  64 => 18,  58 => 15,  42 => 1,);
+        return array (  123 => 12,  111 => 7,  96 => 6,  83 => 5,  74 => 15,  72 => 14,  69 => 13,  67 => 12,  64 => 11,  62 => 10,  55 => 7,  52 => 6,  50 => 5,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -126,16 +152,8 @@ class __TwigTemplate_aa7692c893771425fed5c18148d75aa74e785b8674fbc1243e46e1ecc41
 <html>
     <head>
         <meta charset=\"UTF-8\">
-
-        <!-- import jquery -->
-        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js\"></script>
-
-        <!-- import bootstrap -->
-        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js\" integrity=\"sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13\" crossorigin=\"anonymous\"></script>
-        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\"></head>
-
-        <!-- Font Awesome -->
-        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css\" integrity=\"sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7\" crossorigin=\"anonymous\">
+        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+        {%  block javascript %} {{  encore_entry_script_tags('app') }} {% endblock %}
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
