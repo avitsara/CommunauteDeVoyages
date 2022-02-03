@@ -4,8 +4,24 @@
 
 return [[
 
+'_default' => 0,
 
 ], [
 
+0 => [
+    'entrypoints' => [
+        'app' => [
+            'js' => [
+                '/build/runtime.js',
+                '/build/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_bs-custom-file-input_dist_bs-5075e4.js',
+                '/build/app.js',
+            ],
+            'css' => [
+                '/build/vendors-node_modules_bootstrap_dist_js_bootstrap_js-node_modules_bs-custom-file-input_dist_bs-5075e4.css',
+                '/build/app.css',
+            ],
+        ],
+    ],
+],
 
 ]];
