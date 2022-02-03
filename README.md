@@ -16,19 +16,27 @@ base de données :
 ```
 docker-compose -f docker-compose.yaml up  
 ```
-
+Et si modifs des conteneurs :  
+```
+docker-compose -f docker-compose.yaml up --force-recreate  
+```
 # Usage  
 Se connecter à l'URL suivante :  
 ```
-http://localhost:80/communautevoyage  
+http://localhost:8080    
 ```
 
 # Developpment
-
-# Warning   
+## Warning   
 - Ne jamais pousser votre code sur main !  
 - Toujours vérifier de n'envoyer que les sources sur github.
-- On pourrait voir à envoyer les contenus des bases de données sur un google drive.  
+- On pourrait voir à envoyer les contenus des bases de données sur un google drive. 
+
+## Accéder au cli symfony  
+ouvrir un terminal et lancer la commande :  
+```
+docker exec -it cm_php_symfony bash  
+```
 ## Pousser une feature  
 ```
 git checkout -b dev-[USERNAME]-[FEATURE_NAME]  
