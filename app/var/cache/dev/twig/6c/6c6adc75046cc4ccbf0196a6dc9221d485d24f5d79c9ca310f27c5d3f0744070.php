@@ -229,6 +229,6 @@ class __TwigTemplate_bb031505e4a10afb38f40d9104df37c08f7c9ff9fb06623fa54d055763b
         </div>
     </footer>
 {% endblock %}
-", "core/footer.html.twig", "/var/www/symfony_docker/templates/core/footer.html.twig");
+", "core/footer.html.twig", "/home/jary/Bureau/CommunauteDeVoyages/app/templates/core/footer.html.twig");
     }
 }

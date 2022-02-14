@@ -175,7 +175,7 @@ class __TwigTemplate_9a7d54844274d09f961c25e67061c2ba7f0949ad5193cde216233e3b612
 {% block body %}
     {## app_login = chemin amenant au formulaire ##}
     <form method=\"post\" action=\"{{path('app_login')}} \">
-        {% if error %}
+
             <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
 

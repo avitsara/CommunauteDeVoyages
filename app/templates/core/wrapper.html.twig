@@ -2,14 +2,14 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
-        {%  block javascript %} {{  encore_entry_script_tags('app') }} {% endblock %}
+        {% block stylesheets %}{% endblock %}
+        {%  block javascript %}  {% endblock %}
         <title>{% block title %}{% endblock %}</title>
     </head>
+
     <body>
         {% include('core/menu.html.twig') %}
         <main>
-            {% block body %}{% endblock %}
         </main>
         {% include('core/footer.html.twig') %}
     </body>

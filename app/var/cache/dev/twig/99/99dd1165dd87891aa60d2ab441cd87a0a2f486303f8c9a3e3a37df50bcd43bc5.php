@@ -147,6 +147,6 @@ class __TwigTemplate_8fc0b3bcf0a14d0f2a7e75cc09e6fa0b22069a41e906ab50803d16c5d82
 
     </header>
 {% endblock %}
-", "core/menu.html.twig", "/var/www/symfony_docker/templates/core/menu.html.twig");
+", "core/menu.html.twig", "/home/jary/Bureau/CommunauteDeVoyages/app/templates/core/menu.html.twig");
     }
 }
