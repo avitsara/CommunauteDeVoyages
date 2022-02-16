@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "bootstrap": "^5.1.3"
+  },
+  "dependencies": {
+    "@symfony/webpack-encore": "^1.8.1"
+  }
+}

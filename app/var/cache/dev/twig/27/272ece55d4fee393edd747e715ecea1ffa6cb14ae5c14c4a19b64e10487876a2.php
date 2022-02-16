@@ -164,6 +164,6 @@ class __TwigTemplate_5b386a39dc34b6961e97a1fd9714a4e63a5363eb6c990578a86a13bcccd
         {% include('core/footer.html.twig') %}
     </body>
 </html>
-", "core/wrapper.html.twig", "/var/www/symfony_docker/templates/core/wrapper.html.twig");
+", "core/wrapper.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/core/wrapper.html.twig");
     }
 }

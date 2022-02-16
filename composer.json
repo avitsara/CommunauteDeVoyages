@@ -1,0 +1,18 @@
+{
+    "name": "fullmetal/communaute-de-voyages",
+    "autoload": {
+        "psr-4": {
+            "Fullmetal\\CommunauteDeVoyages\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "avitsara",
+            "email": "avitsara@github.com"
+        }
+    ],
+    "require": {
+        "symfony/webpack-encore-bundle": "^1.14",
+        "twbs/bootstrap": "5.1.3"
+    }
+}

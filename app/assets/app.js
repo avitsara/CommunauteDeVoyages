@@ -7,9 +7,6 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.css';
-import './styles/app-custom.scss'
 
 // start the Stimulus application
-import 'bootstrap';
-import bsCustomFileInput from 'bs-custom-file-input';
-new bsCustomFileInput.init();
+import './bootstrap';

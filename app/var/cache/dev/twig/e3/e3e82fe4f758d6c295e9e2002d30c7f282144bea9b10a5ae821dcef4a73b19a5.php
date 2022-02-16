@@ -110,6 +110,6 @@ class __TwigTemplate_1964ea11f97cb18c54cfa6ceb962e045df28e946e2d0a4b77c0a6308094
     </div>
     {% include('distinct/authentication/login.html.twig') %}
 {% endblock %}
-", "distinct/home/home.html.twig", "/var/www/symfony_docker/templates/distinct/home/home.html.twig");
+", "distinct/home/home.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/distinct/home/home.html.twig");
     }
 }
