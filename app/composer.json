@@ -22,9 +22,10 @@
         "symfony/security-bundle": "6.0.*",
         "symfony/twig-bundle": "6.0.*",
         "symfony/validator": "6.0.*",
-        "symfony/webpack-encore-bundle": "^1.13",
+        "symfony/webpack-encore-bundle": "^1.14",
         "symfony/yaml": "6.0.*",
-        "symfonycasts/verify-email-bundle": "^1.8"
+        "symfonycasts/verify-email-bundle": "^1.8",
+        "twbs/bootstrap": "5.1.3"
     },
     "require-dev": {
         "symfony/maker-bundle": "^1.36"

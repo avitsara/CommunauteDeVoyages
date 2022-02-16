@@ -24,11 +24,15 @@ class __TwigTemplate_dda7894004950ede3e85775e861a5ec0d4a5f4d3fe1ca4bed57123560d6
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
             'menu' => [$this, 'block_menu'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "security/base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -37,20 +41,21 @@ class __TwigTemplate_dda7894004950ede3e85775e861a5ec0d4a5f4d3fe1ca4bed57123560d6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "core/menu.html.twig"));
 
-        // line 1
-        $this->displayBlock('menu', $context, $blocks);
+        $this->parent = $this->loadTemplate("security/base.html.twig", "core/menu.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
+    // line 3
     public function block_menu($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "menu"));
 
-        // line 2
+        // line 4
         echo "    <header>
         <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
             <a class=\"navbar-brand\" href=\"#\">Navbar</a>
@@ -100,14 +105,21 @@ class __TwigTemplate_dda7894004950ede3e85775e861a5ec0d4a5f4d3fe1ca4bed57123560d6
         return "core/menu.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  54 => 2,  41 => 1,);
+        return array (  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% block menu %}
+        return new Source("{% extends 'security/base.html.twig' %}
+
+{% block menu %}
     <header>
         <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
             <a class=\"navbar-brand\" href=\"#\">Navbar</a>
@@ -147,6 +159,6 @@ class __TwigTemplate_dda7894004950ede3e85775e861a5ec0d4a5f4d3fe1ca4bed57123560d6
 
     </header>
 {% endblock %}
-", "core/menu.html.twig", "/home/jary/Bureau/CommunauteDeVoyages/app/templates/core/menu.html.twig");
+", "core/menu.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/core/menu.html.twig");
     }
 }

@@ -3897,6 +3897,7 @@ return array(
     'Symfony\\WebpackEncoreBundle\\DependencyInjection\\WebpackEncoreExtension' => $vendorDir . '/symfony/webpack-encore-bundle/src/DependencyInjection/WebpackEncoreExtension.php',
     'Symfony\\WebpackEncoreBundle\\EventListener\\ExceptionListener' => $vendorDir . '/symfony/webpack-encore-bundle/src/EventListener/ExceptionListener.php',
     'Symfony\\WebpackEncoreBundle\\EventListener\\PreLoadAssetsEventListener' => $vendorDir . '/symfony/webpack-encore-bundle/src/EventListener/PreLoadAssetsEventListener.php',
+    'Symfony\\WebpackEncoreBundle\\EventListener\\ResetAssetsEventListener' => $vendorDir . '/symfony/webpack-encore-bundle/src/EventListener/ResetAssetsEventListener.php',
     'Symfony\\WebpackEncoreBundle\\Event\\RenderAssetTagEvent' => $vendorDir . '/symfony/webpack-encore-bundle/src/Event/RenderAssetTagEvent.php',
     'Symfony\\WebpackEncoreBundle\\Exception\\EntrypointNotFoundException' => $vendorDir . '/symfony/webpack-encore-bundle/src/Exception/EntrypointNotFoundException.php',
     'Symfony\\WebpackEncoreBundle\\Exception\\UndefinedBuildException' => $vendorDir . '/symfony/webpack-encore-bundle/src/Exception/UndefinedBuildException.php',

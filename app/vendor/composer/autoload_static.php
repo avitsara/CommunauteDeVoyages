@@ -4330,6 +4330,7 @@ class ComposerStaticInitcb231c24119e6819a8de5148416fd054
         'Symfony\\WebpackEncoreBundle\\DependencyInjection\\WebpackEncoreExtension' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/DependencyInjection/WebpackEncoreExtension.php',
         'Symfony\\WebpackEncoreBundle\\EventListener\\ExceptionListener' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/EventListener/ExceptionListener.php',
         'Symfony\\WebpackEncoreBundle\\EventListener\\PreLoadAssetsEventListener' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/EventListener/PreLoadAssetsEventListener.php',
+        'Symfony\\WebpackEncoreBundle\\EventListener\\ResetAssetsEventListener' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/EventListener/ResetAssetsEventListener.php',
         'Symfony\\WebpackEncoreBundle\\Event\\RenderAssetTagEvent' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Event/RenderAssetTagEvent.php',
         'Symfony\\WebpackEncoreBundle\\Exception\\EntrypointNotFoundException' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Exception/EntrypointNotFoundException.php',
         'Symfony\\WebpackEncoreBundle\\Exception\\UndefinedBuildException' => __DIR__ . '/..' . '/symfony/webpack-encore-bundle/src/Exception/UndefinedBuildException.php',

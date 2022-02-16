@@ -1,9 +1,15 @@
+{% extends 'security/base.html.twig' %}
+{% block content %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
-        {% block stylesheets %}{% endblock %}
-        {%  block javascript %}  {% endblock %}
+        {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        {% endblock %}
+        {%  block javascript %} 
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> {% endblock %}
         <title>{% block title %}{% endblock %}</title>
     </head>
 
@@ -14,3 +20,4 @@
         {% include('core/footer.html.twig') %}
     </body>
 </html>
+{% endblock %}

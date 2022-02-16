@@ -112,6 +112,6 @@ class __TwigTemplate_c767ae3369151f9a03fb827a8eab0c6cbe9e7384749b02b2c6459f8c071
         <button type=\"submit\" class=\"btn\">Register</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
-", "registration/register.html.twig", "/home/jary/Bureau/CommunauteDeVoyages/app/templates/registration/register.html.twig");
+", "registration/register.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/registration/register.html.twig");
     }
 }

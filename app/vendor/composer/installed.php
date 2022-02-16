@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '159ced7d865db9cf6635e7f4f847d3d04434718f',
+        'reference' => '81f88d250aac82aa660ebf4f743db09911e9f2d8',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '159ced7d865db9cf6635e7f4f847d3d04434718f',
+            'reference' => '81f88d250aac82aa660ebf4f743db09911e9f2d8',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -767,12 +767,12 @@
             'dev_requirement' => false,
         ),
         'symfony/webpack-encore-bundle' => array(
-            'pretty_version' => 'v1.13.2',
-            'version' => '1.13.2.0',
+            'pretty_version' => 'v1.14.0',
+            'version' => '1.14.0.0',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../symfony/webpack-encore-bundle',
             'aliases' => array(),
-            'reference' => '509cad50878e838c879743225e0e921b3b64a3f2',
+            'reference' => '1729c314574f32e49f9660a0cee870f7e603864f',
             'dev_requirement' => false,
         ),
         'symfony/yaml' => array(
@@ -793,6 +793,15 @@
             'reference' => 'aecd44697f7385178ff84a80f2b51d6318c15497',
             'dev_requirement' => false,
         ),
+        'twbs/bootstrap' => array(
+            'pretty_version' => 'v5.1.3',
+            'version' => '5.1.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../twbs/bootstrap',
+            'aliases' => array(),
+            'reference' => '1a6fdfae6be09b09eaced8f0e442ca6f7680a61e',
+            'dev_requirement' => false,
+        ),
         'twig/twig' => array(
             'pretty_version' => 'v3.3.7',
             'version' => '3.3.7.0',
@@ -801,6 +810,12 @@
             'aliases' => array(),
             'reference' => '8f168c6ffa3ce76d1786b3cd52275424a3fc675b',
             'dev_requirement' => false,
+        ),
+        'twitter/bootstrap' => array(
+            'dev_requirement' => false,
+            'replaced' => array(
+                0 => 'v5.1.3',
+            ),
         ),
     ),
 );

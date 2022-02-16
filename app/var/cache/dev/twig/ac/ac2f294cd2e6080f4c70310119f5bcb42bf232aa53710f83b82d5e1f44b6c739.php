@@ -24,11 +24,15 @@ class __TwigTemplate_580c13d77884383c14cea1de880edc0cb40f137c3f18618c47ad67bb308
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
             'footer' => [$this, 'block_footer'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "security/base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -37,23 +41,21 @@ class __TwigTemplate_580c13d77884383c14cea1de880edc0cb40f137c3f18618c47ad67bb308
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "core/footer.html.twig"));
 
-        // line 1
-        echo "
-";
-        // line 2
-        $this->displayBlock('footer', $context, $blocks);
+        $this->parent = $this->loadTemplate("security/base.html.twig", "core/footer.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
+    // line 3
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 3
+        // line 4
         echo "    <footer class=\"small bg-light\">
         <div class=\"container py-3 py-sm-5\">
             <div class=\"row\">
@@ -142,14 +144,20 @@ class __TwigTemplate_580c13d77884383c14cea1de880edc0cb40f137c3f18618c47ad67bb308
         return "core/footer.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  57 => 3,  44 => 2,  41 => 1,);
+        return array (  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("
+        return new Source("{% extends 'security/base.html.twig' %}
+
 {% block footer %}
     <footer class=\"small bg-light\">
         <div class=\"container py-3 py-sm-5\">
@@ -229,6 +237,6 @@ class __TwigTemplate_580c13d77884383c14cea1de880edc0cb40f137c3f18618c47ad67bb308
         </div>
     </footer>
 {% endblock %}
-", "core/footer.html.twig", "/home/jary/Bureau/CommunauteDeVoyages/app/templates/core/footer.html.twig");
+", "core/footer.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/core/footer.html.twig");
     }
 }
