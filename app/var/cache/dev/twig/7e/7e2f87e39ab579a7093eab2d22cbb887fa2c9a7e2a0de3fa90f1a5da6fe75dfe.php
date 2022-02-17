@@ -24,11 +24,16 @@ class __TwigTemplate_c767ae3369151f9a03fb827a8eab0c6cbe9e7384749b02b2c6459f8c071
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
+            'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "security/base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -37,48 +42,108 @@ class __TwigTemplate_c767ae3369151f9a03fb827a8eab0c6cbe9e7384749b02b2c6459f8c071
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "registration/register.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-
-<title>Register</title>
-
-";
-        // line 5
-        $this->displayBlock('body', $context, $blocks);
+        $this->parent = $this->loadTemplate("security/base.html.twig", "registration/register.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
+    // line 3
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        // line 4
+        echo "Register
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 6
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    <h1>Register</h1>
-
-    ";
         // line 8
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 8, $this->source); })()), 'form_start');
-        echo "
-        ";
-        // line 9
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 9, $this->source); })()), "email", [], "any", false, false, false, 9), 'row');
-        echo "
-        ";
-        // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 10, $this->source); })()), "plainPassword", [], "any", false, false, false, 10), 'row', ["label" => "Password"]);
-        // line 12
-        echo "
+        echo "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        <a class=\"navbar-brand\" href=\"#\"> My very bad trip </a>
+        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            <span class=\"navbar-toggler-icon\"></span>
+        </button>
 
-        <button type=\"submit\" class=\"btn\">Register</button>
-    ";
-        // line 15
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 15, $this->source); })()), 'form_end');
-        echo "
-";
+        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+            <ul class=\"navbar-nav mr-auto\">
+            <li class=\"nav-item active\">
+                <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>
+            </li>
+            <li class=\"nav-item\">
+                <a class=\"nav-link\" href=\"#\"> Trips </a>
+            </li>
+            <li class=\"nav-item dropdown\">
+                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                Dropdown
+                </a>
+                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+                <a class=\"dropdown-item\" href=\"#\">Action</a>
+                <a class=\"dropdown-item\" href=\"#\">Another action</a>
+                <div class=\"dropdown-divider\"></div>
+                <a class=\"dropdown-item\" href=\"#\">Something else here</a>
+                </div>
+            </li>
+            <li class=\"nav-item\">
+                <a class=\"nav-link disabled\" href=\"#\">Disabled</a>
+            </li>
+            </ul>
+            <form class=\"form-inline my-2 my-lg-0\">
+            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
+            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
+            </form>
+        </div>
+</nav>
+
+    <form>
+    <div class=\"form-group\">
+           <label for=\"lastname\"> Lastname :  </label>
+           <input type=\"text\"  placeholder=\"Lastname\" class=\"form-control\" id=\"lastname\" name=\"registration_form[lastname]\">
+    </div>
+    <div class=\"form-group\">
+           <label for=\"firstname\"> Firstname :  </label>
+           <input type=\"text\"  placeholder=\"Firstname\" class=\"form-control\" id=\"firstname\" name=\"registration_form[firstname]\">
+    </div>
+   <div class=\"form-group\">
+            <label for=\"email\">Email :</label>
+            <input type=\"email\"  placeholder=\"Enter email\"class=\"form-control\" id=\"email\" name=\"registration_form[email]\">
+    </div>
+    <div class=\"form-group\">
+            <label for=\"pwd\">Password:</label>
+            <input type=\"password\"  placeholder=\"Enter password\" class=\"form-control\" id=\"pwd\" name=\"regsitration_form[plainPassword]\">
+    </div>
+
+    <div class=\"form-group\">
+        <label for=\"pwd\"> Date of Birth :</label>
+        <input type=\"date\" class=\"form-control\" id=\"date_of_birth\" name=\"regsitration_form[date_of_birth]\">
+
+    </div>
+
+     <div class=\"form-group\">
+        <select class=\"form-select\" aria-label=\"Default select example\">
+          <option selected> Sélectionner votre sexe  </option>
+          <option value=\"Homme\">  Homme </option>
+          <option value=\"Femme\">  Femme </option>
+        </select>
+
+    </div>
+    <button type=\"submit\"  class=\"btn btn-primary\">Register</button>
+
+    </form>
+  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -89,28 +154,109 @@ class __TwigTemplate_c767ae3369151f9a03fb827a8eab0c6cbe9e7384749b02b2c6459f8c071
         return "registration/register.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  79 => 15,  74 => 12,  72 => 10,  68 => 9,  64 => 8,  60 => 6,  47 => 5,  41 => 1,);
+        return array (  75 => 8,  68 => 6,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!DOCTYPE html>
+        return new Source("{% extends 'security/base.html.twig' %}
 
-<title>Register</title>
-
+{% block title %}
+Register
+{% endblock %}
 {% block body %}
-    <h1>Register</h1>
+{# Menu haut #}
+<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        <a class=\"navbar-brand\" href=\"#\"> My very bad trip </a>
+        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+            <span class=\"navbar-toggler-icon\"></span>
+        </button>
 
-    {{ form_start(registrationForm) }}
+        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+            <ul class=\"navbar-nav mr-auto\">
+            <li class=\"nav-item active\">
+                <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>
+            </li>
+            <li class=\"nav-item\">
+                <a class=\"nav-link\" href=\"#\"> Trips </a>
+            </li>
+            <li class=\"nav-item dropdown\">
+                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                Dropdown
+                </a>
+                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+                <a class=\"dropdown-item\" href=\"#\">Action</a>
+                <a class=\"dropdown-item\" href=\"#\">Another action</a>
+                <div class=\"dropdown-divider\"></div>
+                <a class=\"dropdown-item\" href=\"#\">Something else here</a>
+                </div>
+            </li>
+            <li class=\"nav-item\">
+                <a class=\"nav-link disabled\" href=\"#\">Disabled</a>
+            </li>
+            </ul>
+            <form class=\"form-inline my-2 my-lg-0\">
+            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
+            <button class=\"btn btn-outline-success my-2 my-sm-0\" type=\"submit\">Search</button>
+            </form>
+        </div>
+</nav>
+
+    <form>
+    <div class=\"form-group\">
+           <label for=\"lastname\"> Lastname :  </label>
+           <input type=\"text\"  placeholder=\"Lastname\" class=\"form-control\" id=\"lastname\" name=\"registration_form[lastname]\">
+    </div>
+    <div class=\"form-group\">
+           <label for=\"firstname\"> Firstname :  </label>
+           <input type=\"text\"  placeholder=\"Firstname\" class=\"form-control\" id=\"firstname\" name=\"registration_form[firstname]\">
+    </div>
+   <div class=\"form-group\">
+            <label for=\"email\">Email :</label>
+            <input type=\"email\"  placeholder=\"Enter email\"class=\"form-control\" id=\"email\" name=\"registration_form[email]\">
+    </div>
+    <div class=\"form-group\">
+            <label for=\"pwd\">Password:</label>
+            <input type=\"password\"  placeholder=\"Enter password\" class=\"form-control\" id=\"pwd\" name=\"regsitration_form[plainPassword]\">
+    </div>
+
+    <div class=\"form-group\">
+        <label for=\"pwd\"> Date of Birth :</label>
+        <input type=\"date\" class=\"form-control\" id=\"date_of_birth\" name=\"regsitration_form[date_of_birth]\">
+
+    </div>
+
+     <div class=\"form-group\">
+        <select class=\"form-select\" aria-label=\"Default select example\">
+          <option selected> Sélectionner votre sexe  </option>
+          <option value=\"Homme\">  Homme </option>
+          <option value=\"Femme\">  Femme </option>
+        </select>
+
+    </div>
+    <button type=\"submit\"  class=\"btn btn-primary\">Register</button>
+
+    </form>
+  {## {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.lastname) }}
+        {{ form_row(registrationForm.firstname) }}
+ 
         {{ form_row(registrationForm.email) }}
+   
+
         {{ form_row(registrationForm.plainPassword, {
             label: 'Password'
         }) }}
-
-        <button type=\"submit\" class=\"btn\">Register</button>
-    {{ form_end(registrationForm) }}
+        {{ form_end(registrationForm) }}
+    <button type=\"submit\" class=\"btn\">Register</button>
+#}
 {% endblock %}
 ", "registration/register.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/registration/register.html.twig");
     }
