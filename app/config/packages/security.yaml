@@ -13,7 +13,10 @@ security:
         main:
             lazy: true
             provider: users_in_memory
-            custom_authenticator: App\Security\Authenticator
+          
+            custom_authenticator:
+               # - App\Security\Authenticator
+                - App\Security\LoginFormAuthenticator
             logout:
                 path: app_logout
                 # where to redirect after logout
