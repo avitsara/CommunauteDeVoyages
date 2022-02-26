@@ -1,10 +1,11 @@
-{% extends 'security/base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}
 Register
 {% endblock %}
 
 {% block body %}
+
     <h1>Register</h1>
 <div class="container">
     {{ form_start(registrationForm) }}
@@ -13,10 +14,11 @@ Register
         {{ form_row(registrationForm.plainPassword,{'attr':{'class':'form-control'}},{
             label: 'Password'
         })}}
+        {## LASTNAME = NOM DE FAMILLE##}
         {{ form_row(registrationForm.lastname,{'attr':{'class':'form-control'}})}}
         {{ form_row(registrationForm.firstname,{'attr':{'class':'form-control'}})}}
         {{ form_row(registrationForm.sex,{'attr':{'class':'form-control'}})}}
-        {{ form_row(registrationForm.dateOfBirth,{'attr':{'class':'form-group','id':'date_of_birth'}})}}
+        {{ form_row(registrationForm.DateOfBirth,{'attr':{'class':'form-group','id':'date_of_birth'}})}}
 
         <button type="submit" class="btn btn-dark">Register</button>
     {{ form_end(registrationForm) }}

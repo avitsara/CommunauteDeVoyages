@@ -14,7 +14,7 @@ use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-/** CLASSE QUI GÉNÈRE LE FORMULAIRE  */
+
 class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -24,7 +24,7 @@ class RegistrationFormType extends AbstractType
             ->add('firstname')
             /* ->add('sex') */
             ->add('email')
-            ->add('dateOfBirth',BirthdayType::class)
+            ->add('DateOfBirth',BirthdayType::class)
             /*
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
@@ -60,7 +60,6 @@ class RegistrationFormType extends AbstractType
             ]);
         ;
     }
-
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

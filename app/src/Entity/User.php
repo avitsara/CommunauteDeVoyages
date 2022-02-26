@@ -8,12 +8,9 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-/**
- * (fields={"email"}, message="L'adresse e-mail a déjà été utilisée")
- * (fields={"lastname"}, message="There is already an a@UniqueEntityccount with this lastname")
- */
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
+#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -24,28 +21,24 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string', length: 180, unique: true)]
     private $email;
 
-
+    #[ORM\Column(type: 'json')]
+    private $roles = [];
 
     #[ORM\Column(type: 'string')]
     private $password;
 
-    #[ORM\Column(type: 'string', length: 150)]
-    private $lastname;
-
-    #[ORM\Column(type: 'string', length: 150)]
+    #[ORM\Column(type: 'string', length: 255)]
     private $firstname;
 
-    #[ORM\Column(type: 'date')]
-    private $dateOfBirth;
+    #[ORM\Column(type: 'string', length: 255)]
+    private $lastname;
 
-    #[ORM\Column(type: 'string', length: 8)]
+
+    #[ORM\Column(type: 'string', length: 6)]
     private $sex;
 
-
-    /**
-     * @ORM\Column(type="boolean")
-     */
-    private $isVerified = false;
+    #[ORM\Column(type: 'datetime')]
+    private $DateOfBirth;
 
     public function getId(): ?int
     {
@@ -74,15 +67,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return (string) $this->email;
     }
 
-
-
     /**
      * @see UserInterface
      */
     public function getRoles(): array
     {
-        $roles = [];
-
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
     }
@@ -118,18 +110,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function getLastname(): ?string
-    {
-        return $this->lastname;
-    }
-
-    public function setLastname(string $lastname): self
-    {
-        $this->lastname = $lastname;
-
-        return $this;
-    }
-
     public function getFirstname(): ?string
     {
         return $this->firstname;
@@ -142,14 +122,26 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getDateOfBirth(): ?\DateTimeInterface
+    public function getLastname(): ?string
     {
-        return $this->dateOfBirth;
+        return $this->lastname;
     }
 
-    public function setDateOfBirth(\DateTimeInterface $dateOfBirth): self
+    public function setLastname(string $lastname): self
     {
-        $this->dateOfBirth = $dateOfBirth;
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
+    public function getBirthDate(): ?string
+    {
+        return $this->birthDate;
+    }
+
+    public function setBirthDate(string $birthDate): self
+    {
+        $this->birthDate = $birthDate;
 
         return $this;
     }
@@ -165,14 +157,15 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-    public function isVerified(): bool
+
+    public function getDateOfBirth(): ?\DateTimeInterface
     {
-        return $this->isVerified;
+        return $this->DateOfBirth;
     }
 
-    public function setIsVerified(bool $isVerified): self
+    public function setDateOfBirth(\DateTimeInterface $DateOfBirth): self
     {
-        $this->isVerified = $isVerified;
+        $this->DateOfBirth = $DateOfBirth;
 
         return $this;
     }

@@ -54,30 +54,12 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%23addLink' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
-'App%5CController%5CAuthenticationController' => 0,
-'[C]App%5CController%5CAuthenticationController' => 1,
-'App%5CController%5CAuthenticationController%23login' => 2,
-'[C]App%5CController%5CAuthenticationController%23login' => 1,
-'App%5CController%5CAuthenticationController%23logout' => 3,
-'[C]App%5CController%5CAuthenticationController%23logout' => 1,
-'App%5CController%5CHomeController' => 0,
-'[C]App%5CController%5CHomeController' => 1,
-'App%5CController%5CHomeController%23index' => 0,
-'[C]App%5CController%5CHomeController%23index' => 1,
-'App%5CController%5CRegistrationController' => 0,
-'[C]App%5CController%5CRegistrationController' => 1,
-'App%5CController%5CRegistrationController%23__construct' => 0,
-'[C]App%5CController%5CRegistrationController%23__construct' => 1,
-'App%5CController%5CRegistrationController%23register' => 4,
-'[C]App%5CController%5CRegistrationController%23register' => 1,
-'App%5CController%5CRegistrationController%24emailVerifier' => 0,
-'[C]App%5CController%5CRegistrationController%24emailVerifier' => 1,
-'App%5CController%5CSecurityController' => 0,
-'[C]App%5CController%5CSecurityController' => 1,
-'App%5CController%5CSecurityController%23login' => 2,
-'[C]App%5CController%5CSecurityController%23login' => 1,
-'App%5CController%5CSecurityController%23logout' => 3,
-'[C]App%5CController%5CSecurityController%23logout' => 1,
+'App%5CController%5CLoginFormController' => 0,
+'[C]App%5CController%5CLoginFormController' => 1,
+'App%5CController%5CLoginFormController%23login' => 0,
+'[C]App%5CController%5CLoginFormController%23login' => 1,
+'App%5CController%5CLoginFormController%23logout' => 0,
+'[C]App%5CController%5CLoginFormController%23logout' => 1,
 'App%5CEntity%5CUser' => 0,
 '[C]App%5CEntity%5CUser' => 1,
 'App%5CEntity%5CUser%23getId' => 0,
@@ -98,42 +80,38 @@ return [[
 '[C]App%5CEntity%5CUser%23setPassword' => 1,
 'App%5CEntity%5CUser%23eraseCredentials' => 0,
 '[C]App%5CEntity%5CUser%23eraseCredentials' => 1,
-'App%5CEntity%5CUser%23getLastname' => 0,
-'[C]App%5CEntity%5CUser%23getLastname' => 1,
-'App%5CEntity%5CUser%23setLastname' => 0,
-'[C]App%5CEntity%5CUser%23setLastname' => 1,
 'App%5CEntity%5CUser%23getFirstname' => 0,
 '[C]App%5CEntity%5CUser%23getFirstname' => 1,
 'App%5CEntity%5CUser%23setFirstname' => 0,
 '[C]App%5CEntity%5CUser%23setFirstname' => 1,
-'App%5CEntity%5CUser%23getDateOfBirth' => 0,
-'[C]App%5CEntity%5CUser%23getDateOfBirth' => 1,
-'App%5CEntity%5CUser%23setDateOfBirth' => 0,
-'[C]App%5CEntity%5CUser%23setDateOfBirth' => 1,
+'App%5CEntity%5CUser%23getLastname' => 0,
+'[C]App%5CEntity%5CUser%23getLastname' => 1,
+'App%5CEntity%5CUser%23setLastname' => 0,
+'[C]App%5CEntity%5CUser%23setLastname' => 1,
+'App%5CEntity%5CUser%23getBirthDate' => 0,
+'[C]App%5CEntity%5CUser%23getBirthDate' => 1,
+'App%5CEntity%5CUser%23setBirthDate' => 0,
+'[C]App%5CEntity%5CUser%23setBirthDate' => 1,
 'App%5CEntity%5CUser%23getSex' => 0,
 '[C]App%5CEntity%5CUser%23getSex' => 1,
 'App%5CEntity%5CUser%23setSex' => 0,
 '[C]App%5CEntity%5CUser%23setSex' => 1,
-'App%5CEntity%5CUser%23isVerified' => 0,
-'[C]App%5CEntity%5CUser%23isVerified' => 1,
-'App%5CEntity%5CUser%23setIsVerified' => 0,
-'[C]App%5CEntity%5CUser%23setIsVerified' => 1,
 'App%5CEntity%5CUser%24id' => 0,
 '[C]App%5CEntity%5CUser%24id' => 1,
 'App%5CEntity%5CUser%24email' => 0,
 '[C]App%5CEntity%5CUser%24email' => 1,
+'App%5CEntity%5CUser%24roles' => 0,
+'[C]App%5CEntity%5CUser%24roles' => 1,
 'App%5CEntity%5CUser%24password' => 0,
 '[C]App%5CEntity%5CUser%24password' => 1,
-'App%5CEntity%5CUser%24lastname' => 0,
-'[C]App%5CEntity%5CUser%24lastname' => 1,
 'App%5CEntity%5CUser%24firstname' => 0,
 '[C]App%5CEntity%5CUser%24firstname' => 1,
-'App%5CEntity%5CUser%24dateOfBirth' => 0,
-'[C]App%5CEntity%5CUser%24dateOfBirth' => 1,
+'App%5CEntity%5CUser%24lastname' => 0,
+'[C]App%5CEntity%5CUser%24lastname' => 1,
+'App%5CEntity%5CUser%24birthDate' => 0,
+'[C]App%5CEntity%5CUser%24birthDate' => 1,
 'App%5CEntity%5CUser%24sex' => 0,
 '[C]App%5CEntity%5CUser%24sex' => 1,
-'App%5CEntity%5CUser%24isVerified' => 5,
-'[C]App%5CEntity%5CUser%24isVerified' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 0,
 '[C]Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23__construct' => 0,
@@ -612,178 +590,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1645268517,
-2 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
-        ],
-        null,
-        [
-            'Symfony\\Component\\Routing\\Annotation\\Route' => [
-                'path' => [
-                    '/login',
-                ],
-                'methods' => [
-                    [],
-                ],
-                'schemes' => [
-                    [],
-                ],
-                'name' => [
-                    'app_login',
-                ],
-                'requirements' => [
-                    [],
-                ],
-                'options' => [
-                    [],
-                ],
-                'defaults' => [
-                    [],
-                ],
-                'host' => [
-                    null,
-                ],
-                'condition' => [
-                    null,
-                ],
-                'priority' => [
-                    null,
-                ],
-                'env' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-3 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
-        ],
-        null,
-        [
-            'Symfony\\Component\\Routing\\Annotation\\Route' => [
-                'path' => [
-                    '/logout',
-                ],
-                'methods' => [
-                    [],
-                ],
-                'schemes' => [
-                    [],
-                ],
-                'name' => [
-                    'app_logout',
-                ],
-                'requirements' => [
-                    [],
-                ],
-                'options' => [
-                    [],
-                ],
-                'defaults' => [
-                    [],
-                ],
-                'host' => [
-                    null,
-                ],
-                'condition' => [
-                    null,
-                ],
-                'priority' => [
-                    null,
-                ],
-                'env' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-4 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
-        ],
-        null,
-        [
-            'Symfony\\Component\\Routing\\Annotation\\Route' => [
-                'path' => [
-                    '/register',
-                ],
-                'methods' => [
-                    [],
-                ],
-                'schemes' => [
-                    [],
-                ],
-                'name' => [
-                    'app_login',
-                ],
-                'requirements' => [
-                    [],
-                ],
-                'options' => [
-                    [],
-                ],
-                'defaults' => [
-                    [],
-                ],
-                'host' => [
-                    null,
-                ],
-                'condition' => [
-                    null,
-                ],
-                'priority' => [
-                    null,
-                ],
-                'env' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-5 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
-        ],
-        null,
-        [
-            'stdClass' => [
-                'type' => [
-                    'boolean',
-                ],
-                'precision' => [
-                    null,
-                ],
-                'scale' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
+1 => 1645869053,
 
 ]];
