@@ -153,6 +153,6 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/templates/base.html.twig");
+", "base.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates/base.html.twig");
     }
 }

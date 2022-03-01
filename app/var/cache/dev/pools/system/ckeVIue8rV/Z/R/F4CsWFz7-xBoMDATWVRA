@@ -1,0 +1,3 @@
+<?php //App%255CController%255CTripController
+
+return [PHP_INT_MAX, []];

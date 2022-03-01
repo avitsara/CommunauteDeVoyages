@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Create your trip {% endblock %}
+
+{% block body %}
+<h1> Create your trip </h1>
+<div class="container">
+
+      {{ form_start(tripCreationForm) }}
+            {{ form_row(tripCreationForm.departure,{'attr':{'class':'form-control'}}) }}
+            {{ form_row(tripCreationForm.destination,{'attr':{'class':'form-control'}}) }}
+            {{ form_row(tripCreationForm.beginDate,{'attr':{'class':'form-group'}}) }}
+            {{ form_row(tripCreationForm.endDate,{'attr':{'class':'form-group'}}) }}
+            {{ form_row(tripCreationForm.transportation,{'attr':{'class':'form-control'}}) }}
+            {{ form_row(tripCreationForm.travelCompanionNumber,{'attr':{'class':'form-group'}}) }}
+            {{ form_row(tripCreationForm.description,{'attr':{'class':'form-control'}}) }}
+            {## BOUTON PERMETTANT DE CRÉER LE VOYAGE ##}
+            <button type="submit" class="btn btn-dark"> Create </button>
+
+     {{ form_end(tripCreationForm) }}
+</div>
+
+{% endblock %}

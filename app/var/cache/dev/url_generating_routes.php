@@ -8,4 +8,5 @@ return [
     'app_login' => [[], ['_controller' => 'App\\Controller\\LoginFormController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\LoginFormController::logout'], [], [['text', '/logout']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
+    'trip' => [[], ['_controller' => 'App\\Controller\\TripController::create'], [], [['text', '/trip']], [], [], []],
 ];

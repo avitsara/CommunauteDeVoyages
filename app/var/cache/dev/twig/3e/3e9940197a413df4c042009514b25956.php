@@ -56,7 +56,7 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo " Bienvenue ";
+        echo " HomePage ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -217,10 +217,24 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
   <!-- Call to action -->
   <ul class=\"list-unstyled list-inline text-center py-2\">
     <li class=\"list-inline-item\">
-      <h5 class=\"mb-1\" href='path(register)'>Register for free</h5>
+      <h5 class=\"mb-1\">Register for free</h5>
     </li>
     <li class=\"list-inline-item\">
-      <a href=\"#!\" class=\"btn btn-danger btn-rounded\">Sign up!</a>
+      <a href=";
+        // line 157
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
+        echo " class=\"btn btn-danger btn-rounded\">Sign up!</a>
+    </li>
+
+      <ul class=\"list-unstyled list-inline text-center py-2\">
+    <li class=\"list-inline-item\">
+      <h5 class=\"mb-1\">Sign in </h5>
+    </li>
+    <li class=\"list-inline-item\">
+      <a href=";
+        // line 165
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo " class=\"btn btn-danger btn-rounded\">Sign in</a>
     </li>
   </ul>
   <!-- Call to action -->
@@ -283,14 +297,14 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
 
     public function getDebugInfo()
     {
-        return array (  110 => 44,  73 => 7,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  236 => 165,  225 => 157,  110 => 44,  73 => 7,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %} Bienvenue {% endblock %}
+{% block title %} HomePage {% endblock %}
 
 {% block body %}
 {# Menu haut #}
@@ -441,10 +455,18 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
   <!-- Call to action -->
   <ul class=\"list-unstyled list-inline text-center py-2\">
     <li class=\"list-inline-item\">
-      <h5 class=\"mb-1\" href='path(register)'>Register for free</h5>
+      <h5 class=\"mb-1\">Register for free</h5>
     </li>
     <li class=\"list-inline-item\">
-      <a href=\"#!\" class=\"btn btn-danger btn-rounded\">Sign up!</a>
+      <a href={{path('app_register')}} class=\"btn btn-danger btn-rounded\">Sign up!</a>
+    </li>
+
+      <ul class=\"list-unstyled list-inline text-center py-2\">
+    <li class=\"list-inline-item\">
+      <h5 class=\"mb-1\">Sign in </h5>
+    </li>
+    <li class=\"list-inline-item\">
+      <a href={{path('app_login')}} class=\"btn btn-danger btn-rounded\">Sign in</a>
     </li>
   </ul>
   <!-- Call to action -->
@@ -490,6 +512,6 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
 </footer>
 <!-- Footer -->
 {% endblock %}
-", "home/index.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/templates/home/index.html.twig");
+", "home/index.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates/home/index.html.twig");
     }
 }

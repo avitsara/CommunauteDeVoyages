@@ -680,6 +680,6 @@ class __TwigTemplate_9a82a31816e29a4c02b4da200ec3d2bf extends Template
         <td class=\"font-normal\">{{ migration.execution_time|default('n/a') }}</td>
     </tr>
 {% endmacro %}
-", "@DoctrineMigrations/Collector/migrations.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/doctrine/doctrine-migrations-bundle/Resources/views/Collector/migrations.html.twig");
+", "@DoctrineMigrations/Collector/migrations.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/doctrine/doctrine-migrations-bundle/Resources/views/Collector/migrations.html.twig");
     }
 }

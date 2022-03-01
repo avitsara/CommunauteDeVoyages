@@ -374,6 +374,6 @@ class __TwigTemplate_484d68ce8a71c4be4df0d6e78fc197ab extends Template
     {%- set widget_class = widget_class|default('mr-2') -%}
     {{- parent() -}}
 {%- endblock radio_widget -%}
-", "tailwind_2_layout.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/twig-bridge/Resources/views/Form/tailwind_2_layout.html.twig");
+", "tailwind_2_layout.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/twig-bridge/Resources/views/Form/tailwind_2_layout.html.twig");
     }
 }

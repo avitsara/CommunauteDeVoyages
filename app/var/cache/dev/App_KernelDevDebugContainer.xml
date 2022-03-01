@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</parameter>
+    <parameter key="kernel.project_dir">/home/fullmetal/Bureau/CommunauteDeVoyages/app</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev</parameter>
-    <parameter key="kernel.cache_dir">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/log</parameter>
+    <parameter key="kernel.build_dir">/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev</parameter>
+    <parameter key="kernel.cache_dir">/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
@@ -20,35 +20,35 @@
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/framework-bundle</parameter>
+        <parameter key="path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/security-bundle</parameter>
+        <parameter key="path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="WebpackEncoreBundle" type="collection">
-        <parameter key="path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/webpack-encore-bundle/src</parameter>
+        <parameter key="path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/webpack-encore-bundle/src</parameter>
         <parameter key="namespace">Symfony\WebpackEncoreBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/doctrine/doctrine-bundle</parameter>
+        <parameter key="path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/doctrine/doctrine-migrations-bundle</parameter>
+        <parameter key="path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/doctrine/doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/maker-bundle/src</parameter>
+        <parameter key="path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/maker-bundle/src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/twig-bundle</parameter>
+        <parameter key="path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="TwigExtraBundle" type="collection">
-        <parameter key="path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/twig/extra-bundle</parameter>
+        <parameter key="path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/twig/extra-bundle</parameter>
         <parameter key="namespace">Twig\Extra\TwigExtraBundle</parameter>
       </parameter>
     </parameter>
@@ -88,14 +88,14 @@
     <parameter key="asset.request_context.base_path">null</parameter>
     <parameter key="asset.request_context.secure">null</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="cache.prefix.seed">_/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages.App_KernelDevDebugContainer</parameter>
+    <parameter key="cache.prefix.seed">_/home/fullmetal/Bureau/CommunauteDeVoyages/app.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cache_limiter" type="string">0</parameter>
@@ -104,11 +104,11 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
-    <parameter key="validator.mapping.cache.file">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="data_collector.templates" type="collection"/>
     <parameter key="security.role_hierarchy.roles" type="collection"/>
@@ -186,14 +186,14 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/templates</parameter>
+    <parameter key="twig.default_path">/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates</parameter>
     <parameter key="maker.compatible_check.doctrine.supports_attributes">true</parameter>
     <parameter key="console.command.ids" type="collection"/>
   </parameters>
@@ -224,8 +224,22 @@
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\RegistrationController"/>
       </call>
     </service>
+    <service id="App\Controller\TripController" class="App\Controller\TripController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\TripController"/>
+      </call>
+    </service>
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
+    </service>
+    <service id="App\Form\TripCreationType" class="App\Form\TripCreationType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Repository\TripRepository" class="App\Repository\TripRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -303,7 +317,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/http_cache</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -313,7 +327,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -481,7 +495,7 @@
       </argument>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
       <argument type="service">
         <service>
           <argument type="service" id="request_stack"/>
@@ -514,7 +528,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="filesystem"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -683,7 +697,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument>dev</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
       <call method="setName">
         <argument>debug:dotenv</argument>
       </call>
@@ -758,6 +772,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\RegistrationFormType</argument>
+        <argument>App\Form\TripCreationType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
@@ -859,9 +874,9 @@
     <service id="cache.app" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>9NhqvEKzbH</argument>
+      <argument>C2DrkoX7mB</argument>
       <argument>0</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/app</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -873,50 +888,50 @@
     <service id="cache.system" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>6fMjkGxoEo</argument>
+      <argument>9+zvHJo1kb</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/system</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>xK4Xb+Mt2f</argument>
+      <argument>KdhZOz-zfM</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/system</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>cl3c31w5lq</argument>
+      <argument>LxRWcyNl4p</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/system</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>+2ywHWOs50</argument>
+      <argument>ckeVIue8rV</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/system</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>IJLDth3fMV</argument>
+      <argument>jgysNvYOvl</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/system</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -926,7 +941,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/system</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -945,7 +960,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/app</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -1103,7 +1118,7 @@
       <argument>false</argument>
     </service>
     <service id="assets._version__default" class="Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy">
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/public/build/manifest.json</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/public/build/manifest.json</argument>
       <argument>null</argument>
       <argument>false</argument>
     </service>
@@ -1518,7 +1533,7 @@
       <argument type="service" id=".service_locator.UxjivMC.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev</argument>
+        <argument key="cache_dir">/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -1557,7 +1572,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -1619,13 +1634,13 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/annotations.php</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache_adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
       <tag name="container.hot_path"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/annotations.php</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1638,7 +1653,7 @@
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
       <tag name="container.env_var_loader"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
       <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
     </service>
     <service id="secrets.decryption_key" class="Symfony\Component\String\LazyString">
@@ -1647,7 +1662,7 @@
       <factory class="Symfony\Component\String\LazyString" method="fromCallable"/>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/.env.dev.local</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/.env.dev.local</argument>
     </service>
     <service id="property_info" class="Symfony\Component\PropertyInfo\PropertyInfoExtractor">
       <argument type="iterator">
@@ -1721,7 +1736,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/sessions</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -1733,7 +1748,7 @@
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler">
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler">
-          <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/sessions</argument>
+          <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/sessions</argument>
         </service>
       </argument>
     </service>
@@ -1778,7 +1793,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.ZyXYEQR"/>
+      <argument type="service" id=".service_locator.FUtUBwt"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -1876,7 +1891,7 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/form/Resources/config/validation.xml</argument>
+          <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1904,10 +1919,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/validation.php</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/validation.php</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1921,10 +1936,10 @@
     <service id="cache.validator_expression_language" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>-03bgfShz-</argument>
+      <argument>tNz-AIJg7r</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/system</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -2065,10 +2080,10 @@
     <service id="cache.security_expression_language" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>ldpBiDxrbJ</argument>
+      <argument>GNM3t1vwLg</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/system</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -2597,7 +2612,7 @@
         <argument>Hash a user password</argument>
       </call>
     </service>
-    <service id=".1_ServiceLocator~yMBWKHF" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".1_ServiceLocator~H6qnr6j" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="webpack_encore.entrypoint_lookup_collection" type="service_closure" id="webpack_encore.entrypoint_lookup_collection"/>
@@ -2621,7 +2636,7 @@
     </service>
     <service id="webpack_encore.twig_entry_files_extension" class="Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension">
       <tag name="twig.extension"/>
-      <argument type="service" id=".1_ServiceLocator~yMBWKHF"/>
+      <argument type="service" id=".1_ServiceLocator~H6qnr6j"/>
     </service>
     <service id="webpack_encore.twig_stimulus_extension" class="Symfony\WebpackEncoreBundle\Twig\StimulusTwigExtension">
       <tag name="twig.extension"/>
@@ -2629,22 +2644,22 @@
     <service id="webpack_encore.entrypoint_lookup.cache_warmer" class="Symfony\WebpackEncoreBundle\CacheWarmer\EntrypointCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="collection">
-        <argument key="_default">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/public/build/entrypoints.json</argument>
+        <argument key="_default">/home/fullmetal/Bureau/CommunauteDeVoyages/app/public/build/entrypoints.json</argument>
       </argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/webpack_encore.cache.php</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/webpack_encore.cache.php</argument>
     </service>
     <service id="webpack_encore.cache" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter">
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/webpack_encore.cache.php</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/webpack_encore.cache.php</argument>
       <argument type="service" id="cache.webpack_encore"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
     <service id="cache.webpack_encore" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>VQYg1KweHV</argument>
+      <argument>aJFk-Y+jgP</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/pools/system</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -2665,7 +2680,7 @@
     </service>
     <service id="webpack_encore.entrypoint_lookup[_default]" class="Symfony\WebpackEncoreBundle\Asset\EntrypointLookup">
       <tag name="kernel.reset" method="reset"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/public/build/entrypoints.json</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/public/build/entrypoints.json</argument>
       <argument>null</argument>
       <argument>_default</argument>
       <argument>true</argument>
@@ -2808,7 +2823,7 @@
         </service>
       </argument>
     </service>
-    <service id=".1_ServiceLocator~t4ftA.M" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".1_ServiceLocator~P_wWEJQ" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer">
@@ -2829,7 +2844,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator._inl0RG"/>
+      <argument type="service" id=".service_locator.QkZ0Pwb"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -2998,7 +3013,7 @@
         <argument type="service" id=".doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -3027,7 +3042,7 @@
     </service>
     <service id="doctrine.orm.default_attribute_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AttributeDriver">
       <argument type="collection">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/src/Entity</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/src/Entity</argument>
       </argument>
     </service>
     <service id="cache.doctrine.orm.default.metadata" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
@@ -3091,7 +3106,7 @@
     <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration">
       <call method="addMigrationsDirectory">
         <argument>DoctrineMigrations</argument>
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/migrations</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/migrations</argument>
       </call>
       <call method="setAllOrNothing">
         <argument>false</argument>
@@ -3238,8 +3253,8 @@
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
       <argument type="service" id="maker.file_link_formatter"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/templates</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder">
       <argument>App</argument>
@@ -3331,7 +3346,7 @@
       <tag name="maker.command"/>
       <argument type="service" id="maker.file_manager"/>
       <argument type="service" id="maker.doctrine_helper"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
       <argument type="service" id="maker.generator"/>
       <argument type="service" id="maker.entity_class_generator"/>
     </service>
@@ -3403,7 +3418,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration">
       <tag name="maker.command"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
     </service>
     <service id="twig" class="Twig\Environment">
       <tag name="container.preload" class="Twig\Cache\FilesystemCache"/>
@@ -3417,7 +3432,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="autoescape">name</argument>
-        <argument key="cache">/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/var/cache/dev/twig</argument>
+        <argument key="cache">/home/fullmetal/Bureau/CommunauteDeVoyages/app/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -3517,9 +3532,9 @@
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator">
       <argument type="service" id="kernel"/>
       <argument type="collection">
-        <argument key="/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/twig-bridge/Resources/views/Form">null</argument>
+        <argument key="/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/twig-bridge/Resources/views/Form">null</argument>
       </argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/templates</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer">
       <tag name="kernel.cache_warmer"/>
@@ -3530,36 +3545,36 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
       <call method="addPath">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/security-bundle/Resources/views</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/security-bundle/Resources/views</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
         <argument>DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
         <argument>!DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/templates</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates</argument>
       </call>
       <call method="addPath">
-        <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/vendor/symfony/twig-bridge/Resources/views/Form</argument>
+        <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/vendor/symfony/twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader"/>
@@ -3585,7 +3600,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension">
@@ -3661,9 +3676,9 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="twig"/>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/Projet annuel/CommunauteDeVoyages/templates</argument>
+      <argument>/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -3693,8 +3708,15 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\RegistrationController" class="App\Controller\RegistrationController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TripController" class="App\Controller\TripController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TripController" class="App\Controller\TripController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\TripController" class="App\Controller\TripController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\TripCreationType" class="App\Form\TripCreationType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\TripCreationType" class="App\Form\TripCreationType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\TripRepository" class="App\Repository\TripRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\TripRepository" class="App\Repository\TripRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".service_locator.gSv9zYw" class="Symfony\Component\DependencyInjection\ServiceLocator">
@@ -4027,11 +4049,18 @@
         <argument key="userPasswordHasher" type="service_closure" id="security.user_password_hasher"/>
       </argument>
     </service>
-    <service id=".service_locator._xwc6og" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.aKM6MDa" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
+    <service id=".service_locator.plP88dK" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\LoginFormController::login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.spC.Z_T"/>
+        <argument key="App\Controller\TripController::create" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="App\Kernel::terminate" type="service_closure" id=".service_locator.bRdave9"/>
@@ -4040,6 +4069,7 @@
         <argument key="kernel::terminate" type="service_closure" id=".service_locator.bRdave9"/>
         <argument key="App\Controller\LoginFormController:login" type="service_closure" id=".service_locator.zFcJjKU"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.spC.Z_T"/>
+        <argument key="App\Controller\TripController:create" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel:terminate" type="service_closure" id=".service_locator.bRdave9"/>
@@ -4104,10 +4134,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.ZyXYEQR" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.FUtUBwt" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
+        <argument key="App\Form\TripCreationType" type="service_closure" id="App\Form\TripCreationType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service_closure" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ColorType" type="service_closure" id="form.type.color"/>
@@ -4150,9 +4181,10 @@
       <argument type="service" id="cache.doctrine.orm.default.result"/>
       <factory class="Doctrine\Common\Cache\Psr6\DoctrineProvider" method="wrap"/>
     </service>
-    <service id=".service_locator._inl0RG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.QkZ0Pwb" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Repository\TripRepository" type="service_closure" id="App\Repository\TripRepository"/>
         <argument key="App\Repository\UserRepository" type="service_closure" id="App\Repository\UserRepository"/>
       </argument>
     </service>
@@ -4197,6 +4229,12 @@
     <service id=".service_locator.jIxfAsi.App\Controller\RegistrationController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\RegistrationController"/>
       <argument>App\Controller\RegistrationController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\TripController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\TripController"/>
+      <argument>App\Controller\TripController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.jIxfAsi" method="withContext"/>
     </service>
@@ -4317,12 +4355,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator._xwc6og"/>
+      <argument type="service" id=".service_locator.plP88dK"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator._xwc6og"/>
+      <argument type="service" id=".service_locator.plP88dK"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -4983,16 +5021,16 @@
     <service id="Twig\Environment" alias="twig"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator._xwc6og"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.plP88dK"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
-    <service id=".service_locator.XDGmiR3" alias=".1_ServiceLocator~yMBWKHF"/>
+    <service id=".service_locator.XDGmiR3" alias=".1_ServiceLocator~H6qnr6j"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
     <service id=".service_locator.uNbyJK2" alias=".service_locator.spC.Z_T"/>
-    <service id=".service_locator.zKCjKhX" alias=".service_locator._xwc6og"/>
+    <service id=".service_locator.9wYLpNH" alias=".service_locator.plP88dK"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
-    <service id=".service_locator.yj07qm_" alias=".service_locator.ZyXYEQR"/>
+    <service id=".service_locator.6SwmbT0" alias=".service_locator.FUtUBwt"/>
     <service id=".service_locator.qBCHs1a" alias=".service_locator.QXcJQkF"/>
     <service id=".service_locator._eRAkJb" alias=".service_locator.jIxfAsi"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
@@ -5015,6 +5053,7 @@
     <service id=".service_locator.uo5c0SP" alias=".service_locator.xUrKPVU"/>
     <service id=".service_locator.URfgn8g" alias=".service_locator.zFcJjKU"/>
     <service id=".service_locator.V6S9Qk3" alias=".service_locator.spC.Z_T"/>
+    <service id=".service_locator.bInR.ll" alias=".service_locator.aKM6MDa"/>
     <service id=".service_locator.Glg4Sov" alias=".service_locator.jIxfAsi"/>
     <service id=".service_locator.u6DWx23" alias=".service_locator.cXsfP3P"/>
     <service id=".service_locator.aa1PbBb" alias=".service_locator.nLgZj7R"/>
