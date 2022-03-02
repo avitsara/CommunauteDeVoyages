@@ -120,32 +120,41 @@ class __TwigTemplate_29681aa3ec86f5148a378fdd6e5438dc extends Template
         // line 47
         echo "
 
-
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
-    <input type=\"email\" value=\"";
-        // line 52
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 52, $this->source); })()), "html", null, true);
+    <div class=\"container\">
+        <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
+          <div class=\"col-xs-4\">
+                <label for=\"inputEmail\">Email</label>
+                <input type=\"email\" value=\"";
+        // line 53
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 53, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
-    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
-
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"";
-        // line 57
+          </div>
+          <div class=\"col-xs-4\">
+            <label for=\"inputPassword\">Password</label>
+            <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>   
+                <input type=\"hidden\" name=\"_csrf_token\"
+              value=\"";
+        // line 59
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"
-    >
+        >
+          </div> 
+    
 
-    ";
-        // line 70
-        echo "
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
+    
+        <br>
+         <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Sign in
     </button>
+    </div> 
+
+    ";
+        // line 81
+        echo "
+   
 </form>
 ";
-        // line 76
+        // line 85
         echo "<!-- Footer -->
 <footer class=\"page-footer font-small stylish-color-dark pt-4\">
 
@@ -322,7 +331,7 @@ class __TwigTemplate_29681aa3ec86f5148a378fdd6e5438dc extends Template
 
     public function getDebugInfo()
     {
-        return array (  149 => 76,  142 => 70,  136 => 57,  128 => 52,  121 => 47,  115 => 45,  113 => 44,  110 => 43,  73 => 7,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  158 => 85,  153 => 81,  138 => 59,  129 => 53,  121 => 47,  115 => 45,  113 => 44,  110 => 43,  73 => 7,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -375,16 +384,27 @@ class __TwigTemplate_29681aa3ec86f5148a378fdd6e5438dc extends Template
     {% endif %}
 
 
+    <div class=\"container\">
+        <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
+          <div class=\"col-xs-4\">
+                <label for=\"inputEmail\">Email</label>
+                <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
+          </div>
+          <div class=\"col-xs-4\">
+            <label for=\"inputPassword\">Password</label>
+            <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>   
+                <input type=\"hidden\" name=\"_csrf_token\"
+              value=\"{{ csrf_token('authenticate') }}\"
+        >
+          </div> 
+    
 
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
-    <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
-    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
-
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"{{ csrf_token('authenticate') }}\"
-    >
+    
+        <br>
+         <button class=\"btn btn-lg btn-primary\" type=\"submit\">
+        Sign in
+    </button>
+    </div> 
 
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -397,9 +417,7 @@ class __TwigTemplate_29681aa3ec86f5148a378fdd6e5438dc extends Template
         </div>
     #}
 
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
-    </button>
+   
 </form>
 {# Footer #}
 <!-- Footer -->

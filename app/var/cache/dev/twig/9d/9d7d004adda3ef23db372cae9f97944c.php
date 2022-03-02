@@ -73,7 +73,7 @@ class __TwigTemplate_0f824bfd77afac3cc00780f5be3f3a19 extends Template
 
         // line 8
         echo "
-    <h1>Register</h1>
+    <h1> Register as a new user </h1>
 <div class=\"container\">
     ";
         // line 11
@@ -319,7 +319,7 @@ Register
 
 {% block body %}
 
-    <h1>Register</h1>
+    <h1> Register as a new user </h1>
 <div class=\"container\">
     {{ form_start(registrationForm) }}
     
