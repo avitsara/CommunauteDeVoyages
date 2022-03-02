@@ -34,6 +34,12 @@ class Trip
     #[ORM\Column(type: 'text')]
     private $description;
 
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'tripsUser')]
+    private $userTripOwner;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $title; /// Le voyageur qui a créé le voyage 
+
     public function getId(): ?int
     {
         return $this->id;
@@ -119,6 +125,30 @@ class Trip
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getUserTripOwner(): ?User
+    {
+        return $this->userTripOwner;
+    }
+
+    public function setUserTripOwner(?User $userTripOwner): self
+    {
+        $this->userTripOwner = $userTripOwner;
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(string $title): self
+    {
+        $this->title = $title;
 
         return $this;
     }

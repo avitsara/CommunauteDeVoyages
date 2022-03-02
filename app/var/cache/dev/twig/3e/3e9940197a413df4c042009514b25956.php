@@ -107,6 +107,71 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
 </nav>
 ";
         // line 44
+        echo "<fiv class=\"container\">
+  <h2> My trips  </h2>
+  <div class=\"row flex\">
+      ";
+        // line 47
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["trips"]) || array_key_exists("trips", $context) ? $context["trips"] : (function () { throw new RuntimeError('Variable "trips" does not exist.', 47, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["trip"]) {
+            // line 48
+            echo "        <div class=\"col-5\">  
+            <div class=\"card\">
+              <div class=\"card body\">
+                 <h5 class=\"card-title\">
+                 ";
+            // line 53
+            echo "                 <a href=#>   ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "title", [], "any", false, false, false, 53), "html", null, true);
+            echo " </a>
+                 </h5>
+                 <p class=\"card-text\"> 
+                    ";
+            // line 56
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "description", [], "any", false, false, false, 56), "html", null, true);
+            echo "
+                  </p>
+                  <p class=\"card-text\"> 
+                    Départ : ";
+            // line 59
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "departure", [], "any", false, false, false, 59), "html", null, true);
+            echo "
+                  </p>
+
+                    <p class=\"card-text\"> 
+                    Destination : ";
+            // line 63
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "destination", [], "any", false, false, false, 63), "html", null, true);
+            echo "
+                  </p>
+
+                     <p class=\"card-text\"> 
+                   Date de départ : ";
+            // line 67
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "beginDate", [], "any", false, false, false, 67), "Y-m-d"), "html", null, true);
+            echo "
+                  </p>
+
+                      <p class=\"card-text\"> 
+                   Date de retour:  ";
+            // line 71
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 71), "Y-m-d"), "html", null, true);
+            echo "
+                  </p>
+              </div>
+            </div>
+        </div>
+      ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['trip'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 77
+        echo "  </div>
+</div>
+";
+        // line 80
         echo "<!-- Footer -->
 <footer class=\"page-footer font-small stylish-color-dark pt-4\">
 
@@ -221,7 +286,7 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
     </li>
     <li class=\"list-inline-item\">
       <a href=";
-        // line 157
+        // line 193
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
         echo " class=\"btn btn-danger btn-rounded\">Sign up!</a>
     </li>
@@ -232,7 +297,7 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
     </li>
     <li class=\"list-inline-item\">
       <a href=";
-        // line 165
+        // line 201
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo " class=\"btn btn-danger btn-rounded\">Sign in</a>
     </li>
@@ -297,7 +362,7 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
 
     public function getDebugInfo()
     {
-        return array (  236 => 165,  225 => 157,  110 => 44,  73 => 7,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  301 => 201,  290 => 193,  175 => 80,  171 => 77,  159 => 71,  152 => 67,  145 => 63,  138 => 59,  132 => 56,  125 => 53,  119 => 48,  115 => 47,  110 => 44,  73 => 7,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -344,6 +409,42 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
         </div>
 </nav>
 {# MENU BAS #}
+{# LISTE DES VOYAGES CRÉÉS PAR L'UTILISATEUR #}
+<fiv class=\"container\">
+  <h2> My trips  </h2>
+  <div class=\"row flex\">
+      {% for trip in trips %}
+        <div class=\"col-5\">  
+            <div class=\"card\">
+              <div class=\"card body\">
+                 <h5 class=\"card-title\">
+                 {## On affiche les voyages de l'utilisateur ####}
+                 <a href=#>   {{ trip.title }} </a>
+                 </h5>
+                 <p class=\"card-text\"> 
+                    {{ trip.description }}
+                  </p>
+                  <p class=\"card-text\"> 
+                    Départ : {{ trip.departure }}
+                  </p>
+
+                    <p class=\"card-text\"> 
+                    Destination : {{ trip.destination }}
+                  </p>
+
+                     <p class=\"card-text\"> 
+                   Date de départ : {{ trip.beginDate|date('Y-m-d') }}
+                  </p>
+
+                      <p class=\"card-text\"> 
+                   Date de retour:  {{ trip.endDate|date('Y-m-d') }}
+                  </p>
+              </div>
+            </div>
+        </div>
+      {% endfor %}
+  </div>
+</div>
 {# Footer #}
 <!-- Footer -->
 <footer class=\"page-footer font-small stylish-color-dark pt-4\">

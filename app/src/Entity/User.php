@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -39,6 +41,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(type: 'datetime')]
     private $DateOfBirth;
+
+    #[ORM\OneToMany(mappedBy: 'userTripOwner', targetEntity: Trip::class)]
+    private $tripsUser; // Les voyages créé par l'utilisateur
+
+    public function __construct()
+    {
+        $this->tripsUser = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -166,6 +176,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setDateOfBirth(\DateTimeInterface $DateOfBirth): self
     {
         $this->DateOfBirth = $DateOfBirth;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Trip>
+     */
+    public function getTripsUser(): Collection
+    {
+        return $this->tripsUser;
+    }
+
+    public function addTripsUser(Trip $tripsUser): self
+    {
+        if (!$this->tripsUser->contains($tripsUser)) {
+            $this->tripsUser[] = $tripsUser;
+            $tripsUser->setUserTripOwner($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTripsUser(Trip $tripsUser): self
+    {
+        if ($this->tripsUser->removeElement($tripsUser)) {
+            // set the owning side to null (unless already changed)
+            if ($tripsUser->getUserTripOwner() === $this) {
+                $tripsUser->setUserTripOwner(null);
+            }
+        }
 
         return $this;
     }

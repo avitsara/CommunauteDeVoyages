@@ -40,6 +40,42 @@
         </div>
 </nav>
 {# MENU BAS #}
+{# LISTE DES VOYAGES CRÉÉS PAR L'UTILISATEUR #}
+<fiv class="container">
+  <h2> My trips  </h2>
+  <div class="row flex">
+      {% for trip in trips %}
+        <div class="col-5">  
+            <div class="card">
+              <div class="card body">
+                 <h5 class="card-title">
+                 {## On affiche les voyages de l'utilisateur ####}
+                 <a href=#>   {{ trip.title }} </a>
+                 </h5>
+                 <p class="card-text"> 
+                    {{ trip.description }}
+                  </p>
+                  <p class="card-text"> 
+                    Départ : {{ trip.departure }}
+                  </p>
+
+                    <p class="card-text"> 
+                    Destination : {{ trip.destination }}
+                  </p>
+
+                     <p class="card-text"> 
+                   Date de départ : {{ trip.beginDate|date('Y-m-d') }}
+                  </p>
+
+                      <p class="card-text"> 
+                   Date de retour:  {{ trip.endDate|date('Y-m-d') }}
+                  </p>
+              </div>
+            </div>
+        </div>
+      {% endfor %}
+  </div>
+</div>
 {# Footer #}
 <!-- Footer -->
 <footer class="page-footer font-small stylish-color-dark pt-4">
