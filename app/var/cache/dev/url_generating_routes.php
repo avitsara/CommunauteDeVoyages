@@ -4,6 +4,11 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
+    'app_crud_trip_index' => [[], ['_controller' => 'App\\Controller\\CrudTripController::index'], [], [['text', '/crud/trip/']], [], [], []],
+    'app_crud_trip_new' => [[], ['_controller' => 'App\\Controller\\CrudTripController::new'], [], [['text', '/crud/trip/new']], [], [], []],
+    'app_crud_trip_show' => [['id'], ['_controller' => 'App\\Controller\\CrudTripController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/crud/trip']], [], [], []],
+    'app_crud_trip_edit' => [['id'], ['_controller' => 'App\\Controller\\CrudTripController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/crud/trip']], [], [], []],
+    'app_crud_trip_delete' => [['id'], ['_controller' => 'App\\Controller\\CrudTripController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/crud/trip']], [], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/home']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\LoginFormController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\LoginFormController::logout'], [], [['text', '/logout']], [], [], []],
