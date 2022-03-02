@@ -21,7 +21,7 @@ class CrudTripController extends AbstractController
             'trips' => $tripRepository->findAll(),
         ]);
     }
-
+    
     #[Route('/new', name: 'app_crud_trip_new', methods: ['GET', 'POST'])]
     public function new(Request $request, TripRepository $tripRepository): Response
     {
@@ -33,10 +33,9 @@ class CrudTripController extends AbstractController
             $tripRepository->add($trip);
             return $this->redirectToRoute('app_crud_trip_index', [], Response::HTTP_SEE_OTHER);
         }
-
-        return $this->renderForm('crud_trip/new.html.twig', [
-            'trip' => $trip,
-            'form' => $form,
+        return $this->render('crud_trip/new.html.twig', [
+            'trip' =>$trip,
+            'form' => $form->createView(),
         ]);
     }
 
