@@ -1,4 +1,12 @@
+{## 
+FORMULAIRE PERMETTANT DE MODIFIER UN VOYAGE
+##}
+<div class="container">
+
 {{ form_start(form) }}
+    <div class="form-group row">
     {{ form_widget(form) }}
+    </div>
     <button class="btn">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
+</div>

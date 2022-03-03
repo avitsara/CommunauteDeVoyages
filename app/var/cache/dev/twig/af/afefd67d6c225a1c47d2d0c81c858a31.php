@@ -47,19 +47,19 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
         ";
         // line 4
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 6
-        echo "        ";
+        // line 8
+        echo "     ";
         $this->displayBlock('javascript', $context, $blocks);
-        // line 12
+        // line 14
         echo "        <title>";
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
     </head>
     <body>
         ";
-        // line 15
+        // line 17
         $this->displayBlock('body', $context, $blocks);
-        // line 16
+        // line 18
         echo "    </body>
 </html>
 ";
@@ -76,13 +76,15 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
-        echo "<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">        ";
+        echo "    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> 
+    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css\" />
+    ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 6
+    // line 8
     public function block_javascript($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -100,7 +102,7 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
 
     }
 
-    // line 12
+    // line 14
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -112,7 +114,7 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
 
     }
 
-    // line 15
+    // line 17
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -131,7 +133,7 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
 
     public function getDebugInfo()
     {
-        return array (  116 => 15,  104 => 12,  86 => 6,  79 => 5,  72 => 4,  63 => 16,  61 => 15,  54 => 12,  51 => 6,  49 => 4,  44 => 1,);
+        return array (  118 => 17,  106 => 14,  88 => 8,  79 => 5,  72 => 4,  63 => 18,  61 => 17,  54 => 14,  51 => 8,  49 => 4,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -140,8 +142,10 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
     <head>
         <meta charset=\"UTF-8\">
         {% block stylesheets %}
-<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">        {% endblock %}
-        {%  block javascript %} 
+    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> 
+    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css\" />
+    {% endblock %}
+     {%  block javascript %} 
         
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>

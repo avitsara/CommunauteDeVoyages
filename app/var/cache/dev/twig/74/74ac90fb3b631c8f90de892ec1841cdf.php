@@ -62,29 +62,32 @@ class __TwigTemplate_a41394607ec9438a8cdb66e7d2b8c2ec extends Template
 
     }
 
-    // line 5
+    // line 6
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    <h1>Edit Trip</h1>
+        // line 7
+        echo twig_include($this->env, $context, "menu.html.twig");
+        echo "
+<br>
+    <h1>Edit Trip</h1>
     <div class=\"container\">
 
     ";
-        // line 9
+        // line 12
         echo twig_include($this->env, $context, "crud_trip/_form.html.twig", ["button_label" => "Update"]);
         echo "
 
     <a href=\"";
-        // line 11
+        // line 14
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_crud_trip_index");
         echo "\">back to list</a>
 
     ";
-        // line 13
+        // line 16
         echo twig_include($this->env, $context, "crud_trip/_delete_form.html.twig");
         echo "
     </div>
@@ -107,7 +110,7 @@ class __TwigTemplate_a41394607ec9438a8cdb66e7d2b8c2ec extends Template
 
     public function getDebugInfo()
     {
-        return array (  88 => 13,  83 => 11,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  91 => 16,  86 => 14,  81 => 12,  73 => 7,  66 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -116,7 +119,10 @@ class __TwigTemplate_a41394607ec9438a8cdb66e7d2b8c2ec extends Template
 
 {% block title %}Edit Trip{% endblock %}
 
+
 {% block body %}
+{{ include('menu.html.twig')}}
+<br>
     <h1>Edit Trip</h1>
     <div class=\"container\">
 

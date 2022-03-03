@@ -26,16 +26,15 @@ class CrudTripController extends AbstractController
     public function new(Request $request, TripRepository $tripRepository): Response
     {
         $trip = new Trip();
-        $form = $this->createForm(TripType::class, $trip);
+        $form = $this->createForm(TripCreationType::class, $trip);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $tripRepository->add($trip);
             return $this->redirectToRoute('app_crud_trip_index', [], Response::HTTP_SEE_OTHER);
         }
-        return $this->render('crud_trip/new.html.twig', [
-            'trip' =>$trip,
-            'form' => $form->createView(),
+        return $this->render('trip/trip.html.twig', [
+            'tripCreationForm' => $form->createView(),
         ]);
     }
 
