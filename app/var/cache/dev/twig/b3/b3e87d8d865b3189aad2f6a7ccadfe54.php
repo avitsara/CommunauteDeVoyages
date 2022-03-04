@@ -37,13 +37,10 @@ class __TwigTemplate_beafeada0c8967581838c21178173e5f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "menu.html.twig"));
 
         // line 1
-        echo "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        echo "<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
   <div class=\"container-fluid\">
-    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor03\" aria-controls=\"navbarColor03\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-      <span class=\"navbar-toggler-icon\"></span>
-    </button>
-
-    <div class=\"collapse navbar-collapse\" id=\"navbarColor03\">
+ 
+    <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
       <ul class=\"navbar-nav me-auto\">
         <li class=\"nav-item\">
           <a class=\"nav-link active\" href=\"#\">Home
@@ -57,7 +54,9 @@ class __TwigTemplate_beafeada0c8967581838c21178173e5f extends Template
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link\" href=\"#\">About</a>
-  
+        </li>
+      
+      </ul>
     
     </div>
   </div>
@@ -79,13 +78,10 @@ class __TwigTemplate_beafeada0c8967581838c21178173e5f extends Template
 
     public function getSourceContext()
     {
-        return new Source("<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        return new Source("<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
   <div class=\"container-fluid\">
-    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor03\" aria-controls=\"navbarColor03\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-      <span class=\"navbar-toggler-icon\"></span>
-    </button>
-
-    <div class=\"collapse navbar-collapse\" id=\"navbarColor03\">
+ 
+    <div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
       <ul class=\"navbar-nav me-auto\">
         <li class=\"nav-item\">
           <a class=\"nav-link active\" href=\"#\">Home
@@ -99,10 +95,12 @@ class __TwigTemplate_beafeada0c8967581838c21178173e5f extends Template
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link\" href=\"#\">About</a>
-  
+        </li>
+      
+      </ul>
     
     </div>
   </div>
-</nav>", "menu.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates/menu.html.twig");
+</nav>", "menu.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/menu.html.twig");
     }
 }

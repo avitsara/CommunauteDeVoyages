@@ -236,6 +236,6 @@ class __TwigTemplate_eecbae1324346a9a64b7a4aee6985233 extends Template
 
     {{ include('crud_trip/_delete_form.html.twig') }}
 {% endblock %}
-", "crud_trip/show.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates/crud_trip/show.html.twig");
+", "crud_trip/show.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/crud_trip/show.html.twig");
     }
 }

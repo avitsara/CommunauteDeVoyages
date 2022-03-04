@@ -210,6 +210,6 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
 {# Footer #}
 
 {% endblock %}
-", "home/index.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates/home/index.html.twig");
+", "home/index.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/home/index.html.twig");
     }
 }

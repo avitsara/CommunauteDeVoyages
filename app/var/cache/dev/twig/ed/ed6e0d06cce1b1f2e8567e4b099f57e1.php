@@ -73,6 +73,6 @@ class __TwigTemplate_94cff9022988daf1f92956cd2ec145b1 extends Template
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ trip.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "crud_trip/_delete_form.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates/crud_trip/_delete_form.html.twig");
+", "crud_trip/_delete_form.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/crud_trip/_delete_form.html.twig");
     }
 }

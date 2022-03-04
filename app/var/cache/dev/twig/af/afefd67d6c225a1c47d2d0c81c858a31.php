@@ -77,7 +77,7 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
 
         // line 5
         echo "    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> 
-    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css\" />
+    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
     ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -143,7 +143,7 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
         <meta charset=\"UTF-8\">
         {% block stylesheets %}
     <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> 
-    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css\" />
+    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
     {% endblock %}
      {%  block javascript %} 
         
@@ -157,6 +157,6 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates/base.html.twig");
+", "base.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/base.html.twig");
     }
 }

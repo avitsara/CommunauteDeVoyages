@@ -91,6 +91,6 @@ FORMULAIRE PERMETTANT DE MODIFIER UN VOYAGE
     </div>
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-</div>", "crud_trip/_form.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates/crud_trip/_form.html.twig");
+</div>", "crud_trip/_form.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/crud_trip/_form.html.twig");
     }
 }

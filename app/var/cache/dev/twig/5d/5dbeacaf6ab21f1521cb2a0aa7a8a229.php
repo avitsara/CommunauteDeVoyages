@@ -194,6 +194,6 @@ class __TwigTemplate_2ca1035641c5770e53f5861f039b2ef2 extends Template
 </div>
 
 {% endblock %}
-", "trip/trip.html.twig", "/home/fullmetal/Bureau/CommunauteDeVoyages/app/templates/trip/trip.html.twig");
+", "trip/trip.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/trip/trip.html.twig");
     }
 }
