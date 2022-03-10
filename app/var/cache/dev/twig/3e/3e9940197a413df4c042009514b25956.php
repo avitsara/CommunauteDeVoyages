@@ -127,6 +127,18 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 36), "Y-m-d"), "html", null, true);
             echo "
                   </p>
+                  <p class=\"card-text\"> 
+                   Nombre de voyageurs :  ";
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "travelCompanionNumber", [], "any", false, false, false, 39), "html", null, true);
+            echo "
+                  </p>
+                     <p class=\"card-text\"> 
+                   Moyen de transport :  ";
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 42), "html", null, true);
+            echo "
+                  </p>
               </div>
             </div>
         </div>
@@ -135,11 +147,13 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['trip'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
-        echo "  </div>
+        // line 48
+        echo "
+</p>
+  </div>
 </div>
 ";
-        // line 45
+        // line 53
         echo "
 ";
         
@@ -159,7 +173,7 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
 
     public function getDebugInfo()
     {
-        return array (  143 => 45,  139 => 42,  127 => 36,  120 => 32,  113 => 28,  106 => 24,  100 => 21,  93 => 18,  87 => 13,  83 => 12,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  157 => 53,  151 => 48,  139 => 42,  133 => 39,  127 => 36,  120 => 32,  113 => 28,  106 => 24,  100 => 21,  93 => 18,  87 => 13,  83 => 12,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -201,15 +215,23 @@ class __TwigTemplate_461204e72c52c865177a31359757bd69 extends Template
                       <p class=\"card-text\"> 
                    Date de retour:  {{ trip.endDate|date('Y-m-d') }}
                   </p>
+                  <p class=\"card-text\"> 
+                   Nombre de voyageurs :  {{ trip.travelCompanionNumber}}
+                  </p>
+                     <p class=\"card-text\"> 
+                   Moyen de transport :  {{ trip.transportation}}
+                  </p>
               </div>
             </div>
         </div>
       {% endfor %}
+
+</p>
   </div>
 </div>
 {# Footer #}
 
 {% endblock %}
-", "home/index.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/home/index.html.twig");
+", "home/index.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/home/index.html.twig");
     }
 }

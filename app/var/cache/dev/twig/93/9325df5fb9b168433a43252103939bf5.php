@@ -140,21 +140,24 @@ class __TwigTemplate_eecbae1324346a9a64b7a4aee6985233 extends Template
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["trip"]) || array_key_exists("trip", $context) ? $context["trip"] : (function () { throw new RuntimeError('Variable "trip" does not exist.', 46, $this->source); })()), "title", [], "any", false, false, false, 46), "html", null, true);
         echo "</td>
             </tr>
+             <tr>
+           
+            </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 51
+        // line 54
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_crud_trip_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 53
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_crud_trip_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["trip"]) || array_key_exists("trip", $context) ? $context["trip"] : (function () { throw new RuntimeError('Variable "trip" does not exist.', 53, $this->source); })()), "id", [], "any", false, false, false, 53)]), "html", null, true);
+        // line 56
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_crud_trip_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["trip"]) || array_key_exists("trip", $context) ? $context["trip"] : (function () { throw new RuntimeError('Variable "trip" does not exist.', 56, $this->source); })()), "id", [], "any", false, false, false, 56)]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 55
+        // line 58
         echo twig_include($this->env, $context, "crud_trip/_delete_form.html.twig");
         echo "
 ";
@@ -175,7 +178,7 @@ class __TwigTemplate_eecbae1324346a9a64b7a4aee6985233 extends Template
 
     public function getDebugInfo()
     {
-        return array (  158 => 55,  153 => 53,  148 => 51,  140 => 46,  133 => 42,  126 => 38,  119 => 34,  112 => 30,  105 => 26,  98 => 22,  91 => 18,  84 => 14,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  161 => 58,  156 => 56,  151 => 54,  140 => 46,  133 => 42,  126 => 38,  119 => 34,  112 => 30,  105 => 26,  98 => 22,  91 => 18,  84 => 14,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -227,6 +230,9 @@ class __TwigTemplate_eecbae1324346a9a64b7a4aee6985233 extends Template
                 <th>Title</th>
                 <td>{{ trip.title }}</td>
             </tr>
+             <tr>
+           
+            </tr>
         </tbody>
     </table>
 
@@ -236,6 +242,6 @@ class __TwigTemplate_eecbae1324346a9a64b7a4aee6985233 extends Template
 
     {{ include('crud_trip/_delete_form.html.twig') }}
 {% endblock %}
-", "crud_trip/show.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/crud_trip/show.html.twig");
+", "crud_trip/show.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/crud_trip/show.html.twig");
     }
 }

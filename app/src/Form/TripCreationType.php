@@ -4,9 +4,12 @@ namespace App\Form;
 
 use App\Entity\Trip;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use App\Form\ImageType;
+
 /**=== FORMULAIRE PERMETTANT LA CRÉATION DE NOUVEAUX VOYAGES =====*/
 class TripCreationType extends AbstractType
 {
@@ -21,7 +24,12 @@ class TripCreationType extends AbstractType
             ->add('transportation')
             ->add('travelCompanionNumber')
             ->add('description',TextareaType::class)
-        ;
+            ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER
+            ->add('image',FileType::class, [
+                'label' => 'Image',
+                'mapped' => false,
+            ]
+            );
     }
 
     public function configureOptions(OptionsResolver $resolver): void

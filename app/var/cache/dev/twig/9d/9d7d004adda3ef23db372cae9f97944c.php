@@ -172,6 +172,6 @@ Register
 
 
 
-", "registration/register.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/registration/register.html.twig");
+", "registration/register.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/registration/register.html.twig");
     }
 }

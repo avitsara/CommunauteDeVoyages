@@ -112,6 +112,10 @@ return [[
 '[C]App%5CEntity%5CTrip%23getTitle' => 1,
 'App%5CEntity%5CTrip%23setTitle' => 0,
 '[C]App%5CEntity%5CTrip%23setTitle' => 1,
+'App%5CEntity%5CTrip%23getImage' => 0,
+'[C]App%5CEntity%5CTrip%23getImage' => 1,
+'App%5CEntity%5CTrip%23setImage' => 0,
+'[C]App%5CEntity%5CTrip%23setImage' => 1,
 'App%5CEntity%5CTrip%24id' => 0,
 '[C]App%5CEntity%5CTrip%24id' => 1,
 'App%5CEntity%5CTrip%24departure' => 0,
@@ -132,6 +136,8 @@ return [[
 '[C]App%5CEntity%5CTrip%24userTripOwner' => 1,
 'App%5CEntity%5CTrip%24title' => 0,
 '[C]App%5CEntity%5CTrip%24title' => 1,
+'App%5CEntity%5CTrip%24image' => 0,
+'[C]App%5CEntity%5CTrip%24image' => 1,
 'App%5CEntity%5CUser' => 0,
 '[C]App%5CEntity%5CUser' => 1,
 'App%5CEntity%5CUser%23__construct' => 0,
@@ -676,6 +682,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1646253888,
+1 => 1646845092,
 
 ]];

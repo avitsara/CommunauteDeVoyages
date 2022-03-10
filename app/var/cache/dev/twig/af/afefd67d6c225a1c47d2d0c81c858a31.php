@@ -47,19 +47,19 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
         ";
         // line 4
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 8
+        // line 9
         echo "     ";
         $this->displayBlock('javascript', $context, $blocks);
-        // line 14
+        // line 15
         echo "        <title>";
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
     </head>
     <body>
         ";
-        // line 17
-        $this->displayBlock('body', $context, $blocks);
         // line 18
+        $this->displayBlock('body', $context, $blocks);
+        // line 19
         echo "    </body>
 </html>
 ";
@@ -77,14 +77,16 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
 
         // line 5
         echo "    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> 
-    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
+    ";
+        // line 7
+        echo "    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
     ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 8
+    // line 9
     public function block_javascript($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -102,7 +104,7 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
 
     }
 
-    // line 14
+    // line 15
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -114,7 +116,7 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
 
     }
 
-    // line 17
+    // line 18
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -133,7 +135,7 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
 
     public function getDebugInfo()
     {
-        return array (  118 => 17,  106 => 14,  88 => 8,  79 => 5,  72 => 4,  63 => 18,  61 => 17,  54 => 14,  51 => 8,  49 => 4,  44 => 1,);
+        return array (  120 => 18,  108 => 15,  90 => 9,  82 => 7,  79 => 5,  72 => 4,  63 => 19,  61 => 18,  54 => 15,  51 => 9,  49 => 4,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -143,6 +145,7 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
         <meta charset=\"UTF-8\">
         {% block stylesheets %}
     <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> 
+    {## THÈME = SPACELAB ###}
     <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
     {% endblock %}
      {%  block javascript %} 
@@ -157,6 +160,6 @@ class __TwigTemplate_916a8aeef1fa224d3c95dc4e787e433b extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/base.html.twig");
+", "base.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/base.html.twig");
     }
 }

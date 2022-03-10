@@ -22,9 +22,13 @@
             {{ form_row(tripCreationForm.travelCompanionNumber,{'attr':{'class':'form-group'}}) }}
             <br>
             {{ form_row(tripCreationForm.description,{'attr':{'class':'form-control','id':'exampleFormControlTextarea1'}}) }}
-            {## BOUTON PERMETTANT DE CRÉER LE VOYAGE ##}
+            {## IMAGE QUE L'ON VEUT UPLOADER ##}
+            {{ form_row(tripCreationForm.image,{'attr':{'class':'form-group'}}) }}
+
             <br>
-            <button type="submit" class="btn btn-dark form-group"> Create </button>
+            {## BOUTON PERMETTANT DE CRÉER LE VOYAGE ##}
+
+            <button type="submit" class="btn btn-primary form-group"> Create </button>
 
      {{ form_end(tripCreationForm) }}
 </div>

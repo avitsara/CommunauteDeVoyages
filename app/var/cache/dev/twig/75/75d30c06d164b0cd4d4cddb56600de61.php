@@ -241,6 +241,6 @@ class __TwigTemplate_9d4bd42e509f5ab74ffdaa10d584724e extends Template
 
     <a href=\"{{ path('app_crud_trip_new') }}\">Create new</a>
 {% endblock %}
-", "crud_trip/index.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/crud_trip/index.html.twig");
+", "crud_trip/index.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/crud_trip/index.html.twig");
     }
 }

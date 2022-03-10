@@ -35,10 +35,18 @@
                       <p class="card-text"> 
                    Date de retour:  {{ trip.endDate|date('Y-m-d') }}
                   </p>
+                  <p class="card-text"> 
+                   Nombre de voyageurs :  {{ trip.travelCompanionNumber}}
+                  </p>
+                     <p class="card-text"> 
+                   Moyen de transport :  {{ trip.transportation}}
+                  </p>
               </div>
             </div>
         </div>
       {% endfor %}
+
+</p>
   </div>
 </div>
 {# Footer #}

@@ -101,6 +101,6 @@ class __TwigTemplate_beafeada0c8967581838c21178173e5f extends Template
     
     </div>
   </div>
-</nav>", "menu.html.twig", "/home/fullmetal/Documents/MASTER_INFORMATIQUE/M1/CommunauteDeVoyages/app/templates/menu.html.twig");
+</nav>", "menu.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/menu.html.twig");
     }
 }

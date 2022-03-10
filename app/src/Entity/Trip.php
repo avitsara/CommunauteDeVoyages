@@ -3,7 +3,10 @@
 namespace App\Entity;
 
 use App\Repository\TripRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\Image;
 
 #[ORM\Entity(repositoryClass: TripRepository::class)]
 class Trip
@@ -38,8 +41,8 @@ class Trip
     private $userTripOwner;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $title; /// Le voyageur qui a créé le voyage 
-
+    private $title;
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -151,9 +154,5 @@ class Trip
         $this->title = $title;
 
         return $this;
-    }
-
-    public function __toString() {
-        return $this->title;
-    }
+    }  
 }
