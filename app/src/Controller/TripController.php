@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\ImageTrip;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -34,23 +35,13 @@ class TripController extends AbstractController
         // alors on crée notre voyage 
         if ($form->isSubmitted() && $form->isValid()) {
             /// On récupère l'image 
-            $image = $form->get('image')->getData();
+          /*  $image = $form->get('imageFileName')->getData();
             if ($image){
                 $imageFileName = $fileUploader->upload($image);
-                $image->setImageFileName($imageFileName);
-              ///  $trip->getImage()->setFile($imageFileName);
-                /*$originalFileName = pathinfo($image->getName(),PATHINFO_FILENAME);
-                /// On inclut le fichier comme faisant partie de l'URL
-                $safeFileName = $slugger->slug($originalFileName);
-                $newFileName = $safeFileName.'.'.$image->guessExtension();
-                try {
-                    $image->move($this->getParameter('images_directory'),$newFileName);
-
-                } catch(FileException $e){
-
-                }*/
-            ///$image->setFileName($newFileName);
-            }
+       ///         $image->setImageFileName($imageFileName);
+                $trip->setImageFileName($imageFileName);
+      
+            }*/
             $entityManager->persist($trip);
             $entityManager->flush();
             /// On redirige l'utilisateur vers 

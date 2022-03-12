@@ -2,53 +2,70 @@
 
 namespace App\Entity;
 
-use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
 
-#[ORM\Entity(repositoryClass: UserRepository::class)]
-#[ORM\Table(name: '`user`')]
-#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
-class User implements UserInterface, PasswordAuthenticatedUserInterface
+/**
+ * User
+ *
+ * @ORM\Table(name="user", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_8D93D649E7927C74", columns={"email"})})
+ * @ORM\Entity
+ */
+class User
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
     private $id;
 
-    #[ORM\Column(type: 'string', length: 180, unique: true)]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=180, nullable=false)
+     */
     private $email;
 
-    #[ORM\Column(type: 'json')]
-    private $roles = [];
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="roles", type="json", nullable=false)
+     */
+    private $roles;
 
-    #[ORM\Column(type: 'string')]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     */
     private $password;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="firstname", type="string", length=255, nullable=false)
+     */
     private $firstname;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lastname", type="string", length=255, nullable=false)
+     */
     private $lastname;
 
-
-    #[ORM\Column(type: 'string', length: 6)]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="sex", type="string", length=6, nullable=false)
+     */
     private $sex;
 
     #[ORM\Column(type: 'datetime')]
     private $DateOfBirth;
-
-    #[ORM\OneToMany(mappedBy: 'userTripOwner', targetEntity: Trip::class)]
-    private $tripsUser; // Les voyages créé par l'utilisateur
-
-    public function __construct()
-    {
-        $this->tripsUser = new ArrayCollection();
-    }
 
     public function getId(): ?int
     {
@@ -144,14 +161,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getBirthDate(): ?string
+    public function getBirthDate(): ? DateTime
     {
-        return $this->birthDate;
+        return $this->dateOfBirth;
     }
 
-    public function setBirthDate(string $birthDate): self
+    public function setBirthDate(DateTime $dateOfBirth): self
     {
-        $this->birthDate = $birthDate;
+        $this->dateOfBirth = $dateOfBirth;
 
         return $this;
     }
@@ -180,33 +197,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    /**
-     * @return Collection<int, Trip>
-     */
-    public function getTripsUser(): Collection
-    {
-        return $this->tripsUser;
-    }
+  
 
-    public function addTripsUser(Trip $tripsUser): self
-    {
-        if (!$this->tripsUser->contains($tripsUser)) {
-            $this->tripsUser[] = $tripsUser;
-            $tripsUser->setUserTripOwner($this);
-        }
 
-        return $this;
-    }
-
-    public function removeTripsUser(Trip $tripsUser): self
-    {
-        if ($this->tripsUser->removeElement($tripsUser)) {
-            // set the owning side to null (unless already changed)
-            if ($tripsUser->getUserTripOwner() === $this) {
-                $tripsUser->setUserTripOwner(null);
-            }
-        }
-
-        return $this;
-    }
 }

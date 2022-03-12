@@ -25,11 +25,7 @@ class TripCreationType extends AbstractType
             ->add('travelCompanionNumber')
             ->add('description',TextareaType::class)
             ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER
-            ->add('image',FileType::class, [
-                'label' => 'Image',
-                'mapped' => false,
-            ]
-            );
+            ->add('imageFile',FileType::class,['required'=>false]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

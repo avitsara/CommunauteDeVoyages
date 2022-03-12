@@ -20,14 +20,17 @@ class TripType extends AbstractType
             ->add('travelCompanionNumber')
             ->add('description')
             ->add('title')
-            ->add('userTripOwner')
+            ->add('userTripOwner');
+              ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER
+           # ->add('imageFile',FileType::class,['required'=>false]);
              ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER
              ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER
-             ->add('image',FileType::class, [
+             ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER
+            /*->add('imageFileName',FileType::class, [
                 'label' => 'Image',
                 'mapped' => false,
             ]
-            );
+            );*/
     }
 
     public function configureOptions(OptionsResolver $resolver): void

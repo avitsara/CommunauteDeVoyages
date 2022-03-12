@@ -2,47 +2,153 @@
 
 namespace App\Entity;
 
-use App\Repository\TripRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Form\TripType;
 use Doctrine\ORM\Mapping as ORM;
-use App\Entity\Image;
-
-#[ORM\Entity(repositoryClass: TripRepository::class)]
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Vich\UploaderBundle\Entity\File as EmbeddedFile;
+/**
+ * Trip
+ *
+ * @ORM\Table(name="trip", indexes={@ORM\Index(name="IDX_7656F53B38E3FFB9", columns={"user_trip_owner_id"})})
+ * @ORM\Entity
+ * @Vich\Uploadable
+ */
 class Trip
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column(type: 'integer')]
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
     private $id;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="departure", type="string", length=255, nullable=false)
+     */
     private $departure;
 
-    #[ORM\Column(type: 'string', length: 255)]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="destination", type="string", length=255, nullable=false)
+     */
     private $destination;
 
-    #[ORM\Column(type: 'datetime')]
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="begin_date", type="datetime", nullable=false)
+     */
     private $beginDate;
 
-    #[ORM\Column(type: 'datetime')]
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="end_date", type="datetime", nullable=false)
+     */
     private $endDate;
 
-    #[ORM\Column(type: 'string', length: 8)]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="transportation", type="string", length=8, nullable=false)
+     */
     private $transportation;
 
-    #[ORM\Column(type: 'integer')]
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="travel_companion_number", type="integer", nullable=false)
+     */
     private $travelCompanionNumber;
 
-    #[ORM\Column(type: 'text')]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", length=0, nullable=false)
+     */
     private $description;
 
-    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'tripsUser')]
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="title", type="string", length=255, nullable=false)
+     */
+    private $title;
+
+    /**
+     * @var \User
+     *
+     * @ORM\ManyToOne(targetEntity="User")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="user_trip_owner_id", referencedColumnName="id")
+     * })
+     */
     private $userTripOwner;
 
-    #[ORM\Column(type: 'string', length: 255)]
-    private $title;
+    /**
+     * @ORM\Embedded(class="Vich\UploaderBundle\Entity\File")
+     *
+     * @var EmbeddedFile
+     */
+    private $image;
     
+    #[Vich\UploadableField(mapping: 'property_image', fileNameProperty: 'imageName')]
+    private ?File $imageFile = null;
+
+    #[ORM\Column(type: 'string',length:255)]
+    private ?string $imageName = null;
+
+    /**
+     * @ORM\Column(type="datetime")
+     * @var \DateTimeInterface|null
+     */
+    private $updated_at;
+
+    public function __construct()
+    {
+        $this->image = new EmbeddedFile();
+    }
+
+  
+
+   /**
+    * 
+     * @param File|UploadedFile|null $imageFile
+     * @return Trip
+     */
+    public function setImageFile(?File $imageFile = null): Trip
+    {
+        $this->imageFile = $imageFile;
+        // Only change the updated af if the file is really uploaded to avoid database updates.
+        // This is needed when the file should be set when loading the entity.
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+    public function setImageName(?string $imageName): void
+    {
+        $this->imageName = $imageName;
+    }
+
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -132,17 +238,6 @@ class Trip
         return $this;
     }
 
-    public function getUserTripOwner(): ?User
-    {
-        return $this->userTripOwner;
-    }
-
-    public function setUserTripOwner(?User $userTripOwner): self
-    {
-        $this->userTripOwner = $userTripOwner;
-
-        return $this;
-    }
 
     public function getTitle(): ?string
     {
@@ -154,5 +249,34 @@ class Trip
         $this->title = $title;
 
         return $this;
-    }  
+    }
+
+
+
+    public function setImage(EmbeddedFile $image): void
+    {
+        $this->image = $image;
+    }
+
+    public function getImage(): ?EmbeddedFile
+    {
+        return $this->image;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updated_at;
+    }
+
+    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    {
+        $this->updated_at = $updated_at;
+
+        return $this;
+    }
+
+   
+
+  
+
 }
