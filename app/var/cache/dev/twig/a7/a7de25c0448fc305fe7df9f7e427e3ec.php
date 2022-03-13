@@ -139,6 +139,12 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 42), "html", null, true);
             echo "
                   </p>
+                  <p class=\"card-text\">
+              <img src=\"";
+            // line 45
+            echo twig_escape_filter($this->env, $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset($context["trip"], "imageFile"), "html", null, true);
+            echo "\" width=\"60%\"/>
+                  </p> 
               </div>
             </div>
         </div>
@@ -147,13 +153,13 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['trip'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 48
+        // line 51
         echo "
 </p>
   </div>
 </div>
 ";
-        // line 53
+        // line 56
         echo "
 ";
         
@@ -173,7 +179,7 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
 
     public function getDebugInfo()
     {
-        return array (  157 => 53,  151 => 48,  139 => 42,  133 => 39,  127 => 36,  120 => 32,  113 => 28,  106 => 24,  100 => 21,  93 => 18,  87 => 13,  83 => 12,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  163 => 56,  157 => 51,  145 => 45,  139 => 42,  133 => 39,  127 => 36,  120 => 32,  113 => 28,  106 => 24,  100 => 21,  93 => 18,  87 => 13,  83 => 12,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -221,6 +227,9 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
                      <p class=\"card-text\"> 
                    Moyen de transport :  {{ trip.transportation}}
                   </p>
+                  <p class=\"card-text\">
+              <img src=\"{{ vich_uploader_asset(trip, 'imageFile') }}\" width=\"60%\"/>
+                  </p> 
               </div>
             </div>
         </div>
