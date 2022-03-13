@@ -207,20 +207,20 @@
     <parameter key="twig.default_path">/home/fullmetal/Documents/CommunauteDeVoyages/app/templates</parameter>
     <parameter key="vich_uploader.default_filename_attribute_suffix">_name</parameter>
     <parameter key="vich_uploader.mappings" type="collection">
-      <parameter key="property_image" type="collection">
-        <parameter key="uri_prefix">upload/images</parameter>
+      <parameter key="image" type="collection">
+        <parameter key="uri_prefix">/upload/images</parameter>
         <parameter key="upload_destination">/home/fullmetal/Documents/CommunauteDeVoyages/app/public/upload/images</parameter>
+        <parameter key="inject_on_load">false</parameter>
+        <parameter key="delete_on_update">true</parameter>
+        <parameter key="delete_on_remove">true</parameter>
         <parameter key="namer" type="collection">
-          <parameter key="service">Vich\UploaderBundle\Naming\SmartUniqueNamer.property_image</parameter>
-          <parameter key="options" type="collection"/>
+          <parameter key="service">null</parameter>
+          <parameter key="options">null</parameter>
         </parameter>
         <parameter key="directory_namer" type="collection">
           <parameter key="service">null</parameter>
           <parameter key="options">null</parameter>
         </parameter>
-        <parameter key="delete_on_remove">true</parameter>
-        <parameter key="delete_on_update">true</parameter>
-        <parameter key="inject_on_load">false</parameter>
         <parameter key="db_driver">orm</parameter>
       </parameter>
     </parameter>
@@ -2898,13 +2898,13 @@
       </argument>
     </service>
     <service id="doctrine.dbal.default_connection.event_manager" class="Symfony\Bridge\Doctrine\ContainerAwareEventManager">
-      <argument type="service" id=".service_locator.tposoAE"/>
+      <argument type="service" id=".service_locator.k4tvAR5"/>
       <argument type="collection">
-        <argument>vich_uploader.listener.clean.property_image</argument>
+        <argument>vich_uploader.listener.clean.image</argument>
         <argument>doctrine.orm.listeners.doctrine_dbal_cache_adapter_schema_subscriber</argument>
         <argument>doctrine.orm.listeners.doctrine_token_provider_schema_subscriber</argument>
-        <argument>vich_uploader.listener.remove.property_image</argument>
-        <argument>vich_uploader.listener.upload.property_image</argument>
+        <argument>vich_uploader.listener.remove.image</argument>
+        <argument>vich_uploader.listener.upload.image</argument>
         <argument type="collection">
           <argument type="collection">
             <argument>loadClassMetadata</argument>
@@ -3910,9 +3910,6 @@
     <service id="framework_extra_bundle.argument_name_convertor" class="Sensio\Bundle\FrameworkExtraBundle\Request\ArgumentNameConverter">
       <argument type="service" id="argument_metadata_factory"/>
     </service>
-    <service id="Vich\UploaderBundle\Naming\SmartUniqueNamer.property_image" class="Vich\UploaderBundle\Naming\SmartUniqueNamer" public="true">
-      <argument type="service" id="Vich\UploaderBundle\Util\Transliterator"/>
-    </service>
     <service id="vich_uploader.adapter.mongodb" class="Vich\UploaderBundle\Adapter\ODM\MongoDB\MongoDBAdapter"/>
     <service id="vich_uploader.adapter.orm" class="Vich\UploaderBundle\Adapter\ORM\DoctrineORMAdapter"/>
     <service id="vich_uploader.adapter.phpcr" class="Vich\UploaderBundle\Adapter\PHPCR\PHPCRAdapter"/>
@@ -4136,23 +4133,23 @@
       <argument type="service" id="Vich\UploaderBundle\Templating\Helper\UploaderHelper"/>
     </service>
     <service id="vich_uploader.metadata.reader" class="Doctrine\Common\Annotations\AnnotationReader"/>
-    <service id="vich_uploader.listener.clean.property_image" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
+    <service id="vich_uploader.listener.clean.image" class="Vich\UploaderBundle\EventListener\Doctrine\CleanListener">
       <tag name="doctrine.event_subscriber" priority="50"/>
-      <argument>property_image</argument>
+      <argument>image</argument>
       <argument type="service" id="vich_uploader.adapter.orm"/>
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
     </service>
-    <service id="vich_uploader.listener.remove.property_image" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
+    <service id="vich_uploader.listener.remove.image" class="Vich\UploaderBundle\EventListener\Doctrine\RemoveListener">
       <tag name="doctrine.event_subscriber" priority="0"/>
-      <argument>property_image</argument>
+      <argument>image</argument>
       <argument type="service" id="vich_uploader.adapter.orm"/>
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
     </service>
-    <service id="vich_uploader.listener.upload.property_image" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
+    <service id="vich_uploader.listener.upload.image" class="Vich\UploaderBundle\EventListener\Doctrine\UploadListener">
       <tag name="doctrine.event_subscriber" priority="0"/>
-      <argument>property_image</argument>
+      <argument>image</argument>
       <argument type="service" id="vich_uploader.adapter.orm"/>
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
@@ -4669,15 +4666,15 @@
     <service id="security.ldap_locator" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <argument type="collection"/>
     </service>
-    <service id=".service_locator.tposoAE" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.k4tvAR5" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service_closure" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
         <argument key="doctrine.orm.listeners.doctrine_dbal_cache_adapter_schema_subscriber" type="service_closure" id="doctrine.orm.listeners.doctrine_dbal_cache_adapter_schema_subscriber"/>
         <argument key="doctrine.orm.listeners.doctrine_token_provider_schema_subscriber" type="service_closure" id="doctrine.orm.listeners.doctrine_token_provider_schema_subscriber"/>
-        <argument key="vich_uploader.listener.clean.property_image" type="service_closure" id="vich_uploader.listener.clean.property_image"/>
-        <argument key="vich_uploader.listener.remove.property_image" type="service_closure" id="vich_uploader.listener.remove.property_image"/>
-        <argument key="vich_uploader.listener.upload.property_image" type="service_closure" id="vich_uploader.listener.upload.property_image"/>
+        <argument key="vich_uploader.listener.clean.image" type="service_closure" id="vich_uploader.listener.clean.image"/>
+        <argument key="vich_uploader.listener.remove.image" type="service_closure" id="vich_uploader.listener.remove.image"/>
+        <argument key="vich_uploader.listener.upload.image" type="service_closure" id="vich_uploader.listener.upload.image"/>
       </argument>
     </service>
     <service id="cache.doctrine.orm.default.query.compatibility_layer" class="Doctrine\Common\Cache\CacheProvider">
@@ -5589,7 +5586,7 @@
     <service id=".service_locator.FdOqLie" alias=".service_locator.wtTScX."/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.vKoQwOz" alias=".service_locator.1kSOiFW"/>
-    <service id=".service_locator.cq6jIGw" alias=".service_locator.tposoAE"/>
+    <service id=".service_locator.IWt0f7l" alias=".service_locator.k4tvAR5"/>
     <service id=".service_locator._eRAkJb" alias=".service_locator.jIxfAsi"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
     <service id="controller_resolver" alias="debug.controller_resolver"/>

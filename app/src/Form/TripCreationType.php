@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use App\Form\ImageType;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 /**=== FORMULAIRE PERMETTANT LA CRÉATION DE NOUVEAUX VOYAGES =====*/
 class TripCreationType extends AbstractType
@@ -25,7 +26,7 @@ class TripCreationType extends AbstractType
             ->add('travelCompanionNumber')
             ->add('description',TextareaType::class)
             ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER
-            ->add('imageFile',FileType::class,['required'=>false]);
+            ->add('imageFile',VichImageType::class,['required'=>false]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

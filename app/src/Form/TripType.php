@@ -6,6 +6,7 @@ use App\Entity\Trip;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class TripType extends AbstractType
 {
@@ -20,7 +21,9 @@ class TripType extends AbstractType
             ->add('travelCompanionNumber')
             ->add('description')
             ->add('title')
-            ->add('userTripOwner');
+            ->add('userTripOwner')
+            ->add('imageFile',VichImageType::class,['required'=>false]);
+
               ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER
            # ->add('imageFile',FileType::class,['required'=>false]);
              ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER

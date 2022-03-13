@@ -17,6 +17,7 @@ use Vich\UploaderBundle\Entity\File as EmbeddedFile;
  */
 class Trip
 {
+  
     /**
      * @var int
      *
@@ -91,63 +92,37 @@ class Trip
      * })
      */
     private $userTripOwner;
-
-    /**
-     * @ORM\Embedded(class="Vich\UploaderBundle\Entity\File")
-     *
-     * @var EmbeddedFile
-     */
-    private $image;
     
-    #[Vich\UploadableField(mapping: 'property_image', fileNameProperty: 'imageName')]
-    private ?File $imageFile = null;
-
-    #[ORM\Column(type: 'string',length:255)]
-    private ?string $imageName = null;
+      /**
+     * NOTE: This is not a mapped field of entity metadata, just a simple property.
+     * 
+     * @Vich\UploadableField(mapping="image", fileNameProperty="imageName", size="imageSize")
+     * 
+     * @var File|null
+     */
+    private $imageFile;
 
     /**
-     * @ORM\Column(type="datetime")
-     * @var \DateTimeInterface|null
+     * @ORM\Column(type="string")
+     *
+     * @var string|null
+     */
+    private $imageName;
+
+    /**
+     * @ORM\Column(type="integer")
+     *
+     * @var int|null
+     */
+    private $imageSize;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
      */
     private $updated_at;
-
-    public function __construct()
-    {
-        $this->image = new EmbeddedFile();
-    }
-
+    
+ 
   
-
-   /**
-    * 
-     * @param File|UploadedFile|null $imageFile
-     * @return Trip
-     */
-    public function setImageFile(?File $imageFile = null): Trip
-    {
-        $this->imageFile = $imageFile;
-        // Only change the updated af if the file is really uploaded to avoid database updates.
-        // This is needed when the file should be set when loading the entity.
-        if ($this->imageFile instanceof UploadedFile) {
-            $this->updated_at = new \DateTime('now');
-        }
-        return $this;
-    }
-
-    public function getImageFile(): ?File
-    {
-        return $this->imageFile;
-    }
-
-    public function setImageName(?string $imageName): void
-    {
-        $this->imageName = $imageName;
-    }
-
-    public function getImageName(): ?string
-    {
-        return $this->imageName;
-    }
 
     public function getId(): ?int
     {
@@ -251,6 +226,39 @@ class Trip
         return $this;
     }
 
+/** ==== GETTERS ET SETTERS POUR NOTRE IMAGE ===============*/
+        public function getImageFile(): ?File
+        {
+            return $this->imageFile;
+        }
+
+    /**
+    * 
+    * @param File|UploadedFile|null $imageFile
+    * @return Trip
+    */
+    public function setImageFile(?File $imageFile): Trip
+    {
+        $this->imageFile = $imageFile;
+        // Only change the updated af if the file is really uploaded to avoid database updates.
+        // This is needed when the file should be set when loading the entity.
+        if ($this->imageFile instanceof UploadedFile) {
+            $this->updated_at = new \DateTime('now');
+        }
+        return $this;
+    }
+
+
+    public function getImageName(): ?string
+    {
+        return $this->imageName;
+    }
+
+    public function setImageName(?string $imageName): void
+    {
+        $this->imageName = $imageName;
+    }
+
 
 
     public function setImage(EmbeddedFile $image): void
@@ -263,17 +271,38 @@ class Trip
         return $this->image;
     }
 
-    public function getUpdatedAt(): ?\DateTimeInterface
+    public function setImageSize(?int $imageSize): void
+    {
+        $this->imageSize = $imageSize;
+    }
+
+    public function getImageSize(): ?int
+    {
+        return $this->imageSize;
+    }
+
+/** ==== FIN GETTERS ET SETTERS POUR NOTRE IMAGE ===============*/
+
+    public function getUpdatedAt(): ?\DateTimeImmutable
     {
         return $this->updated_at;
     }
 
-    public function setUpdatedAt(\DateTimeInterface $updated_at): self
+    public function setUpdatedAt(?\DateTimeImmutable $updated_at): self
     {
         $this->updated_at = $updated_at;
 
         return $this;
     }
+
+  
+   
+    
+   
+
+
+
+  
 
    
 
