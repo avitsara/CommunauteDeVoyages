@@ -121,6 +121,10 @@ class __TwigTemplate_a5362b30190db3c8f0abcb8a3b856a42 extends Template
         echo "
    
 </form>
+";
+        // line 51
+        echo twig_include($this->env, $context, "footer.html.twig");
+        echo "
 
 ";
         
@@ -140,7 +144,7 @@ class __TwigTemplate_a5362b30190db3c8f0abcb8a3b856a42 extends Template
 
     public function getDebugInfo()
     {
-        return array (  121 => 47,  106 => 25,  97 => 19,  89 => 13,  83 => 11,  81 => 10,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  126 => 51,  121 => 47,  106 => 25,  97 => 19,  89 => 13,  83 => 11,  81 => 10,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -194,6 +198,8 @@ class __TwigTemplate_a5362b30190db3c8f0abcb8a3b856a42 extends Template
 
    
 </form>
+{## INCLUSION DU FOOTER ###}
+{{ include('footer.html.twig')}}
 
 {% endblock %}
 ", "security/login.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/security/login.html.twig");

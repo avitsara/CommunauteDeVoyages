@@ -26,6 +26,7 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'stylesheet' => [$this, 'block_stylesheet'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -62,86 +63,101 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
 
     }
 
-    // line 5
+    // line 4
+    public function block_stylesheet($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
+
+        // line 5
+        echo "<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.7.1/dist/leaflet.css\" />
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 8
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 9
         echo twig_include($this->env, $context, "menu.html.twig");
         echo "
 <br>
 ";
-        // line 9
+        // line 12
         echo "<fiv class=\"container\">
   <h2> My trips  </h2>
   <div class=\"row flex\">
       ";
-        // line 12
+        // line 15
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["trips"]) || array_key_exists("trips", $context) ? $context["trips"] : (function () { throw new RuntimeError('Variable "trips" does not exist.', 12, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["trips"]) || array_key_exists("trips", $context) ? $context["trips"] : (function () { throw new RuntimeError('Variable "trips" does not exist.', 15, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["trip"]) {
-            // line 13
+            // line 16
             echo "        <div class=\"col-5\">  
             <div class=\"card\">
               <div class=\"card body\">
                  <h5 class=\"card-title\">
                  ";
-            // line 18
+            // line 21
             echo "                 <a href=#>   ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "title", [], "any", false, false, false, 18), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "title", [], "any", false, false, false, 21), "html", null, true);
             echo " </a>
                  </h5>
                  <p class=\"card-text\"> 
                     ";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "description", [], "any", false, false, false, 21), "html", null, true);
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "description", [], "any", false, false, false, 24), "html", null, true);
             echo "
                   </p>
                   <p class=\"card-text\"> 
                     Départ : ";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "departure", [], "any", false, false, false, 24), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "departure", [], "any", false, false, false, 27), "html", null, true);
             echo "
                   </p>
 
                     <p class=\"card-text\"> 
                     Destination : ";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "destination", [], "any", false, false, false, 28), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "destination", [], "any", false, false, false, 31), "html", null, true);
             echo "
                   </p>
 
                      <p class=\"card-text\"> 
                    Date de départ : ";
-            // line 32
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "beginDate", [], "any", false, false, false, 32), "Y-m-d"), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "beginDate", [], "any", false, false, false, 35), "Y-m-d"), "html", null, true);
             echo "
                   </p>
 
                       <p class=\"card-text\"> 
                    Date de retour:  ";
-            // line 36
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 36), "Y-m-d"), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 39), "Y-m-d"), "html", null, true);
             echo "
                   </p>
                   <p class=\"card-text\"> 
                    Nombre de voyageurs :  ";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "travelCompanionNumber", [], "any", false, false, false, 39), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "travelCompanionNumber", [], "any", false, false, false, 42), "html", null, true);
             echo "
                   </p>
                      <p class=\"card-text\"> 
                    Moyen de transport :  ";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 42), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 45), "html", null, true);
             echo "
                   </p>
                   <p class=\"card-text\">
               <img src=\"";
-            // line 45
+            // line 48
             echo twig_escape_filter($this->env, $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset($context["trip"], "imageFile"), "html", null, true);
             echo "\" width=\"60%\"/>
                   </p> 
@@ -153,13 +169,14 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['trip'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
+        // line 54
         echo "
 </p>
   </div>
 </div>
 ";
-        // line 56
+        // line 60
+        echo twig_include($this->env, $context, "footer.html.twig");
         echo "
 ";
         
@@ -179,7 +196,7 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
 
     public function getDebugInfo()
     {
-        return array (  163 => 56,  157 => 51,  145 => 45,  139 => 42,  133 => 39,  127 => 36,  120 => 32,  113 => 28,  106 => 24,  100 => 21,  93 => 18,  87 => 13,  83 => 12,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  179 => 60,  173 => 54,  161 => 48,  155 => 45,  149 => 42,  143 => 39,  136 => 35,  129 => 31,  122 => 27,  116 => 24,  109 => 21,  103 => 16,  99 => 15,  94 => 12,  89 => 9,  82 => 8,  74 => 5,  67 => 4,  54 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -187,6 +204,9 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %} HomePage {% endblock %}
+{% block stylesheet %}
+<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.7.1/dist/leaflet.css\" />
+{% endblock %}
 
 {% block body %}
 {{ include('menu.html.twig')}}
@@ -239,7 +259,8 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
   </div>
 </div>
 {# Footer #}
-
+{## INCLUSION DU FOOTER ###}
+{{ include('footer.html.twig')}}
 {% endblock %}
 ", "home/index.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/home/index.html.twig");
     }

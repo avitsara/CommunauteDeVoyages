@@ -84,7 +84,7 @@ class __TwigTemplate_aa5940917b7d21237fa4c8819d0b921a extends Template
     
         ";
         // line 14
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 14, $this->source); })()), "email", [], "any", false, false, false, 14), 'row', ["attr" => ["class" => "form-control"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 14, $this->source); })()), "email", [], "any", false, false, false, 14), 'row', ["attr" => ["class" => "form-control", "id" => "exampleInputEmail1", "data-form-type" => "email"]]);
         echo "
         ";
         // line 15
@@ -115,6 +115,7 @@ class __TwigTemplate_aa5940917b7d21237fa4c8819d0b921a extends Template
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 25, $this->source); })()), 'form_end');
         echo "
 </div>
+
 
 
 ";
@@ -153,7 +154,7 @@ Register
 <div class=\"container\">
     {{ form_start(registrationForm) }}
     
-        {{ form_row(registrationForm.email,{'attr':{'class':'form-control'}}) }}
+        {{ form_row(registrationForm.email,{'attr':{'class':'form-control','id':'exampleInputEmail1','data-form-type':'email'}}) }}
         {{ form_row(registrationForm.plainPassword,{'attr':{'class':'form-control'}},{
             label: 'Password'
         })}}
@@ -166,6 +167,7 @@ Register
         <button type=\"submit\" class=\"btn btn-primary\">Register</button>
     {{ form_end(registrationForm) }}
 </div>
+
 
 
 {% endblock %}

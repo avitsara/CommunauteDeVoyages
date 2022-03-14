@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block title %} HomePage {% endblock %}
+{% block stylesheet %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+{% endblock %}
 
 {% block body %}
 {{ include('menu.html.twig')}}
@@ -53,5 +56,6 @@
   </div>
 </div>
 {# Footer #}
-
+{## INCLUSION DU FOOTER ###}
+{{ include('footer.html.twig')}}
 {% endblock %}

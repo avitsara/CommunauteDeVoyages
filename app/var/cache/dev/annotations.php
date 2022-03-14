@@ -734,7 +734,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1647186017,
+1 => 1647200271,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1158,7 +1158,7 @@ return [[
         [
             'stdClass' => [
                 'type' => [
-                    'datetime_immutable',
+                    'datetime',
                 ],
                 'precision' => [
                     null,

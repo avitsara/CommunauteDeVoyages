@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\Trip;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -22,7 +23,17 @@ class TripCreationType extends AbstractType
             ->add('destination')
             ->add('beginDate')
             ->add('endDate')
-            ->add('transportation')
+            ->add('transportation',ChoiceType::class, [
+                'choices'  => [
+                    'Bus' => true,
+                    'Plane' => true,
+                    'Car' => true,
+                    'Ship' => true,
+
+                ],
+                
+            ])
+           
             ->add('travelCompanionNumber')
             ->add('description',TextareaType::class)
             ### ON RAJOUTE UNE IMAGE QUE L'ON VA UPLOADER

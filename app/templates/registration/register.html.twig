@@ -11,7 +11,7 @@ Register
 <div class="container">
     {{ form_start(registrationForm) }}
     
-        {{ form_row(registrationForm.email,{'attr':{'class':'form-control'}}) }}
+        {{ form_row(registrationForm.email,{'attr':{'class':'form-control','id':'exampleInputEmail1','data-form-type':'email'}}) }}
         {{ form_row(registrationForm.plainPassword,{'attr':{'class':'form-control'}},{
             label: 'Password'
         })}}
@@ -24,6 +24,7 @@ Register
         <button type="submit" class="btn btn-primary">Register</button>
     {{ form_end(registrationForm) }}
 </div>
+
 
 
 {% endblock %}

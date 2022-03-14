@@ -12,7 +12,6 @@ use App\Form\TripCreationType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\String\Slugger\SluggerInterface;
-use App\Service\FileUploader;
 
 /**===  CLASSE PERMETTANT DE CRÉER LES VOYAGES ==*/
 class TripController extends AbstractController
@@ -25,7 +24,7 @@ class TripController extends AbstractController
         ]);
     } */
     /**== MÉTHODE PERMETTANT DE CRÉER LES VOYAGES == */
-    public function create(Request $request,EntityManagerInterface $entityManager,FileUploader $fileUploader):Response {
+    public function create(Request $request,EntityManagerInterface $entityManager):Response {
         $trip = new Trip();
        // $upload = new Upload(); /// On instancie l'entité Upload
         $form = $this->createForm(TripCreationType::class, $trip);
@@ -34,14 +33,7 @@ class TripController extends AbstractController
         /// Si on soumet le formulaire et qu'il est valide 
         // alors on crée notre voyage 
         if ($form->isSubmitted() && $form->isValid()) {
-            /// On récupère l'image 
-          /*  $image = $form->get('imageFileName')->getData();
-            if ($image){
-                $imageFileName = $fileUploader->upload($image);
-       ///         $image->setImageFileName($imageFileName);
-                $trip->setImageFileName($imageFileName);
-      
-            }*/
+       
             $entityManager->persist($trip);
             $entityManager->flush();
             /// On redirige l'utilisateur vers 
