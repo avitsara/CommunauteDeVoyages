@@ -63,8 +63,6 @@ class __TwigTemplate_350f8a20b4c1a15d188e1ae492524ad0 extends Template
         echo "    </body>
 </html>
 ";
-        // line 22
-        echo twig_include($this->env, $context, "footer.html.twig");
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -135,14 +133,9 @@ class __TwigTemplate_350f8a20b4c1a15d188e1ae492524ad0 extends Template
         return "base.html.twig";
     }
 
-    public function isTraitable()
-    {
-        return false;
-    }
-
     public function getDebugInfo()
     {
-        return array (  122 => 18,  110 => 15,  92 => 9,  84 => 7,  81 => 5,  74 => 4,  67 => 22,  63 => 19,  61 => 18,  54 => 15,  51 => 9,  49 => 4,  44 => 1,);
+        return array (  120 => 18,  108 => 15,  90 => 9,  82 => 7,  79 => 5,  72 => 4,  63 => 19,  61 => 18,  54 => 15,  51 => 9,  49 => 4,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -167,7 +160,6 @@ class __TwigTemplate_350f8a20b4c1a15d188e1ae492524ad0 extends Template
         {% block body %}{% endblock %}
     </body>
 </html>
-{## INCLUSION DU FOOTER ###}
-{{ include('footer.html.twig')}}", "base.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/base.html.twig");
+", "base.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/base.html.twig");
     }
 }

@@ -2,14 +2,24 @@
 
 {% block title %} HomePage {% endblock %}
 {% block stylesheet %}
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css'  />
+<style>
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+
 {% endblock %}
+
+{% block javascript %}
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+
+{% endblock %}
+
 
 {% block body %}
 {{ include('menu.html.twig')}}
 <br>
 {# LISTE DES VOYAGES CRÉÉS PAR L'UTILISATEUR #}
-<fiv class="container">
+<div class="card" style="width: 80%;">
   <h2> My trips  </h2>
   <div class="row flex">
       {% for trip in trips %}
@@ -18,8 +28,9 @@
               <div class="card body">
                  <h5 class="card-title">
                  {## On affiche les voyages de l'utilisateur ####}
-                 <a href=#>   {{ trip.title }} </a>
+                 <h4>   {{ trip.title }} </h4>
                  </h5>
+              <img class='card-img-top' src="{{ vich_uploader_asset(trip, 'imageFile') }}" width="60%"/>
                  <p class="card-text"> 
                     {{ trip.description }}
                   </p>
@@ -45,17 +56,33 @@
                    Moyen de transport :  {{ trip.transportation}}
                   </p>
                   <p class="card-text">
-              <img src="{{ vich_uploader_asset(trip, 'imageFile') }}" width="60%"/>
-                  </p> 
+
+                 
+
               </div>
             </div>
         </div>
       {% endfor %}
 
 </p>
+
+
   </div>
 </div>
-{# Footer #}
-{## INCLUSION DU FOOTER ###}
-{{ include('footer.html.twig')}}
+<p class="card-text">
+
+ <div id="map">
+                  
+</div>
+</p>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZnVsbG1ldGFsYWxjaGVtaXN0OTIiLCJhIjoiY2wwcXFoMTR1MjdnbjNqcHdsY3V0ZmdrbCJ9.yXymeZBgXGPbhkQGtRtjLA';
+    const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+    });
+</script>
+                  </p> 
 {% endblock %}

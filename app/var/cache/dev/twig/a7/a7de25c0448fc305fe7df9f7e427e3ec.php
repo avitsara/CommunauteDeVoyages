@@ -27,6 +27,7 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'stylesheet' => [$this, 'block_stylesheet'],
+            'javascript' => [$this, 'block_javascript'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -71,96 +72,118 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheet"));
 
         // line 5
-        echo "<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.7.1/dist/leaflet.css\" />
+        echo "<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css'  />
+<style>
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 8
+    // line 12
+    public function block_javascript($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascript"));
+
+        // line 13
+        echo "<script src=\"https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js\"></script>
+
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 18
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 9
+        // line 19
         echo twig_include($this->env, $context, "menu.html.twig");
         echo "
 <br>
 ";
-        // line 12
-        echo "<fiv class=\"container\">
+        // line 22
+        echo "<div class=\"card\" style=\"width: 80%;\">
   <h2> My trips  </h2>
   <div class=\"row flex\">
       ";
-        // line 15
+        // line 25
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["trips"]) || array_key_exists("trips", $context) ? $context["trips"] : (function () { throw new RuntimeError('Variable "trips" does not exist.', 15, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["trips"]) || array_key_exists("trips", $context) ? $context["trips"] : (function () { throw new RuntimeError('Variable "trips" does not exist.', 25, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["trip"]) {
-            // line 16
+            // line 26
             echo "        <div class=\"col-5\">  
             <div class=\"card\">
               <div class=\"card body\">
                  <h5 class=\"card-title\">
                  ";
-            // line 21
-            echo "                 <a href=#>   ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "title", [], "any", false, false, false, 21), "html", null, true);
-            echo " </a>
+            // line 31
+            echo "                 <h4>   ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "title", [], "any", false, false, false, 31), "html", null, true);
+            echo " </h4>
                  </h5>
+              <img class='card-img-top' src=\"";
+            // line 33
+            echo twig_escape_filter($this->env, $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset($context["trip"], "imageFile"), "html", null, true);
+            echo "\" width=\"60%\"/>
                  <p class=\"card-text\"> 
                     ";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "description", [], "any", false, false, false, 24), "html", null, true);
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "description", [], "any", false, false, false, 35), "html", null, true);
             echo "
                   </p>
                   <p class=\"card-text\"> 
                     Départ : ";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "departure", [], "any", false, false, false, 27), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "departure", [], "any", false, false, false, 38), "html", null, true);
             echo "
                   </p>
 
                     <p class=\"card-text\"> 
                     Destination : ";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "destination", [], "any", false, false, false, 31), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "destination", [], "any", false, false, false, 42), "html", null, true);
             echo "
                   </p>
 
                      <p class=\"card-text\"> 
                    Date de départ : ";
-            // line 35
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "beginDate", [], "any", false, false, false, 35), "Y-m-d"), "html", null, true);
+            // line 46
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "beginDate", [], "any", false, false, false, 46), "Y-m-d"), "html", null, true);
             echo "
                   </p>
 
                       <p class=\"card-text\"> 
                    Date de retour:  ";
-            // line 39
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 39), "Y-m-d"), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 50), "Y-m-d"), "html", null, true);
             echo "
                   </p>
                   <p class=\"card-text\"> 
                    Nombre de voyageurs :  ";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "travelCompanionNumber", [], "any", false, false, false, 42), "html", null, true);
+            // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "travelCompanionNumber", [], "any", false, false, false, 53), "html", null, true);
             echo "
                   </p>
                      <p class=\"card-text\"> 
                    Moyen de transport :  ";
-            // line 45
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 45), "html", null, true);
+            // line 56
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 56), "html", null, true);
             echo "
                   </p>
                   <p class=\"card-text\">
-              <img src=\"";
-            // line 48
-            echo twig_escape_filter($this->env, $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset($context["trip"], "imageFile"), "html", null, true);
-            echo "\" width=\"60%\"/>
-                  </p> 
+
+                 
+
               </div>
             </div>
         </div>
@@ -169,15 +192,29 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['trip'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 54
+        // line 66
         echo "
 </p>
+
+
   </div>
 </div>
-";
-        // line 60
-        echo twig_include($this->env, $context, "footer.html.twig");
-        echo "
+<p class=\"card-text\">
+
+ <div id=\"map\">
+                  
+</div>
+</p>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZnVsbG1ldGFsYWxjaGVtaXN0OTIiLCJhIjoiY2wwcXFoMTR1MjdnbjNqcHdsY3V0ZmdrbCJ9.yXymeZBgXGPbhkQGtRtjLA';
+    const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+    });
+</script>
+                  </p> 
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -196,7 +233,7 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
 
     public function getDebugInfo()
     {
-        return array (  179 => 60,  173 => 54,  161 => 48,  155 => 45,  149 => 42,  143 => 39,  136 => 35,  129 => 31,  122 => 27,  116 => 24,  109 => 21,  103 => 16,  99 => 15,  94 => 12,  89 => 9,  82 => 8,  74 => 5,  67 => 4,  54 => 3,  37 => 1,);
+        return array (  196 => 66,  180 => 56,  174 => 53,  168 => 50,  161 => 46,  154 => 42,  147 => 38,  141 => 35,  136 => 33,  130 => 31,  124 => 26,  120 => 25,  115 => 22,  110 => 19,  103 => 18,  94 => 13,  87 => 12,  75 => 5,  68 => 4,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -205,14 +242,24 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
 
 {% block title %} HomePage {% endblock %}
 {% block stylesheet %}
-<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.7.1/dist/leaflet.css\" />
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css'  />
+<style>
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+
 {% endblock %}
+
+{% block javascript %}
+<script src=\"https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js\"></script>
+
+{% endblock %}
+
 
 {% block body %}
 {{ include('menu.html.twig')}}
 <br>
 {# LISTE DES VOYAGES CRÉÉS PAR L'UTILISATEUR #}
-<fiv class=\"container\">
+<div class=\"card\" style=\"width: 80%;\">
   <h2> My trips  </h2>
   <div class=\"row flex\">
       {% for trip in trips %}
@@ -221,8 +268,9 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
               <div class=\"card body\">
                  <h5 class=\"card-title\">
                  {## On affiche les voyages de l'utilisateur ####}
-                 <a href=#>   {{ trip.title }} </a>
+                 <h4>   {{ trip.title }} </h4>
                  </h5>
+              <img class='card-img-top' src=\"{{ vich_uploader_asset(trip, 'imageFile') }}\" width=\"60%\"/>
                  <p class=\"card-text\"> 
                     {{ trip.description }}
                   </p>
@@ -248,19 +296,35 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
                    Moyen de transport :  {{ trip.transportation}}
                   </p>
                   <p class=\"card-text\">
-              <img src=\"{{ vich_uploader_asset(trip, 'imageFile') }}\" width=\"60%\"/>
-                  </p> 
+
+                 
+
               </div>
             </div>
         </div>
       {% endfor %}
 
 </p>
+
+
   </div>
 </div>
-{# Footer #}
-{## INCLUSION DU FOOTER ###}
-{{ include('footer.html.twig')}}
+<p class=\"card-text\">
+
+ <div id=\"map\">
+                  
+</div>
+</p>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZnVsbG1ldGFsYWxjaGVtaXN0OTIiLCJhIjoiY2wwcXFoMTR1MjdnbjNqcHdsY3V0ZmdrbCJ9.yXymeZBgXGPbhkQGtRtjLA';
+    const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    style: 'mapbox://styles/mapbox/streets-v11', // style URL
+    center: [-74.5, 40], // starting position [lng, lat]
+    zoom: 9 // starting zoom
+    });
+</script>
+                  </p> 
 {% endblock %}
 ", "home/index.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/home/index.html.twig");
     }
