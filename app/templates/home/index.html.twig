@@ -3,22 +3,97 @@
 {% block title %} HomePage {% endblock %}
 
 {% block stylesheet %}
- <link href='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css' rel='stylesheet' />
-<style>
+<link href="https://unpkg.com/maplibre-gl@2.1.7/dist/maplibre-gl.css" rel="stylesheet" /><style>
 
- .container {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	#map {  width: 100%; }
+  #fly {
+position: relative;
+margin: 0px auto;
+width: 10%;
+height: 0px;
+padding: 0px;
+border: none;
+border-radius: 3px;
+font-size: 12px;
+text-align: center;
+color: #000;
+background: #68707b;
 }
 </style>
 
 {% endblock %}
 
 {% block javascript %}
- <script src='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js'></script>
+    <script src="https://unpkg.com/maplibre-gl@2.1.7/dist/maplibre-gl.js"></script>
+     <script>
+     /// var styleJson = 'https://api.maptiler.com/maps/voyager/style.json?key=tlsMQxY2O8t8fc48pkeW';
+window.onload = function(){
+   var map = new maplibregl.Map({
+      container: 'map',
+      style: 'https://api.maptiler.com/maps/streets/style.json?key=tlsMQxY2O8t8fc48pkeW',
+      center: [-0.07, 51.5],
+      zoom: 6,
+      hash: true,
+    });
 
+    map.on('load', function () {
+		map.loadImage(
+		'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-plane-512.png',
+		function (error, image) {
+		if (error) throw error;
+		map.addImage('AirPort_icon', image);
+    const geojson = {
+    'type': 'FeatureCollection',
+      'features': [
+      {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [-77.032, 38.913]
+        },
+      'properties': {
+        'title': 'Mapbox',
+        'description': 'Washington, D.C.'
+        }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [-122.414, 37.776]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'San Francisco, California'
+      }
+    }
+  ]
+};
+
+		map.addSource('AirPorts_points', {
+			type: 'geojson',
+			data: geojson
+		});
+
+		map.addLayer({
+		'id': 'AirPorts',
+		'type': 'symbol',
+		'source': 'AirPorts_points',
+		'layout': {
+		'icon-image': 'AirPort_icon',
+		'icon-size': 0.05
+		}
+		});
+		}
+		);
+		});
+    
+///var marker = new maplibregl.Marker().setLngLat([0.11, 51.49]).addTo(map);    
+} 
+</script>
+  <script> 
+ 
+</script>
 {% endblock %}
 
 
@@ -26,7 +101,7 @@
 {{ include('menu.html.twig')}}
 <br>
 {# LISTE DES VOYAGES CRÉÉS PAR L'UTILISATEUR #}
-<div class="card" style="width: 80%;">
+<div class="card" style="width: 100%;">
   <h2> My trips  </h2>
   <div class="row flex">
       {% for trip in trips %}
@@ -60,7 +135,6 @@
                      <p class="card-text"> 
                    Moyen de transport :  {{ trip.transportation}}
                   </p>
-                  <p class="card-text">
 
                  
                       {##  
@@ -76,16 +150,13 @@
 
   </div>
 </div>
-
 <br>
 
-<div class="container">
-    <div>
-     <iframe  width="500" height="500" src="https://api.maptiler.com/maps/voyager/?key=tlsMQxY2O8t8fc48pkeW#0.0/0.00000/0.00000"></iframe>
+<div id="map"></div>
+  <button id="fly"></button>
 
-    </div>
-</div>
-  
 
-    
+   
+
+{###  tlsMQxY2O8t8fc48pkeW #####}
 {% endblock %}
