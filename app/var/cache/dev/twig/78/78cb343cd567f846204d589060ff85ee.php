@@ -161,6 +161,11 @@ class __TwigTemplate_312f789fa437854b5c8cdeb6bf8e771a extends Template
         echo twig_include($this->env, $context, "crud_trip/_delete_form.html.twig");
         echo "
 ";
+        // line 60
+        echo twig_include($this->env, $context, "footer.html.twig");
+        echo "
+
+";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
@@ -178,7 +183,7 @@ class __TwigTemplate_312f789fa437854b5c8cdeb6bf8e771a extends Template
 
     public function getDebugInfo()
     {
-        return array (  161 => 58,  156 => 56,  151 => 54,  140 => 46,  133 => 42,  126 => 38,  119 => 34,  112 => 30,  105 => 26,  98 => 22,  91 => 18,  84 => 14,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  165 => 60,  161 => 58,  156 => 56,  151 => 54,  140 => 46,  133 => 42,  126 => 38,  119 => 34,  112 => 30,  105 => 26,  98 => 22,  91 => 18,  84 => 14,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -241,6 +246,9 @@ class __TwigTemplate_312f789fa437854b5c8cdeb6bf8e771a extends Template
     <a href=\"{{ path('app_crud_trip_edit', {'id': trip.id}) }}\">edit</a>
 
     {{ include('crud_trip/_delete_form.html.twig') }}
+{## INCLUSION DU FOOTER ###}
+{{ include('footer.html.twig')}}
+
 {% endblock %}
 ", "crud_trip/show.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/crud_trip/show.html.twig");
     }

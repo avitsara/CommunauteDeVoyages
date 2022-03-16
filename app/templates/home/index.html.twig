@@ -1,16 +1,23 @@
 {% extends 'base.html.twig' %}
 
 {% block title %} HomePage {% endblock %}
+
 {% block stylesheet %}
-<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css'  />
+ <link href='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.css' rel='stylesheet' />
 <style>
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+ .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 </style>
 
 {% endblock %}
 
 {% block javascript %}
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+ <script src='https://unpkg.com/maplibre-gl@1.15.2/dist/maplibre-gl.js'></script>
 
 {% endblock %}
 
@@ -30,10 +37,8 @@
                  {## On affiche les voyages de l'utilisateur ####}
                  <h4>   {{ trip.title }} </h4>
                  </h5>
-              <img class='card-img-top' src="{{ vich_uploader_asset(trip, 'imageFile') }}" width="60%"/>
-                 <p class="card-text"> 
-                    {{ trip.description }}
-                  </p>
+              <img class='img-thumbnail rounded float-right' src="{{ vich_uploader_asset(trip, 'imageFile') }}" width="60%"/>
+               
                   <p class="card-text"> 
                     Départ : {{ trip.departure }}
                   </p>
@@ -58,31 +63,29 @@
                   <p class="card-text">
 
                  
-
+                      {##  
+                      <p class="card-text"> 
+                    {{ trip.description }}
+                  </p> ##}
               </div>
             </div>
         </div>
       {% endfor %}
 
-</p>
 
 
   </div>
 </div>
-<p class="card-text">
 
- <div id="map">
-                  
+<br>
+
+<div class="container">
+    <div>
+     <iframe  width="500" height="500" src="https://api.maptiler.com/maps/voyager/?key=tlsMQxY2O8t8fc48pkeW#0.0/0.00000/0.00000"></iframe>
+
+    </div>
 </div>
-</p>
-<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZnVsbG1ldGFsYWxjaGVtaXN0OTIiLCJhIjoiY2wwcXFoMTR1MjdnbjNqcHdsY3V0ZmdrbCJ9.yXymeZBgXGPbhkQGtRtjLA';
-    const map = new mapboxgl.Map({
-    container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v11', // style URL
-    center: [-74.5, 40], // starting position [lng, lat]
-    zoom: 9 // starting zoom
-    });
-</script>
-                  </p> 
+  
+
+    
 {% endblock %}

@@ -47,19 +47,19 @@ class __TwigTemplate_350f8a20b4c1a15d188e1ae492524ad0 extends Template
         ";
         // line 4
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 9
+        // line 10
         echo "     ";
         $this->displayBlock('javascript', $context, $blocks);
-        // line 15
+        // line 16
         echo "        <title>";
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
     </head>
     <body>
         ";
-        // line 18
-        $this->displayBlock('body', $context, $blocks);
         // line 19
+        $this->displayBlock('body', $context, $blocks);
+        // line 20
         echo "    </body>
 </html>
 ";
@@ -80,13 +80,14 @@ class __TwigTemplate_350f8a20b4c1a15d188e1ae492524ad0 extends Template
     ";
         // line 7
         echo "    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
+  
     ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 9
+    // line 10
     public function block_javascript($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -104,7 +105,7 @@ class __TwigTemplate_350f8a20b4c1a15d188e1ae492524ad0 extends Template
 
     }
 
-    // line 15
+    // line 16
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -116,7 +117,7 @@ class __TwigTemplate_350f8a20b4c1a15d188e1ae492524ad0 extends Template
 
     }
 
-    // line 18
+    // line 19
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -135,7 +136,7 @@ class __TwigTemplate_350f8a20b4c1a15d188e1ae492524ad0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  120 => 18,  108 => 15,  90 => 9,  82 => 7,  79 => 5,  72 => 4,  63 => 19,  61 => 18,  54 => 15,  51 => 9,  49 => 4,  44 => 1,);
+        return array (  121 => 19,  109 => 16,  91 => 10,  82 => 7,  79 => 5,  72 => 4,  63 => 20,  61 => 19,  54 => 16,  51 => 10,  49 => 4,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -147,6 +148,7 @@ class __TwigTemplate_350f8a20b4c1a15d188e1ae492524ad0 extends Template
     <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\"> 
     {## THÈME = SPACELAB ###}
     <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
+  
     {% endblock %}
      {%  block javascript %} 
         
