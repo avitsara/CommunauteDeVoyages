@@ -59,73 +59,67 @@ class __TwigTemplate_b0ff3415c5114577fbc6e80d9b815f76 extends Template
         echo twig_include($this->env, $context, "menu.html.twig");
         echo "
 <br>
-";
-        // line 6
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 6, $this->source); })()), 'form_start');
-        echo "
-    <div class=\"form-group\"> 
+    <h1> Create a new trip  </h1>
+
+<div class=\"container\">
+
         ";
-        // line 8
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 8, $this->source); })()), "title", [], "any", false, false, false, 8), 'row', ["attr" => ["class" => "form-control ", "id" => "inputsm", "data-form-type" => "email"]]);
+        // line 10
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 10, $this->source); })()), 'form_start');
         echo "
-    </div>
-    <div class=\"form-group\"> 
-        ";
+            ";
         // line 11
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 11, $this->source); })()), "departure", [], "any", false, false, false, 11), 'row', ["attr" => ["class" => "form-control"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 11, $this->source); })()), "title", [], "any", false, false, false, 11), 'row', ["attr" => ["class" => "form-control ", "id" => "inputsm", "data-form-type" => "email"]]);
         echo "
-    </div>
-     <div class=\"form-group\"> 
-        ";
+            ";
+        // line 12
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 12, $this->source); })()), "departure", [], "any", false, false, false, 12), 'row', ["attr" => ["class" => "form-control"]]);
+        echo "
+            ";
+        // line 13
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 13, $this->source); })()), "tripDepartureRegion", [], "any", false, false, false, 13), 'row', ["attr" => ["class" => "form-control"], "id" => "exampleTextarea"]);
+        echo "
+            ";
         // line 14
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 14, $this->source); })()), "destination", [], "any", false, false, false, 14), 'row', ["attr" => ["class" => "form-control"]]);
         echo "
-    </div>
-    <div class=\"form-group\"> 
-        ";
+            ";
+        // line 15
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 15, $this->source); })()), "tripDestinationRegion", [], "any", false, false, false, 15), 'row', ["attr" => ["class" => "form-control"], "id" => "exampleTextarea"]);
+        echo "
+            ";
+        // line 16
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 16, $this->source); })()), "beginDate", [], "any", false, false, false, 16), 'row', ["attr" => ["class" => "form-group"]]);
+        echo "
+            ";
         // line 17
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 17, $this->source); })()), "beginDate", [], "any", false, false, false, 17), 'row', ["attr" => ["class" => "form-group"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 17, $this->source); })()), "endDate", [], "any", false, false, false, 17), 'row', ["attr" => ["class" => "form-group"]]);
         echo "
-    </div>
-    <div class=\"form-group\"> 
-        ";
+            ";
+        // line 18
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 18, $this->source); })()), "transportation", [], "any", false, false, false, 18), 'row', ["attr" => ["class" => "form-control"]]);
+        echo "
+            ";
+        // line 19
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 19, $this->source); })()), "travelCompanionNumber", [], "any", false, false, false, 19), 'row', ["attr" => ["class" => "form-control"]]);
+        echo "
+            ";
         // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 20, $this->source); })()), "endDate", [], "any", false, false, false, 20), 'row', ["attr" => ["class" => "form-group"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 20, $this->source); })()), "description", [], "any", false, false, false, 20), 'row', ["attr" => ["class" => "form-control"], "id" => "exampleTextarea"]);
         echo "
-    </div>
-    <div class=\"form-group\"> 
-        ";
-        // line 23
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 23, $this->source); })()), "transportation", [], "any", false, false, false, 23), 'row', ["attr" => ["class" => "form-control"]]);
+            ";
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 21, $this->source); })()), "imageFile", [], "any", false, false, false, 21), 'row');
         echo "
-    </div> 
-
-     <div class=\"form-group\"> 
-        ";
-        // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 27, $this->source); })()), "travelCompanionNumber", [], "any", false, false, false, 27), 'row', ["attr" => ["class" => "form-control"]]);
-        echo "
-    </div>
-     <div class=\"form-group\"> 
-        ";
-        // line 30
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 30, $this->source); })()), "description", [], "any", false, false, false, 30), 'row', ["attr" => ["class" => "form-control"], "id" => "exampleTextarea"]);
-        echo "
-    </div> 
-       <div class=\"form-group\"> 
-        ";
-        // line 33
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 33, $this->source); })()), "imageFile", [], "any", false, false, false, 33), 'row');
-        echo "
-    </div> 
+   
  
-
+    <br>
     <button type=\"submit\" class=\"btn btn-primary\"> Create trip </button>
 
-
+</div>
 ";
-        // line 40
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 40, $this->source); })()), 'form_end');
+        // line 28
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["tripCreationForm"]) || array_key_exists("tripCreationForm", $context) ? $context["tripCreationForm"] : (function () { throw new RuntimeError('Variable "tripCreationForm" does not exist.', 28, $this->source); })()), 'form_end');
         echo "
 ";
         
@@ -145,7 +139,7 @@ class __TwigTemplate_b0ff3415c5114577fbc6e80d9b815f76 extends Template
 
     public function getDebugInfo()
     {
-        return array (  128 => 40,  118 => 33,  112 => 30,  106 => 27,  99 => 23,  93 => 20,  87 => 17,  81 => 14,  75 => 11,  69 => 8,  64 => 6,  59 => 4,  52 => 3,  35 => 1,);
+        return array (  122 => 28,  112 => 21,  108 => 20,  104 => 19,  100 => 18,  96 => 17,  92 => 16,  88 => 15,  84 => 14,  80 => 13,  76 => 12,  72 => 11,  68 => 10,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -155,40 +149,28 @@ class __TwigTemplate_b0ff3415c5114577fbc6e80d9b815f76 extends Template
 {% block body %}
 {{ include('menu.html.twig')}}
 <br>
-{{ form_start(tripCreationForm) }}
-    <div class=\"form-group\"> 
-        {{ form_row(tripCreationForm.title,{'attr':{'class':'form-control ','id':'inputsm','data-form-type':'email'}}) }}
-    </div>
-    <div class=\"form-group\"> 
-        {{ form_row(tripCreationForm.departure,{'attr':{'class':'form-control'}})}}
-    </div>
-     <div class=\"form-group\"> 
-        {{ form_row(tripCreationForm.destination,{'attr':{'class':'form-control'}})}}
-    </div>
-    <div class=\"form-group\"> 
-        {{ form_row(tripCreationForm.beginDate,{'attr':{'class':'form-group'}})}}
-    </div>
-    <div class=\"form-group\"> 
-        {{ form_row(tripCreationForm.endDate,{'attr':{'class':'form-group'}})}}
-    </div>
-    <div class=\"form-group\"> 
-        {{ form_row(tripCreationForm.transportation,{'attr':{'class':'form-control'}})}}
-    </div> 
+    <h1> Create a new trip  </h1>
 
-     <div class=\"form-group\"> 
-        {{ form_row(tripCreationForm.travelCompanionNumber,{'attr':{'class':'form-control'}})}}
-    </div>
-     <div class=\"form-group\"> 
-        {{ form_row(tripCreationForm.description,{'attr':{'class':'form-control'},'id':'exampleTextarea'})}}
-    </div> 
-       <div class=\"form-group\"> 
-        {{ form_row(tripCreationForm.imageFile) }}
-    </div> 
+<div class=\"container\">
+
+        {{ form_start(tripCreationForm) }}
+            {{ form_row(tripCreationForm.title,{'attr':{'class':'form-control ','id':'inputsm','data-form-type':'email'}}) }}
+            {{ form_row(tripCreationForm.departure,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripCreationForm.tripDepartureRegion,{'attr':{'class':'form-control'},'id':'exampleTextarea'})}}
+            {{ form_row(tripCreationForm.destination,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripCreationForm.tripDestinationRegion,{'attr':{'class':'form-control'},'id':'exampleTextarea'})}}
+            {{ form_row(tripCreationForm.beginDate,{'attr':{'class':'form-group'}})}}
+            {{ form_row(tripCreationForm.endDate,{'attr':{'class':'form-group'}})}}
+            {{ form_row(tripCreationForm.transportation,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripCreationForm.travelCompanionNumber,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripCreationForm.description,{'attr':{'class':'form-control'},'id':'exampleTextarea'})}}
+            {{ form_row(tripCreationForm.imageFile) }}
+   
  
-
+    <br>
     <button type=\"submit\" class=\"btn btn-primary\"> Create trip </button>
 
-
+</div>
 {{ form_end(tripCreationForm) }}
 {% endblock %}", "trip/trip.html.twig", "/home/fullmetal/Documents/CommunauteDeVoyages/app/templates/trip/trip.html.twig");
     }

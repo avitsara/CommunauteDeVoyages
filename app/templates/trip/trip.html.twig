@@ -3,39 +3,27 @@
 {% block body %}
 {{ include('menu.html.twig')}}
 <br>
-{{ form_start(tripCreationForm) }}
-    <div class="form-group"> 
-        {{ form_row(tripCreationForm.title,{'attr':{'class':'form-control ','id':'inputsm','data-form-type':'email'}}) }}
-    </div>
-    <div class="form-group"> 
-        {{ form_row(tripCreationForm.departure,{'attr':{'class':'form-control'}})}}
-    </div>
-     <div class="form-group"> 
-        {{ form_row(tripCreationForm.destination,{'attr':{'class':'form-control'}})}}
-    </div>
-    <div class="form-group"> 
-        {{ form_row(tripCreationForm.beginDate,{'attr':{'class':'form-group'}})}}
-    </div>
-    <div class="form-group"> 
-        {{ form_row(tripCreationForm.endDate,{'attr':{'class':'form-group'}})}}
-    </div>
-    <div class="form-group"> 
-        {{ form_row(tripCreationForm.transportation,{'attr':{'class':'form-control'}})}}
-    </div> 
+    <h1> Create a new trip  </h1>
 
-     <div class="form-group"> 
-        {{ form_row(tripCreationForm.travelCompanionNumber,{'attr':{'class':'form-control'}})}}
-    </div>
-     <div class="form-group"> 
-        {{ form_row(tripCreationForm.description,{'attr':{'class':'form-control'},'id':'exampleTextarea'})}}
-    </div> 
-       <div class="form-group"> 
-        {{ form_row(tripCreationForm.imageFile) }}
-    </div> 
+<div class="container">
+
+        {{ form_start(tripCreationForm) }}
+            {{ form_row(tripCreationForm.title,{'attr':{'class':'form-control ','id':'inputsm','data-form-type':'email'}}) }}
+            {{ form_row(tripCreationForm.departure,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripCreationForm.tripDepartureRegion,{'attr':{'class':'form-control'},'id':'exampleTextarea'})}}
+            {{ form_row(tripCreationForm.destination,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripCreationForm.tripDestinationRegion,{'attr':{'class':'form-control'},'id':'exampleTextarea'})}}
+            {{ form_row(tripCreationForm.beginDate,{'attr':{'class':'form-group'}})}}
+            {{ form_row(tripCreationForm.endDate,{'attr':{'class':'form-group'}})}}
+            {{ form_row(tripCreationForm.transportation,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripCreationForm.travelCompanionNumber,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripCreationForm.description,{'attr':{'class':'form-control'},'id':'exampleTextarea'})}}
+            {{ form_row(tripCreationForm.imageFile) }}
+   
  
-
+    <br>
     <button type="submit" class="btn btn-primary"> Create trip </button>
 
-
+</div>
 {{ form_end(tripCreationForm) }}
 {% endblock %}

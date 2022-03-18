@@ -20,7 +20,9 @@ class TripCreationType extends AbstractType
         $builder
             ->add('title')
             ->add('departure')
+            ->add('tripDepartureRegion')
             ->add('destination')
+            ->add('tripDestinationRegion')
             ->add('beginDate')
             ->add('endDate')
             ->add('transportation',ChoiceType::class, [

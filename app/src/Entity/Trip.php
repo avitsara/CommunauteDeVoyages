@@ -120,6 +120,17 @@ class Trip
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $updated_at;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $tripDepartureRegion;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $tripDestinationRegion;
+
     
  
   
@@ -294,6 +305,32 @@ class Trip
 
         return $this;
     }
+
+    public function getTripDepartureRegion(): ?string
+    {
+        return $this->tripDepartureRegion;
+    }
+
+    public function setTripDepartureRegion(string $tripDepartureRegion): self
+    {
+        $this->tripDepartureRegion = $tripDepartureRegion;
+
+        return $this;
+    }
+
+    public function getTripDestinationRegion(): ?string
+    {
+        return $this->tripDestinationRegion;
+    }
+
+    public function setTripDestinationRegion(string $tripDestinationRegion): self
+    {
+        $this->tripDestinationRegion = $tripDestinationRegion;
+
+        return $this;
+    }
+
+  
 
   
    

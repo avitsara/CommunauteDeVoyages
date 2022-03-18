@@ -74,18 +74,31 @@ class __TwigTemplate_a5362b30190db3c8f0abcb8a3b856a42 extends Template
         echo "
 <br>
 ";
-        // line 9
+        // line 8
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", [], "any", false, false, false, 8)) {
+            // line 9
+            echo "        <div class=\"mb-3\">
+            You are logged in as ";
+            // line 10
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "user", [], "any", false, false, false, 10), "username", [], "any", false, false, false, 10), "html", null, true);
+            echo ", <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+            echo "\">Logout</a>
+        </div>
+    ";
+        }
+        // line 14
         echo "<form method=\"post\">
     ";
-        // line 10
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 10, $this->source); })())) {
-            // line 11
+        // line 15
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 15, $this->source); })())) {
+            // line 16
             echo "        <div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 11, $this->source); })()), "messageKey", [], "any", false, false, false, 11), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 11, $this->source); })()), "messageData", [], "any", false, false, false, 11), "security"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 16, $this->source); })()), "messageKey", [], "any", false, false, false, 16), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 16, $this->source); })()), "messageData", [], "any", false, false, false, 16), "security"), "html", null, true);
             echo "</div>
     ";
         }
-        // line 13
+        // line 18
         echo "
 
     <div class=\"container\">
@@ -93,8 +106,8 @@ class __TwigTemplate_a5362b30190db3c8f0abcb8a3b856a42 extends Template
           <div class=\"col-xs-4\">
                 <label for=\"inputEmail\">Email</label>
                 <input type=\"email\" value=\"";
-        // line 19
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 19, $this->source); })()), "html", null, true);
+        // line 24
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 24, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
           </div>
           <div class=\"col-xs-4\">
@@ -102,7 +115,7 @@ class __TwigTemplate_a5362b30190db3c8f0abcb8a3b856a42 extends Template
             <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>   
                 <input type=\"hidden\" name=\"_csrf_token\"
               value=\"";
-        // line 25
+        // line 30
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"
         >
@@ -117,12 +130,12 @@ class __TwigTemplate_a5362b30190db3c8f0abcb8a3b856a42 extends Template
     </div> 
 
     ";
-        // line 47
+        // line 52
         echo "
    
 </form>
 ";
-        // line 51
+        // line 56
         echo twig_include($this->env, $context, "footer.html.twig");
         echo "
 
@@ -144,7 +157,7 @@ class __TwigTemplate_a5362b30190db3c8f0abcb8a3b856a42 extends Template
 
     public function getDebugInfo()
     {
-        return array (  126 => 51,  121 => 47,  106 => 25,  97 => 19,  89 => 13,  83 => 11,  81 => 10,  78 => 9,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  139 => 56,  134 => 52,  119 => 30,  110 => 24,  102 => 18,  96 => 16,  94 => 15,  91 => 14,  83 => 10,  80 => 9,  78 => 8,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -156,6 +169,11 @@ class __TwigTemplate_a5362b30190db3c8f0abcb8a3b856a42 extends Template
 {% block body %}
 {{ include('menu.html.twig')}}
 <br>
+{% if app.user %}
+        <div class=\"mb-3\">
+            You are logged in as {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
+        </div>
+    {% endif %}
 {# FORMULAIRE #}
 <form method=\"post\">
     {% if error %}

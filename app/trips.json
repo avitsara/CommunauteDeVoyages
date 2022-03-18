@@ -1,0 +1,8 @@
+{
+    "trips":
+    [{"departure": "Milan", "destination": "Antananarivo"}                   
+    ,{"departure": "Caen", "destination": "Malte"},                               
+    {"departure": "Paris", "destination": "Athenes"}]
+    
+
+}

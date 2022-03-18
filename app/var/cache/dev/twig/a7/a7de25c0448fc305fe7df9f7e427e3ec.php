@@ -122,32 +122,69 @@ window.onload = function(){
 \t\tfunction (error, image) {
 \t\tif (error) throw error;
 \t\tmap.addImage('AirPort_icon', image);
-        const geojson = {
-'type': 'FeatureCollection',
-'features': [
-{
-'type': 'Feature',
-'geometry': {
-'type': 'Point',
-'coordinates': [-77.032, 38.913]
-},
-'properties': {
-'title': 'Mapbox',
-'description': 'Washington, D.C.'
-}
-},
-{
-'type': 'Feature',
-'geometry': {
-'type': 'Point',
-'coordinates': [-122.414, 37.776]
-},
-'properties': {
-'title': 'Mapbox',
-'description': 'San Francisco, California'
-}
-}
-]
+    const geojson = {
+    'type': 'FeatureCollection',
+      'features': [
+      {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [23.728541, 37.988579]
+        },
+      'properties': {
+        'title': 'Mapbox',
+        'description': 'Attica'
+        }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      /// coordinates : [longitude,latitude]
+      'coordinates': [9.170685, 45.473702]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Milan'
+      }
+    },
+    // \"latitude\":-15.344724,\"longitude\":48.270561,
+    {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [14.409943,35.917973]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Malta'
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [2.342865,48.858705]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Paris'
+      }
+    },
+      {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [48.270561,-15.344724]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Mahanjaga'
+      }
+    }
+
+
+  ]
 };
 
 \t\tmap.addSource('AirPorts_points', {
@@ -180,86 +217,88 @@ window.onload = function(){
 
     }
 
-    // line 100
+    // line 137
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 101
+        // line 138
         echo twig_include($this->env, $context, "menu.html.twig");
         echo "
 <br>
+
 ";
-        // line 104
+        // line 142
         echo "<div class=\"card\" style=\"width: 100%;\">
   <h2> My trips  </h2>
   <div class=\"row flex\">
       ";
-        // line 107
+        // line 145
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["trips"]) || array_key_exists("trips", $context) ? $context["trips"] : (function () { throw new RuntimeError('Variable "trips" does not exist.', 107, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["trips"]) || array_key_exists("trips", $context) ? $context["trips"] : (function () { throw new RuntimeError('Variable "trips" does not exist.', 145, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["trip"]) {
-            // line 108
-            echo "        <div class=\"col-5\">  
+            // line 146
+            echo "     
+        <div class=\"col-5\">  
             <div class=\"card\">
               <div class=\"card body\">
                  <h5 class=\"card-title\">
                  ";
-            // line 113
+            // line 152
             echo "                 <h4>   ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "title", [], "any", false, false, false, 113), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "title", [], "any", false, false, false, 152), "html", null, true);
             echo " </h4>
                  </h5>
               <img class='img-thumbnail rounded float-right' src=\"";
-            // line 115
+            // line 154
             echo twig_escape_filter($this->env, $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset($context["trip"], "imageFile"), "html", null, true);
             echo "\" width=\"60%\"/>
                
                   <p class=\"card-text\"> 
                     Départ : ";
-            // line 118
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "departure", [], "any", false, false, false, 118), "html", null, true);
+            // line 157
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "departure", [], "any", false, false, false, 157), "html", null, true);
             echo "
                   </p>
 
                     <p class=\"card-text\"> 
                     Destination : ";
-            // line 122
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "destination", [], "any", false, false, false, 122), "html", null, true);
+            // line 161
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "destination", [], "any", false, false, false, 161), "html", null, true);
             echo "
                   </p>
 
                      <p class=\"card-text\"> 
                    Date de départ : ";
-            // line 126
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "beginDate", [], "any", false, false, false, 126), "Y-m-d"), "html", null, true);
+            // line 165
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "beginDate", [], "any", false, false, false, 165), "Y-m-d"), "html", null, true);
             echo "
                   </p>
 
                       <p class=\"card-text\"> 
                    Date de retour:  ";
-            // line 130
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 130), "Y-m-d"), "html", null, true);
+            // line 169
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 169), "Y-m-d"), "html", null, true);
             echo "
                   </p>
                   <p class=\"card-text\"> 
                    Nombre de voyageurs :  ";
-            // line 133
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "travelCompanionNumber", [], "any", false, false, false, 133), "html", null, true);
+            // line 172
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "travelCompanionNumber", [], "any", false, false, false, 172), "html", null, true);
             echo "
                   </p>
                      <p class=\"card-text\"> 
                    Moyen de transport :  ";
-            // line 136
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 136), "html", null, true);
+            // line 175
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 175), "html", null, true);
             echo "
                   </p>
 
                  
                       ";
-            // line 144
+            // line 183
             echo "              </div>
             </div>
         </div>
@@ -268,7 +307,7 @@ window.onload = function(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['trip'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 148
+        // line 187
         echo "
 
 
@@ -300,7 +339,7 @@ window.onload = function(){
 
     public function getDebugInfo()
     {
-        return array (  272 => 148,  263 => 144,  256 => 136,  250 => 133,  244 => 130,  237 => 126,  230 => 122,  223 => 118,  217 => 115,  211 => 113,  205 => 108,  201 => 107,  196 => 104,  191 => 101,  184 => 100,  107 => 27,  100 => 26,  75 => 6,  68 => 5,  55 => 3,  38 => 1,);
+        return array (  311 => 187,  302 => 183,  295 => 175,  289 => 172,  283 => 169,  276 => 165,  269 => 161,  262 => 157,  256 => 154,  250 => 152,  243 => 146,  239 => 145,  234 => 142,  228 => 138,  221 => 137,  107 => 27,  100 => 26,  75 => 6,  68 => 5,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -349,32 +388,69 @@ window.onload = function(){
 \t\tfunction (error, image) {
 \t\tif (error) throw error;
 \t\tmap.addImage('AirPort_icon', image);
-        const geojson = {
-'type': 'FeatureCollection',
-'features': [
-{
-'type': 'Feature',
-'geometry': {
-'type': 'Point',
-'coordinates': [-77.032, 38.913]
-},
-'properties': {
-'title': 'Mapbox',
-'description': 'Washington, D.C.'
-}
-},
-{
-'type': 'Feature',
-'geometry': {
-'type': 'Point',
-'coordinates': [-122.414, 37.776]
-},
-'properties': {
-'title': 'Mapbox',
-'description': 'San Francisco, California'
-}
-}
-]
+    const geojson = {
+    'type': 'FeatureCollection',
+      'features': [
+      {
+      'type': 'Feature',
+      'geometry': {
+        'type': 'Point',
+        'coordinates': [23.728541, 37.988579]
+        },
+      'properties': {
+        'title': 'Mapbox',
+        'description': 'Attica'
+        }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      /// coordinates : [longitude,latitude]
+      'coordinates': [9.170685, 45.473702]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Milan'
+      }
+    },
+    // \"latitude\":-15.344724,\"longitude\":48.270561,
+    {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [14.409943,35.917973]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Malta'
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [2.342865,48.858705]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Paris'
+      }
+    },
+      {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [48.270561,-15.344724]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Mahanjaga'
+      }
+    }
+
+
+  ]
 };
 
 \t\tmap.addSource('AirPorts_points', {
@@ -407,11 +483,13 @@ window.onload = function(){
 {% block body %}
 {{ include('menu.html.twig')}}
 <br>
+
 {# LISTE DES VOYAGES CRÉÉS PAR L'UTILISATEUR #}
 <div class=\"card\" style=\"width: 100%;\">
   <h2> My trips  </h2>
   <div class=\"row flex\">
       {% for trip in trips %}
+     
         <div class=\"col-5\">  
             <div class=\"card\">
               <div class=\"card body\">

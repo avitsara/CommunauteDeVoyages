@@ -49,24 +49,61 @@ window.onload = function(){
       'type': 'Feature',
       'geometry': {
         'type': 'Point',
-        'coordinates': [-77.032, 38.913]
+        'coordinates': [23.728541, 37.988579]
         },
       'properties': {
         'title': 'Mapbox',
-        'description': 'Washington, D.C.'
+        'description': 'Attica'
         }
     },
     {
       'type': 'Feature',
       'geometry': {
       'type': 'Point',
-      'coordinates': [-122.414, 37.776]
+      /// coordinates : [longitude,latitude]
+      'coordinates': [9.170685, 45.473702]
       },
       'properties': {
       'title': 'Mapbox',
-      'description': 'San Francisco, California'
+      'description': 'Milan'
+      }
+    },
+    // "latitude":-15.344724,"longitude":48.270561,
+    {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [14.409943,35.917973]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Malta'
+      }
+    },
+    {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [2.342865,48.858705]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Paris'
+      }
+    },
+      {
+      'type': 'Feature',
+      'geometry': {
+      'type': 'Point',
+      'coordinates': [48.270561,-15.344724]
+      },
+      'properties': {
+      'title': 'Mapbox',
+      'description': 'Mahanjaga'
       }
     }
+
+
   ]
 };
 
@@ -100,11 +137,13 @@ window.onload = function(){
 {% block body %}
 {{ include('menu.html.twig')}}
 <br>
+
 {# LISTE DES VOYAGES CRÉÉS PAR L'UTILISATEUR #}
 <div class="card" style="width: 100%;">
   <h2> My trips  </h2>
   <div class="row flex">
       {% for trip in trips %}
+     
         <div class="col-5">  
             <div class="card">
               <div class="card body">
