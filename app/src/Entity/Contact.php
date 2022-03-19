@@ -30,7 +30,7 @@ class Contact
     private $lastname;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
     private $phone;
 

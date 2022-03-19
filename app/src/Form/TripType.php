@@ -17,7 +17,16 @@ class TripType extends AbstractType
             ->add('destination')
             ->add('beginDate')
             ->add('endDate')
-            ->add('transportation')
+            ->add('transportation',ChoiceType::class, [
+                'choices'  => [
+                    'Bus' => true,
+                    'Plane' => true,
+                    'Car' => true,
+                    'Ship' => true,
+
+                ],
+                
+            ])
             ->add('travelCompanionNumber')
             ->add('description')
             ->add('title')

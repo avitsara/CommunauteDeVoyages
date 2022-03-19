@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'f3e946f6a8998a4dc6694f52f831aa755c1f39be',
+        'reference' => 'ebe2104f14db31ef4d1d98fe8b9e7ee01bd6efdd',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,16 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'f3e946f6a8998a4dc6694f52f831aa755c1f39be',
+            'reference' => 'ebe2104f14db31ef4d1d98fe8b9e7ee01bd6efdd',
+            'dev_requirement' => false,
+        ),
+        'brick/phonenumber' => array(
+            'pretty_version' => '0.4.0',
+            'version' => '0.4.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../brick/phonenumber',
+            'aliases' => array(),
+            'reference' => 'a57af1217d336c6b7535ba035394985b2f8177d6',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -190,6 +199,24 @@
             'reference' => '006aa5d32f887a4db4353b13b5b5095613e0611f',
             'dev_requirement' => false,
         ),
+        'giggsey/libphonenumber-for-php' => array(
+            'pretty_version' => '8.12.45',
+            'version' => '8.12.45.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../giggsey/libphonenumber-for-php',
+            'aliases' => array(),
+            'reference' => '7f494fd3b87c7d83472e8b6126eedc6b72dd3f3e',
+            'dev_requirement' => false,
+        ),
+        'giggsey/locale' => array(
+            'pretty_version' => '2.1',
+            'version' => '2.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../giggsey/locale',
+            'aliases' => array(),
+            'reference' => '8d324583b5899e6280a875c43bf1fc9658bc6962',
+            'dev_requirement' => false,
+        ),
         'jms/metadata' => array(
             'pretty_version' => '2.6.1',
             'version' => '2.6.1.0',
@@ -208,6 +235,15 @@
             'reference' => '6fd96d4d913571a2cd056a27b123fa28cb90ac4e',
             'dev_requirement' => false,
         ),
+        'nepada/phone-number-doctrine' => array(
+            'pretty_version' => 'v2.1.0',
+            'version' => '2.1.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nepada/phone-number-doctrine',
+            'aliases' => array(),
+            'reference' => 'e90ec7ea04d17aac721c64f8b9903e15044480df',
+            'dev_requirement' => false,
+        ),
         'nikic/php-parser' => array(
             'pretty_version' => 'v4.13.2',
             'version' => '4.13.2.0',
@@ -221,6 +257,18 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => '^2.1',
+            ),
+        ),
+        'php-http/async-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
+            ),
+        ),
+        'php-http/client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '*',
             ),
         ),
         'psr/cache' => array(
@@ -268,6 +316,12 @@
                 0 => '1.0',
             ),
         ),
+        'psr/http-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
         'psr/log' => array(
             'pretty_version' => '3.0.0',
             'version' => '3.0.0.0',
@@ -296,6 +350,15 @@
             'install_path' => __DIR__ . '/../sensio/framework-extra-bundle',
             'aliases' => array(),
             'reference' => '6bd976c99ef3f78e31c9490a10ba6dd8901076eb',
+            'dev_requirement' => false,
+        ),
+        'swiftmailer/swiftmailer' => array(
+            'pretty_version' => 'v6.3.0',
+            'version' => '6.3.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../swiftmailer/swiftmailer',
+            'aliases' => array(),
+            'reference' => '8a5d5072dca8f48460fce2f4131fcc495eec654c',
             'dev_requirement' => false,
         ),
         'symfony/asset' => array(
@@ -463,6 +526,30 @@
             'reference' => '12d8bfaa3dec658da80125d37633221ce1e40f8f',
             'dev_requirement' => false,
         ),
+        'symfony/http-client' => array(
+            'pretty_version' => 'v6.0.5',
+            'version' => '6.0.5.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/http-client',
+            'aliases' => array(),
+            'reference' => 'a8f87328930932c455cffd048f965d1223d91915',
+            'dev_requirement' => false,
+        ),
+        'symfony/http-client-contracts' => array(
+            'pretty_version' => 'v3.0.0',
+            'version' => '3.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/http-client-contracts',
+            'aliases' => array(),
+            'reference' => '265f03fed057044a8e4dc159aa33596d0f48ed3f',
+            'dev_requirement' => false,
+        ),
+        'symfony/http-client-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '3.0',
+            ),
+        ),
         'symfony/http-foundation' => array(
             'pretty_version' => 'v6.0.3',
             'version' => '6.0.3.0',
@@ -479,6 +566,15 @@
             'install_path' => __DIR__ . '/../symfony/http-kernel',
             'aliases' => array(),
             'reference' => '9dce179ce52b0f4f669c07fd5e465e5d809a5d3b',
+            'dev_requirement' => false,
+        ),
+        'symfony/mailchimp-mailer' => array(
+            'pretty_version' => 'v6.0.5',
+            'version' => '6.0.5.0',
+            'type' => 'symfony-mailer-bridge',
+            'install_path' => __DIR__ . '/../symfony/mailchimp-mailer',
+            'aliases' => array(),
+            'reference' => '675e7ab2157f26e538c200850fb6c6d04d5d3e11',
             'dev_requirement' => false,
         ),
         'symfony/mailer' => array(

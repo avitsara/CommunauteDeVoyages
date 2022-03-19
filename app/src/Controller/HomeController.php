@@ -15,7 +15,7 @@ class HomeController extends AbstractController
     {
         /// On récupère l'entité trip
         $trip = $repository->findLatest();
-        return $this->render('home/index.html.twig', [
+        return $this->render('home/home.html.twig', [
             'controller_name' => 'HomeController',
             'trips' => $trip
         ]);

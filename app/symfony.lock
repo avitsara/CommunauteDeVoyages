@@ -1,4 +1,7 @@
 {
+    "brick/phonenumber": {
+        "version": "0.4.0"
+    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -83,11 +86,20 @@
     "friendsofphp/proxy-manager-lts": {
         "version": "v1.0.5"
     },
+    "giggsey/libphonenumber-for-php": {
+        "version": "8.12.45"
+    },
+    "giggsey/locale": {
+        "version": "2.1"
+    },
     "jms/metadata": {
         "version": "2.6.1"
     },
     "laminas/laminas-code": {
         "version": "4.5.1"
+    },
+    "nepada/phone-number-doctrine": {
+        "version": "v2.1.0"
     },
     "nikic/php-parser": {
         "version": "v4.13.2"
@@ -115,6 +127,9 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "swiftmailer/swiftmailer": {
+        "version": "v6.3.0"
     },
     "symfony/asset": {
         "version": "v6.0.3"
@@ -201,11 +216,26 @@
             "src/Kernel.php"
         ]
     },
+    "symfony/http-client": {
+        "version": "v6.0.5"
+    },
+    "symfony/http-client-contracts": {
+        "version": "v3.0.0"
+    },
     "symfony/http-foundation": {
         "version": "v6.0.3"
     },
     "symfony/http-kernel": {
         "version": "v6.0.4"
+    },
+    "symfony/mailchimp-mailer": {
+        "version": "6.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.4",
+            "ref": "1be490e068472fc87e226cf54bc95fb6f2e49117"
+        }
     },
     "symfony/mailer": {
         "version": "6.0",

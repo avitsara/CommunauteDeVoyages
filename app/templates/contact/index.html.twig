@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Contact Form {% endblock %}
+
+{% block body %}
+{{ include('menu.html.twig')}}
+
+<div class="container">
+    {{ form_start(contactForm) }}
+    <br>
+            {{ form_row(contactForm.firstname,{'attr':{'class':'form-control','id':'exampleInputEmail1','data-form-type':'email'}}) }}
+            {{ form_row(contactForm.lastname,{'attr':{'class':'form-control','id':'exampleInputEmail1','data-form-type':'email'}}) }}
+            {{ form_row(contactForm.phone,{'attr':{'class':'form-control','id':'exampleInputEmail1','data-form-type':'email'}}) }}
+            {{ form_row(contactForm.email,{'attr':{'class':'form-control','id':'exampleInputEmail1','data-form-type':'email'}}) }}
+            {{ form_row(contactForm.message,{'attr':{'class':'form-control'},'id':'exampleTextarea'})}}
+
+    {{ form_end(contactForm) }}
+
+    <button type="submit" class="btn btn-primary"> Submit </button>
+
+</div>
+{% endblock %}

@@ -4,6 +4,7 @@
 
 return [
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
+    'contact' => [[], ['_controller' => 'App\\Controller\\ContactController::contact'], [], [['text', '/contact']], [], [], []],
     'app_crud_trip_index' => [[], ['_controller' => 'App\\Controller\\CrudTripController::index'], [], [['text', '/crud/trip/']], [], [], []],
     'app_crud_trip_new' => [[], ['_controller' => 'App\\Controller\\CrudTripController::new'], [], [['text', '/crud/trip/new']], [], [], []],
     'app_crud_trip_show' => [['id'], ['_controller' => 'App\\Controller\\CrudTripController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/crud/trip']], [], [], []],

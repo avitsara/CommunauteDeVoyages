@@ -17,9 +17,14 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'c2aad8997a98dfc4771bdbffea3d62b7' => __DIR__ . '/..' . '/laminas/laminas-code/polyfill/ReflectionEnumPolyfill.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'l' => 
+        array (
+            'libphonenumber\\' => 15,
+        ),
         'V' => 
         array (
             'Vich\\UploaderBundle\\' => 20,
@@ -42,6 +47,7 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
             'Symfony\\Flex\\' => 13,
             'Symfony\\Contracts\\Translation\\' => 30,
             'Symfony\\Contracts\\Service\\' => 26,
+            'Symfony\\Contracts\\HttpClient\\' => 29,
             'Symfony\\Contracts\\EventDispatcher\\' => 34,
             'Symfony\\Contracts\\Cache\\' => 24,
             'Symfony\\Component\\Yaml\\' => 23,
@@ -60,9 +66,11 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
             'Symfony\\Component\\PasswordHasher\\' => 33,
             'Symfony\\Component\\OptionsResolver\\' => 34,
             'Symfony\\Component\\Mime\\' => 23,
+            'Symfony\\Component\\Mailer\\Bridge\\Mailchimp\\' => 42,
             'Symfony\\Component\\Mailer\\' => 25,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
+            'Symfony\\Component\\HttpClient\\' => 29,
             'Symfony\\Component\\Form\\' => 23,
             'Symfony\\Component\\Finder\\' => 25,
             'Symfony\\Component\\Filesystem\\' => 29,
@@ -92,6 +100,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
             'ProxyManager\\' => 13,
             'PhpParser\\' => 10,
         ),
+        'N' => 
+        array (
+            'Nepada\\PhoneNumberDoctrine\\' => 27,
+        ),
         'M' => 
         array (
             'Metadata\\' => 9,
@@ -99,6 +111,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'L' => 
         array (
             'Laminas\\Code\\' => 13,
+        ),
+        'G' => 
+        array (
+            'Giggsey\\Locale\\' => 15,
         ),
         'F' => 
         array (
@@ -126,6 +142,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
             'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
+        'B' => 
+        array (
+            'Brick\\PhoneNumber\\' => 18,
+        ),
         'A' => 
         array (
             'App\\Tests\\' => 10,
@@ -134,6 +154,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
     );
 
     public static $prefixDirsPsr4 = array (
+        'libphonenumber\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src',
+        ),
         'Vich\\UploaderBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/vich/uploader-bundle/src',
@@ -189,6 +213,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'Symfony\\Contracts\\Service\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/service-contracts',
+        ),
+        'Symfony\\Contracts\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client-contracts',
         ),
         'Symfony\\Contracts\\EventDispatcher\\' => 
         array (
@@ -262,6 +290,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         array (
             0 => __DIR__ . '/..' . '/symfony/mime',
         ),
+        'Symfony\\Component\\Mailer\\Bridge\\Mailchimp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/mailchimp-mailer',
+        ),
         'Symfony\\Component\\Mailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/mailer',
@@ -273,6 +305,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'Symfony\\Component\\HttpFoundation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
+        ),
+        'Symfony\\Component\\HttpClient\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/http-client',
         ),
         'Symfony\\Component\\Form\\' => 
         array (
@@ -374,6 +410,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'Nepada\\PhoneNumberDoctrine\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nepada/phone-number-doctrine/src/PhoneNumberDoctrine',
+        ),
         'Metadata\\' => 
         array (
             0 => __DIR__ . '/..' . '/jms/metadata/src',
@@ -381,6 +421,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'Laminas\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-code/src',
+        ),
+        'Giggsey\\Locale\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/giggsey/locale/src',
         ),
         'Faker\\' => 
         array (
@@ -452,6 +496,10 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
         ),
+        'Brick\\PhoneNumber\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/brick/phonenumber/src',
+        ),
         'App\\Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
@@ -463,21 +511,31 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
     );
 
     public static $classMap = array (
+        'App\\Controller\\ContactController' => __DIR__ . '/../..' . '/src/Controller/ContactController.php',
         'App\\Controller\\CrudTripController' => __DIR__ . '/../..' . '/src/Controller/CrudTripController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
         'App\\Controller\\LoginFormController' => __DIR__ . '/../..' . '/src/Controller/LoginFormController.php',
         'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
         'App\\Controller\\TripController' => __DIR__ . '/../..' . '/src/Controller/TripController.php',
+        'App\\Entity\\Contact' => __DIR__ . '/../..' . '/src/Entity/Contact.php',
         'App\\Entity\\Trip' => __DIR__ . '/../..' . '/src/Entity/Trip.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'App\\Form\\ContactType' => __DIR__ . '/../..' . '/src/Form/ContactType.php',
         'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Form\\TripCreationType' => __DIR__ . '/../..' . '/src/Form/TripCreationType.php',
         'App\\Form\\TripType' => __DIR__ . '/../..' . '/src/Form/TripType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Notification\\ContactNotification' => __DIR__ . '/../..' . '/src/Notification/ContactNotification.php',
+        'App\\Repository\\ContactRepository' => __DIR__ . '/../..' . '/src/Repository/ContactRepository.php',
         'App\\Repository\\TripRepository' => __DIR__ . '/../..' . '/src/Repository/TripRepository.php',
         'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
         'App\\Security\\LoginFormAuthenticator' => __DIR__ . '/../..' . '/src/Security/LoginFormAuthenticator.php',
         'App\\Service\\FileUploader' => __DIR__ . '/../..' . '/src/Service/FileUploader.php',
+        'Brick\\PhoneNumber\\PhoneNumber' => __DIR__ . '/..' . '/brick/phonenumber/src/PhoneNumber.php',
+        'Brick\\PhoneNumber\\PhoneNumberException' => __DIR__ . '/..' . '/brick/phonenumber/src/PhoneNumberException.php',
+        'Brick\\PhoneNumber\\PhoneNumberFormat' => __DIR__ . '/..' . '/brick/phonenumber/src/PhoneNumberFormat.php',
+        'Brick\\PhoneNumber\\PhoneNumberParseException' => __DIR__ . '/..' . '/brick/phonenumber/src/PhoneNumberParseException.php',
+        'Brick\\PhoneNumber\\PhoneNumberType' => __DIR__ . '/..' . '/brick/phonenumber/src/PhoneNumberType.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Doctrine\\Bundle\\DoctrineBundle\\Attribute\\AsEntityListener' => __DIR__ . '/..' . '/doctrine/doctrine-bundle/Attribute/AsEntityListener.php',
@@ -2164,6 +2222,7 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'Faker\\Provider\\zh_TW\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/zh_TW/Text.php',
         'Faker\\UniqueGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/UniqueGenerator.php',
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/ValidGenerator.php',
+        'Giggsey\\Locale\\Locale' => __DIR__ . '/..' . '/giggsey/locale/src/Locale.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/IntlDateFormatter.php',
         'Laminas\\Code\\DeclareStatement' => __DIR__ . '/..' . '/laminas/laminas-code/src/DeclareStatement.php',
         'Laminas\\Code\\Exception\\BadMethodCallException' => __DIR__ . '/..' . '/laminas/laminas-code/src/Exception/BadMethodCallException.php',
@@ -2263,6 +2322,7 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'Metadata\\NullMetadata' => __DIR__ . '/..' . '/jms/metadata/src/NullMetadata.php',
         'Metadata\\PropertyMetadata' => __DIR__ . '/..' . '/jms/metadata/src/PropertyMetadata.php',
         'Metadata\\SerializationHelper' => __DIR__ . '/..' . '/jms/metadata/src/SerializationHelper.php',
+        'Nepada\\PhoneNumberDoctrine\\PhoneNumberType' => __DIR__ . '/..' . '/nepada/phone-number-doctrine/src/PhoneNumberDoctrine/PhoneNumberType.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'NumberFormatter' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/NumberFormatter.php',
         'PhpParser\\Builder' => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser/Builder.php',
@@ -3759,6 +3819,66 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'Symfony\\Component\\Form\\Util\\OrderedHashMapIterator' => __DIR__ . '/..' . '/symfony/form/Util/OrderedHashMapIterator.php',
         'Symfony\\Component\\Form\\Util\\ServerParams' => __DIR__ . '/..' . '/symfony/form/Util/ServerParams.php',
         'Symfony\\Component\\Form\\Util\\StringUtil' => __DIR__ . '/..' . '/symfony/form/Util/StringUtil.php',
+        'Symfony\\Component\\HttpClient\\AmpHttpClient' => __DIR__ . '/..' . '/symfony/http-client/AmpHttpClient.php',
+        'Symfony\\Component\\HttpClient\\AsyncDecoratorTrait' => __DIR__ . '/..' . '/symfony/http-client/AsyncDecoratorTrait.php',
+        'Symfony\\Component\\HttpClient\\CachingHttpClient' => __DIR__ . '/..' . '/symfony/http-client/CachingHttpClient.php',
+        'Symfony\\Component\\HttpClient\\Chunk\\DataChunk' => __DIR__ . '/..' . '/symfony/http-client/Chunk/DataChunk.php',
+        'Symfony\\Component\\HttpClient\\Chunk\\ErrorChunk' => __DIR__ . '/..' . '/symfony/http-client/Chunk/ErrorChunk.php',
+        'Symfony\\Component\\HttpClient\\Chunk\\FirstChunk' => __DIR__ . '/..' . '/symfony/http-client/Chunk/FirstChunk.php',
+        'Symfony\\Component\\HttpClient\\Chunk\\InformationalChunk' => __DIR__ . '/..' . '/symfony/http-client/Chunk/InformationalChunk.php',
+        'Symfony\\Component\\HttpClient\\Chunk\\LastChunk' => __DIR__ . '/..' . '/symfony/http-client/Chunk/LastChunk.php',
+        'Symfony\\Component\\HttpClient\\Chunk\\ServerSentEvent' => __DIR__ . '/..' . '/symfony/http-client/Chunk/ServerSentEvent.php',
+        'Symfony\\Component\\HttpClient\\CurlHttpClient' => __DIR__ . '/..' . '/symfony/http-client/CurlHttpClient.php',
+        'Symfony\\Component\\HttpClient\\DataCollector\\HttpClientDataCollector' => __DIR__ . '/..' . '/symfony/http-client/DataCollector/HttpClientDataCollector.php',
+        'Symfony\\Component\\HttpClient\\DecoratorTrait' => __DIR__ . '/..' . '/symfony/http-client/DecoratorTrait.php',
+        'Symfony\\Component\\HttpClient\\DependencyInjection\\HttpClientPass' => __DIR__ . '/..' . '/symfony/http-client/DependencyInjection/HttpClientPass.php',
+        'Symfony\\Component\\HttpClient\\EventSourceHttpClient' => __DIR__ . '/..' . '/symfony/http-client/EventSourceHttpClient.php',
+        'Symfony\\Component\\HttpClient\\Exception\\ClientException' => __DIR__ . '/..' . '/symfony/http-client/Exception/ClientException.php',
+        'Symfony\\Component\\HttpClient\\Exception\\EventSourceException' => __DIR__ . '/..' . '/symfony/http-client/Exception/EventSourceException.php',
+        'Symfony\\Component\\HttpClient\\Exception\\HttpExceptionTrait' => __DIR__ . '/..' . '/symfony/http-client/Exception/HttpExceptionTrait.php',
+        'Symfony\\Component\\HttpClient\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/symfony/http-client/Exception/InvalidArgumentException.php',
+        'Symfony\\Component\\HttpClient\\Exception\\JsonException' => __DIR__ . '/..' . '/symfony/http-client/Exception/JsonException.php',
+        'Symfony\\Component\\HttpClient\\Exception\\RedirectionException' => __DIR__ . '/..' . '/symfony/http-client/Exception/RedirectionException.php',
+        'Symfony\\Component\\HttpClient\\Exception\\ServerException' => __DIR__ . '/..' . '/symfony/http-client/Exception/ServerException.php',
+        'Symfony\\Component\\HttpClient\\Exception\\TimeoutException' => __DIR__ . '/..' . '/symfony/http-client/Exception/TimeoutException.php',
+        'Symfony\\Component\\HttpClient\\Exception\\TransportException' => __DIR__ . '/..' . '/symfony/http-client/Exception/TransportException.php',
+        'Symfony\\Component\\HttpClient\\HttpClient' => __DIR__ . '/..' . '/symfony/http-client/HttpClient.php',
+        'Symfony\\Component\\HttpClient\\HttpClientTrait' => __DIR__ . '/..' . '/symfony/http-client/HttpClientTrait.php',
+        'Symfony\\Component\\HttpClient\\HttpOptions' => __DIR__ . '/..' . '/symfony/http-client/HttpOptions.php',
+        'Symfony\\Component\\HttpClient\\HttplugClient' => __DIR__ . '/..' . '/symfony/http-client/HttplugClient.php',
+        'Symfony\\Component\\HttpClient\\Internal\\AmpBody' => __DIR__ . '/..' . '/symfony/http-client/Internal/AmpBody.php',
+        'Symfony\\Component\\HttpClient\\Internal\\AmpClientState' => __DIR__ . '/..' . '/symfony/http-client/Internal/AmpClientState.php',
+        'Symfony\\Component\\HttpClient\\Internal\\AmpListener' => __DIR__ . '/..' . '/symfony/http-client/Internal/AmpListener.php',
+        'Symfony\\Component\\HttpClient\\Internal\\AmpResolver' => __DIR__ . '/..' . '/symfony/http-client/Internal/AmpResolver.php',
+        'Symfony\\Component\\HttpClient\\Internal\\Canary' => __DIR__ . '/..' . '/symfony/http-client/Internal/Canary.php',
+        'Symfony\\Component\\HttpClient\\Internal\\ClientState' => __DIR__ . '/..' . '/symfony/http-client/Internal/ClientState.php',
+        'Symfony\\Component\\HttpClient\\Internal\\CurlClientState' => __DIR__ . '/..' . '/symfony/http-client/Internal/CurlClientState.php',
+        'Symfony\\Component\\HttpClient\\Internal\\DnsCache' => __DIR__ . '/..' . '/symfony/http-client/Internal/DnsCache.php',
+        'Symfony\\Component\\HttpClient\\Internal\\HttplugWaitLoop' => __DIR__ . '/..' . '/symfony/http-client/Internal/HttplugWaitLoop.php',
+        'Symfony\\Component\\HttpClient\\Internal\\NativeClientState' => __DIR__ . '/..' . '/symfony/http-client/Internal/NativeClientState.php',
+        'Symfony\\Component\\HttpClient\\Internal\\PushedResponse' => __DIR__ . '/..' . '/symfony/http-client/Internal/PushedResponse.php',
+        'Symfony\\Component\\HttpClient\\MockHttpClient' => __DIR__ . '/..' . '/symfony/http-client/MockHttpClient.php',
+        'Symfony\\Component\\HttpClient\\NativeHttpClient' => __DIR__ . '/..' . '/symfony/http-client/NativeHttpClient.php',
+        'Symfony\\Component\\HttpClient\\NoPrivateNetworkHttpClient' => __DIR__ . '/..' . '/symfony/http-client/NoPrivateNetworkHttpClient.php',
+        'Symfony\\Component\\HttpClient\\Psr18Client' => __DIR__ . '/..' . '/symfony/http-client/Psr18Client.php',
+        'Symfony\\Component\\HttpClient\\Response\\AmpResponse' => __DIR__ . '/..' . '/symfony/http-client/Response/AmpResponse.php',
+        'Symfony\\Component\\HttpClient\\Response\\AsyncContext' => __DIR__ . '/..' . '/symfony/http-client/Response/AsyncContext.php',
+        'Symfony\\Component\\HttpClient\\Response\\AsyncResponse' => __DIR__ . '/..' . '/symfony/http-client/Response/AsyncResponse.php',
+        'Symfony\\Component\\HttpClient\\Response\\CommonResponseTrait' => __DIR__ . '/..' . '/symfony/http-client/Response/CommonResponseTrait.php',
+        'Symfony\\Component\\HttpClient\\Response\\CurlResponse' => __DIR__ . '/..' . '/symfony/http-client/Response/CurlResponse.php',
+        'Symfony\\Component\\HttpClient\\Response\\HttplugPromise' => __DIR__ . '/..' . '/symfony/http-client/Response/HttplugPromise.php',
+        'Symfony\\Component\\HttpClient\\Response\\MockResponse' => __DIR__ . '/..' . '/symfony/http-client/Response/MockResponse.php',
+        'Symfony\\Component\\HttpClient\\Response\\NativeResponse' => __DIR__ . '/..' . '/symfony/http-client/Response/NativeResponse.php',
+        'Symfony\\Component\\HttpClient\\Response\\ResponseStream' => __DIR__ . '/..' . '/symfony/http-client/Response/ResponseStream.php',
+        'Symfony\\Component\\HttpClient\\Response\\StreamWrapper' => __DIR__ . '/..' . '/symfony/http-client/Response/StreamWrapper.php',
+        'Symfony\\Component\\HttpClient\\Response\\StreamableInterface' => __DIR__ . '/..' . '/symfony/http-client/Response/StreamableInterface.php',
+        'Symfony\\Component\\HttpClient\\Response\\TraceableResponse' => __DIR__ . '/..' . '/symfony/http-client/Response/TraceableResponse.php',
+        'Symfony\\Component\\HttpClient\\Response\\TransportResponseTrait' => __DIR__ . '/..' . '/symfony/http-client/Response/TransportResponseTrait.php',
+        'Symfony\\Component\\HttpClient\\Retry\\GenericRetryStrategy' => __DIR__ . '/..' . '/symfony/http-client/Retry/GenericRetryStrategy.php',
+        'Symfony\\Component\\HttpClient\\Retry\\RetryStrategyInterface' => __DIR__ . '/..' . '/symfony/http-client/Retry/RetryStrategyInterface.php',
+        'Symfony\\Component\\HttpClient\\RetryableHttpClient' => __DIR__ . '/..' . '/symfony/http-client/RetryableHttpClient.php',
+        'Symfony\\Component\\HttpClient\\ScopingHttpClient' => __DIR__ . '/..' . '/symfony/http-client/ScopingHttpClient.php',
+        'Symfony\\Component\\HttpClient\\TraceableHttpClient' => __DIR__ . '/..' . '/symfony/http-client/TraceableHttpClient.php',
         'Symfony\\Component\\HttpFoundation\\AcceptHeader' => __DIR__ . '/..' . '/symfony/http-foundation/AcceptHeader.php',
         'Symfony\\Component\\HttpFoundation\\AcceptHeaderItem' => __DIR__ . '/..' . '/symfony/http-foundation/AcceptHeaderItem.php',
         'Symfony\\Component\\HttpFoundation\\BinaryFileResponse' => __DIR__ . '/..' . '/symfony/http-foundation/BinaryFileResponse.php',
@@ -3991,6 +4111,11 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'Symfony\\Component\\HttpKernel\\RebootableInterface' => __DIR__ . '/..' . '/symfony/http-kernel/RebootableInterface.php',
         'Symfony\\Component\\HttpKernel\\TerminableInterface' => __DIR__ . '/..' . '/symfony/http-kernel/TerminableInterface.php',
         'Symfony\\Component\\HttpKernel\\UriSigner' => __DIR__ . '/..' . '/symfony/http-kernel/UriSigner.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Mailchimp\\Transport\\MandrillApiTransport' => __DIR__ . '/..' . '/symfony/mailchimp-mailer/Transport/MandrillApiTransport.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Mailchimp\\Transport\\MandrillHeadersTrait' => __DIR__ . '/..' . '/symfony/mailchimp-mailer/Transport/MandrillHeadersTrait.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Mailchimp\\Transport\\MandrillHttpTransport' => __DIR__ . '/..' . '/symfony/mailchimp-mailer/Transport/MandrillHttpTransport.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Mailchimp\\Transport\\MandrillSmtpTransport' => __DIR__ . '/..' . '/symfony/mailchimp-mailer/Transport/MandrillSmtpTransport.php',
+        'Symfony\\Component\\Mailer\\Bridge\\Mailchimp\\Transport\\MandrillTransportFactory' => __DIR__ . '/..' . '/symfony/mailchimp-mailer/Transport/MandrillTransportFactory.php',
         'Symfony\\Component\\Mailer\\DataCollector\\MessageDataCollector' => __DIR__ . '/..' . '/symfony/mailer/DataCollector/MessageDataCollector.php',
         'Symfony\\Component\\Mailer\\DelayedEnvelope' => __DIR__ . '/..' . '/symfony/mailer/DelayedEnvelope.php',
         'Symfony\\Component\\Mailer\\Envelope' => __DIR__ . '/..' . '/symfony/mailer/Envelope.php',
@@ -4785,6 +4910,20 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'Symfony\\Contracts\\Cache\\TagAwareCacheInterface' => __DIR__ . '/..' . '/symfony/cache-contracts/TagAwareCacheInterface.php',
         'Symfony\\Contracts\\EventDispatcher\\Event' => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts/Event.php',
         'Symfony\\Contracts\\EventDispatcher\\EventDispatcherInterface' => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts/EventDispatcherInterface.php',
+        'Symfony\\Contracts\\HttpClient\\ChunkInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/ChunkInterface.php',
+        'Symfony\\Contracts\\HttpClient\\Exception\\ClientExceptionInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/Exception/ClientExceptionInterface.php',
+        'Symfony\\Contracts\\HttpClient\\Exception\\DecodingExceptionInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/Exception/DecodingExceptionInterface.php',
+        'Symfony\\Contracts\\HttpClient\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/Exception/ExceptionInterface.php',
+        'Symfony\\Contracts\\HttpClient\\Exception\\HttpExceptionInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/Exception/HttpExceptionInterface.php',
+        'Symfony\\Contracts\\HttpClient\\Exception\\RedirectionExceptionInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/Exception/RedirectionExceptionInterface.php',
+        'Symfony\\Contracts\\HttpClient\\Exception\\ServerExceptionInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/Exception/ServerExceptionInterface.php',
+        'Symfony\\Contracts\\HttpClient\\Exception\\TimeoutExceptionInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/Exception/TimeoutExceptionInterface.php',
+        'Symfony\\Contracts\\HttpClient\\Exception\\TransportExceptionInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/Exception/TransportExceptionInterface.php',
+        'Symfony\\Contracts\\HttpClient\\HttpClientInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/HttpClientInterface.php',
+        'Symfony\\Contracts\\HttpClient\\ResponseInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/ResponseInterface.php',
+        'Symfony\\Contracts\\HttpClient\\ResponseStreamInterface' => __DIR__ . '/..' . '/symfony/http-client-contracts/ResponseStreamInterface.php',
+        'Symfony\\Contracts\\HttpClient\\Test\\HttpClientTestCase' => __DIR__ . '/..' . '/symfony/http-client-contracts/Test/HttpClientTestCase.php',
+        'Symfony\\Contracts\\HttpClient\\Test\\TestHttpServer' => __DIR__ . '/..' . '/symfony/http-client-contracts/Test/TestHttpServer.php',
         'Symfony\\Contracts\\Service\\Attribute\\Required' => __DIR__ . '/..' . '/symfony/service-contracts/Attribute/Required.php',
         'Symfony\\Contracts\\Service\\Attribute\\SubscribedService' => __DIR__ . '/..' . '/symfony/service-contracts/Attribute/SubscribedService.php',
         'Symfony\\Contracts\\Service\\ResetInterface' => __DIR__ . '/..' . '/symfony/service-contracts/ResetInterface.php',
@@ -5158,6 +5297,47 @@ class ComposerStaticInit40c7808c81a804fda90522f24608fb33
         'Vich\\UploaderBundle\\Util\\FilenameUtils' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Util/FilenameUtils.php',
         'Vich\\UploaderBundle\\Util\\Transliterator' => __DIR__ . '/..' . '/vich/uploader-bundle/src/Util/Transliterator.php',
         'Vich\\UploaderBundle\\VichUploaderBundle' => __DIR__ . '/..' . '/vich/uploader-bundle/src/VichUploaderBundle.php',
+        'libphonenumber\\AlternateFormatsCountryCodeSet' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/AlternateFormatsCountryCodeSet.php',
+        'libphonenumber\\AsYouTypeFormatter' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/AsYouTypeFormatter.php',
+        'libphonenumber\\CountryCodeSource' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/CountryCodeSource.php',
+        'libphonenumber\\CountryCodeToRegionCodeMap' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/CountryCodeToRegionCodeMap.php',
+        'libphonenumber\\CountryCodeToRegionCodeMapForTesting' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/CountryCodeToRegionCodeMapForTesting.php',
+        'libphonenumber\\DefaultMetadataLoader' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/DefaultMetadataLoader.php',
+        'libphonenumber\\Leniency' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/Leniency.php',
+        'libphonenumber\\Leniency\\AbstractLeniency' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/Leniency/AbstractLeniency.php',
+        'libphonenumber\\Leniency\\ExactGrouping' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/Leniency/ExactGrouping.php',
+        'libphonenumber\\Leniency\\Possible' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/Leniency/Possible.php',
+        'libphonenumber\\Leniency\\StrictGrouping' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/Leniency/StrictGrouping.php',
+        'libphonenumber\\Leniency\\Valid' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/Leniency/Valid.php',
+        'libphonenumber\\MatchType' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/MatchType.php',
+        'libphonenumber\\Matcher' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/Matcher.php',
+        'libphonenumber\\MatcherAPIInterface' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/MatcherAPIInterface.php',
+        'libphonenumber\\MetadataLoaderInterface' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/MetadataLoaderInterface.php',
+        'libphonenumber\\MetadataSourceInterface' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/MetadataSourceInterface.php',
+        'libphonenumber\\MultiFileMetadataSourceImpl' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/MultiFileMetadataSourceImpl.php',
+        'libphonenumber\\NumberFormat' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/NumberFormat.php',
+        'libphonenumber\\NumberParseException' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/NumberParseException.php',
+        'libphonenumber\\PhoneMetadata' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneMetadata.php',
+        'libphonenumber\\PhoneNumber' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneNumber.php',
+        'libphonenumber\\PhoneNumberDesc' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneNumberDesc.php',
+        'libphonenumber\\PhoneNumberFormat' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneNumberFormat.php',
+        'libphonenumber\\PhoneNumberMatch' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneNumberMatch.php',
+        'libphonenumber\\PhoneNumberMatcher' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneNumberMatcher.php',
+        'libphonenumber\\PhoneNumberToCarrierMapper' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneNumberToCarrierMapper.php',
+        'libphonenumber\\PhoneNumberToTimeZonesMapper' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneNumberToTimeZonesMapper.php',
+        'libphonenumber\\PhoneNumberType' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneNumberType.php',
+        'libphonenumber\\PhoneNumberUtil' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/PhoneNumberUtil.php',
+        'libphonenumber\\RegexBasedMatcher' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/RegexBasedMatcher.php',
+        'libphonenumber\\RegionCode' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/RegionCode.php',
+        'libphonenumber\\ShortNumberCost' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/ShortNumberCost.php',
+        'libphonenumber\\ShortNumberInfo' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/ShortNumberInfo.php',
+        'libphonenumber\\ShortNumbersRegionCodeSet' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/ShortNumbersRegionCodeSet.php',
+        'libphonenumber\\ValidationResult' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/ValidationResult.php',
+        'libphonenumber\\geocoding\\PhoneNumberOfflineGeocoder' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/geocoding/PhoneNumberOfflineGeocoder.php',
+        'libphonenumber\\prefixmapper\\MappingFileProvider' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/prefixmapper/MappingFileProvider.php',
+        'libphonenumber\\prefixmapper\\PhonePrefixMap' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/prefixmapper/PhonePrefixMap.php',
+        'libphonenumber\\prefixmapper\\PrefixFileReader' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/prefixmapper/PrefixFileReader.php',
+        'libphonenumber\\prefixmapper\\PrefixTimeZonesMap' => __DIR__ . '/..' . '/giggsey/libphonenumber-for-php/src/prefixmapper/PrefixTimeZonesMap.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

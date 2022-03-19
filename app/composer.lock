@@ -4,8 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da9bb3936d086e2d32a1ec744424fc56",
+    "content-hash": "4bca9e82c81c59bd1baee1fcdccb4c93",
     "packages": [
+        {
+            "name": "brick/phonenumber",
+            "version": "0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brick/phonenumber.git",
+                "reference": "a57af1217d336c6b7535ba035394985b2f8177d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brick/phonenumber/zipball/a57af1217d336c6b7535ba035394985b2f8177d6",
+                "reference": "a57af1217d336c6b7535ba035394985b2f8177d6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "giggsey/libphonenumber-for-php": "^7.0 || ^8.0",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Brick\\PhoneNumber\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Phone number library",
+            "keywords": [
+                "brick",
+                "phone",
+                "phone number",
+                "phonenumber"
+            ],
+            "support": {
+                "issues": "https://github.com/brick/phonenumber/issues",
+                "source": "https://github.com/brick/phonenumber/tree/0.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/BenMorel",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/brick/phonenumber",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-09-02T23:16:18+00:00"
+        },
         {
             "name": "doctrine/annotations",
             "version": "1.13.2",
@@ -1581,6 +1637,133 @@
             "time": "2021-05-22T16:11:15+00:00"
         },
         {
+            "name": "giggsey/libphonenumber-for-php",
+            "version": "8.12.45",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giggsey/libphonenumber-for-php.git",
+                "reference": "7f494fd3b87c7d83472e8b6126eedc6b72dd3f3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giggsey/libphonenumber-for-php/zipball/7f494fd3b87c7d83472e8b6126eedc6b72dd3f3e",
+                "reference": "7f494fd3b87c7d83472e8b6126eedc6b72dd3f3e",
+                "shasum": ""
+            },
+            "require": {
+                "giggsey/locale": "^1.7|^2.0",
+                "php": ">=5.3.2",
+                "symfony/polyfill-mbstring": "^1.17"
+            },
+            "require-dev": {
+                "pear/pear-core-minimal": "^1.9",
+                "pear/pear_exception": "^1.0",
+                "pear/versioncontrol_git": "^0.5",
+                "phing/phing": "^2.7",
+                "php-coveralls/php-coveralls": "^1.0|^2.0",
+                "symfony/console": "^2.8|^3.0|^v4.4|^v5.2",
+                "symfony/phpunit-bridge": "^4.2 || ^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "libphonenumber\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "/src/data/",
+                    "/src/carrier/data/",
+                    "/src/geocoding/data/",
+                    "/src/timezone/data/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "https://giggsey.com/"
+                }
+            ],
+            "description": "PHP Port of Google's libphonenumber",
+            "homepage": "https://github.com/giggsey/libphonenumber-for-php",
+            "keywords": [
+                "geocoding",
+                "geolocation",
+                "libphonenumber",
+                "mobile",
+                "phonenumber",
+                "validation"
+            ],
+            "support": {
+                "irc": "irc://irc.appliedirc.com/lobby",
+                "issues": "https://github.com/giggsey/libphonenumber-for-php/issues",
+                "source": "https://github.com/giggsey/libphonenumber-for-php"
+            },
+            "time": "2022-03-10T10:28:34+00:00"
+        },
+        {
+            "name": "giggsey/locale",
+            "version": "2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giggsey/Locale.git",
+                "reference": "8d324583b5899e6280a875c43bf1fc9658bc6962"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/giggsey/Locale/zipball/8d324583b5899e6280a875c43bf1fc9658bc6962",
+                "reference": "8d324583b5899e6280a875c43bf1fc9658bc6962",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "pear/pear-core-minimal": "^1.9",
+                "pear/pear_exception": "^1.0",
+                "pear/versioncontrol_git": "^0.5",
+                "phing/phing": "^2.7",
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpunit": "^8.5|^9.5",
+                "symfony/console": "^5.0",
+                "symfony/filesystem": "^5.0",
+                "symfony/finder": "^5.0",
+                "symfony/process": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Giggsey\\Locale\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joshua Gigg",
+                    "email": "giggsey@gmail.com",
+                    "homepage": "https://giggsey.com/"
+                }
+            ],
+            "description": "Locale functions required by libphonenumber-for-php",
+            "support": {
+                "issues": "https://github.com/giggsey/Locale/issues",
+                "source": "https://github.com/giggsey/Locale/tree/2.1"
+            },
+            "time": "2021-11-04T19:12:22+00:00"
+        },
+        {
             "name": "jms/metadata",
             "version": "2.6.1",
             "source": {
@@ -1709,6 +1892,72 @@
                 }
             ],
             "time": "2021-12-19T18:06:55+00:00"
+        },
+        {
+            "name": "nepada/phone-number-doctrine",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nepada/phone-number-doctrine.git",
+                "reference": "e90ec7ea04d17aac721c64f8b9903e15044480df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nepada/phone-number-doctrine/zipball/e90ec7ea04d17aac721c64f8b9903e15044480df",
+                "reference": "e90ec7ea04d17aac721c64f8b9903e15044480df",
+                "shasum": ""
+            },
+            "require": {
+                "brick/phonenumber": "^0.2@dev || ^0.3@dev || ^0.4@dev",
+                "doctrine/dbal": "^2.13.3@dev || ^3.0@dev",
+                "php": ">=7.4.0"
+            },
+            "require-dev": {
+                "giggsey/libphonenumber-for-php": "^8.12.34",
+                "mockery/mockery": "1.4.4",
+                "nepada/coding-standard": "7.4.0",
+                "nepada/phpstan-nette-tester": "0.3.2",
+                "nette/tester": "2.4.1",
+                "pepakriz/phpstan-exception-rules": "0.11.7",
+                "php-parallel-lint/php-parallel-lint": "1.3.1",
+                "phpstan/phpstan": "0.12.99",
+                "phpstan/phpstan-mockery": "0.12.14",
+                "phpstan/phpstan-strict-rules": "0.12.11",
+                "spaze/phpstan-disallowed-calls": "1.9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nepada\\PhoneNumberDoctrine\\": "src/PhoneNumberDoctrine/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Petr Morávek",
+                    "email": "petr@pada.cz"
+                }
+            ],
+            "description": "Phone number type for Doctrine.",
+            "keywords": [
+                "Value Object",
+                "doctrine",
+                "phone number"
+            ],
+            "support": {
+                "email": "petr@pada.cz",
+                "issues": "https://github.com/nepada/phone-number-doctrine/issues",
+                "source": "https://github.com/nepada/phone-number-doctrine/tree/v2.1.0"
+            },
+            "time": "2021-10-30T12:33:37+00:00"
         },
         {
             "name": "psr/cache",
@@ -1989,6 +2238,82 @@
                 "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v6.2.6"
             },
             "time": "2022-01-14T11:51:13+00:00"
+        },
+        {
+            "name": "swiftmailer/swiftmailer",
+            "version": "v6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "8a5d5072dca8f48460fce2f4131fcc495eec654c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/8a5d5072dca8f48460fce2f4131fcc495eec654c",
+                "reference": "8a5d5072dca8f48460fce2f4131fcc495eec654c",
+                "shasum": ""
+            },
+            "require": {
+                "egulias/email-validator": "^2.0|^3.1",
+                "php": ">=7.0.0",
+                "symfony/polyfill-iconv": "^1.0",
+                "symfony/polyfill-intl-idn": "^1.10",
+                "symfony/polyfill-mbstring": "^1.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "symfony/phpunit-bridge": "^4.4|^5.4"
+            },
+            "suggest": {
+                "ext-intl": "Needed to support internationalized email addresses"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "6.2-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Corbyn"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "https://swiftmailer.symfony.com",
+            "keywords": [
+                "email",
+                "mail",
+                "mailer"
+            ],
+            "support": {
+                "issues": "https://github.com/swiftmailer/swiftmailer/issues",
+                "source": "https://github.com/swiftmailer/swiftmailer/tree/v6.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/swiftmailer/swiftmailer",
+                    "type": "tidelift"
+                }
+            ],
+            "abandoned": "symfony/mailer",
+            "time": "2021-10-18T15:26:12+00:00"
         },
         {
             "name": "symfony/asset",
@@ -3422,6 +3747,168 @@
             "time": "2022-01-29T17:50:53+00:00"
         },
         {
+            "name": "symfony/http-client",
+            "version": "v6.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client.git",
+                "reference": "a8f87328930932c455cffd048f965d1223d91915"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/a8f87328930932c455cffd048f965d1223d91915",
+                "reference": "a8f87328930932c455cffd048f965d1223d91915",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+                "psr/log": "^1|^2|^3",
+                "symfony/http-client-contracts": "^3",
+                "symfony/service-contracts": "^1.0|^2|^3"
+            },
+            "provide": {
+                "php-http/async-client-implementation": "*",
+                "php-http/client-implementation": "*",
+                "psr/http-client-implementation": "1.0",
+                "symfony/http-client-implementation": "3.0"
+            },
+            "require-dev": {
+                "amphp/amp": "^2.5",
+                "amphp/http-client": "^4.2.1",
+                "amphp/http-tunnel": "^1.0",
+                "amphp/socket": "^1.1",
+                "guzzlehttp/promises": "^1.4",
+                "nyholm/psr7": "^1.0",
+                "php-http/httplug": "^1.0|^2.0",
+                "psr/http-client": "^1.0",
+                "symfony/dependency-injection": "^5.4|^6.0",
+                "symfony/http-kernel": "^5.4|^6.0",
+                "symfony/process": "^5.4|^6.0",
+                "symfony/stopwatch": "^5.4|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\HttpClient\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides powerful methods to fetch HTTP resources synchronously or asynchronously",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/http-client/tree/v6.0.5"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-02-27T08:47:28+00:00"
+        },
+        {
+            "name": "symfony/http-client-contracts",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/http-client-contracts.git",
+                "reference": "265f03fed057044a8e4dc159aa33596d0f48ed3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/265f03fed057044a8e4dc159aa33596d0f48ed3f",
+                "reference": "265f03fed057044a8e4dc159aa33596d0f48ed3f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2"
+            },
+            "suggest": {
+                "symfony/http-client-implementation": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.0-dev"
+                },
+                "thanks": {
+                    "name": "symfony/contracts",
+                    "url": "https://github.com/symfony/contracts"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Contracts\\HttpClient\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Generic abstractions related to HTTP clients",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "abstractions",
+                "contracts",
+                "decoupling",
+                "interfaces",
+                "interoperability",
+                "standards"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/http-client-contracts/tree/v3.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-11-03T13:44:55+00:00"
+        },
+        {
             "name": "symfony/http-foundation",
             "version": "v6.0.3",
             "source": {
@@ -3601,6 +4088,71 @@
                 }
             ],
             "time": "2022-01-29T18:12:46+00:00"
+        },
+        {
+            "name": "symfony/mailchimp-mailer",
+            "version": "v6.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/mailchimp-mailer.git",
+                "reference": "675e7ab2157f26e538c200850fb6c6d04d5d3e11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/mailchimp-mailer/zipball/675e7ab2157f26e538c200850fb6c6d04d5d3e11",
+                "reference": "675e7ab2157f26e538c200850fb6c6d04d5d3e11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+                "symfony/mailer": "^5.4|^6.0"
+            },
+            "require-dev": {
+                "symfony/http-client": "^5.4|^6.0"
+            },
+            "type": "symfony-mailer-bridge",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Mailer\\Bridge\\Mailchimp\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Mailchimp Mailer Bridge",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/mailchimp-mailer/tree/v6.0.5"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-02-04T19:03:38+00:00"
         },
         {
             "name": "symfony/mailer",

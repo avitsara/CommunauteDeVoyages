@@ -234,6 +234,13 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
+    <service id="App\Controller\ContactController" class="App\Controller\ContactController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.jIxfAsi.App\Controller\ContactController"/>
+      </call>
+    </service>
     <service id="App\Controller\CrudTripController" class="App\Controller\CrudTripController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -269,6 +276,9 @@
         <argument type="service" id=".service_locator.jIxfAsi.App\Controller\TripController"/>
       </call>
     </service>
+    <service id="App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -278,6 +288,7 @@
     <service id="App\Form\TripType" class="App\Form\TripType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Notification\ContactNotification" class="App\Notification\ContactNotification" autowire="true" autoconfigure="true"/>
     <service id="App\Repository\ContactRepository" class="App\Repository\ContactRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -403,6 +414,7 @@
         <argument key="cache.serializer" type="service" id="cache.serializer" on-invalid="ignore_uninitialized"/>
         <argument key="cache.annotations" type="service" id="cache.annotations" on-invalid="ignore_uninitialized"/>
         <argument key="cache.property_info" type="service" id="cache.property_info" on-invalid="ignore_uninitialized"/>
+        <argument key="http_client" type="service" id="http_client" on-invalid="ignore_uninitialized"/>
         <argument key="mailer.message_logger_listener" type="service" id="mailer.message_logger_listener" on-invalid="ignore_uninitialized"/>
         <argument key="debug.stopwatch" type="service" id="debug.stopwatch" on-invalid="ignore_uninitialized"/>
         <argument key="debug.event_dispatcher" type="service" id="debug.event_dispatcher" on-invalid="ignore_uninitialized"/>
@@ -435,6 +447,9 @@
         </argument>
         <argument key="cache.property_info" type="collection">
           <argument>reset</argument>
+        </argument>
+        <argument key="http_client" type="collection">
+          <argument>?reset</argument>
         </argument>
         <argument key="mailer.message_logger_listener" type="collection">
           <argument>reset</argument>
@@ -822,6 +837,7 @@
         <argument>Vich\UploaderBundle\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\ContactType</argument>
         <argument>App\Form\RegistrationFormType</argument>
         <argument>App\Form\TripCreationType</argument>
         <argument>App\Form\TripType</argument>
@@ -1173,13 +1189,31 @@
     </service>
     <service id="assets._version__default" class="Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy">
       <argument>/home/fullmetal/Documents/CommunauteDeVoyages/app/public/build/manifest.json</argument>
-      <argument>null</argument>
+      <argument type="service" id="http_client" on-invalid="null"/>
       <argument>false</argument>
     </service>
     <service id="assets._default_package" class="Symfony\Component\Asset\PathPackage">
       <argument></argument>
       <argument type="service" id="assets._version__default"/>
       <argument type="service" id="assets.context"/>
+    </service>
+    <service id="http_client" class="Symfony\Contracts\HttpClient\HttpClientInterface">
+      <tag name="monolog.logger" channel="http_client"/>
+      <tag name="kernel.reset" method="reset" on_invalid="ignore"/>
+      <tag name="http_client.client"/>
+      <argument type="collection"/>
+      <argument>6</argument>
+      <call method="setLogger">
+        <argument type="service" id="logger" on-invalid="ignore"/>
+      </call>
+      <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
+    </service>
+    <service id="http_client.abstract_retry_strategy" class="Symfony\Component\HttpClient\Retry\GenericRetryStrategy" abstract="true">
+      <argument type="abstract">http codes</argument>
+      <argument type="abstract">delay ms</argument>
+      <argument type="abstract">multiplier</argument>
+      <argument type="abstract">max delay ms</argument>
+      <argument type="abstract">jitter</argument>
     </service>
     <service id="mailer.mailer" class="Symfony\Component\Mailer\Mailer">
       <argument type="service" id="mailer.transports"/>
@@ -1218,28 +1252,34 @@
       <argument type="service" id="http_client" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
     </service>
+    <service id="mailer.transport_factory.mailchimp" class="Symfony\Component\Mailer\Bridge\Mailchimp\Transport\MandrillTransportFactory">
+      <tag name="mailer.transport_factory"/>
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="http_client" on-invalid="ignore"/>
+      <argument type="service" id="logger" on-invalid="ignore"/>
+    </service>
     <service id="mailer.transport_factory.null" class="Symfony\Component\Mailer\Transport\NullTransportFactory">
       <tag name="mailer.transport_factory"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument>null</argument>
+      <argument type="service" id="http_client" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
     </service>
     <service id="mailer.transport_factory.sendmail" class="Symfony\Component\Mailer\Transport\SendmailTransportFactory">
       <tag name="mailer.transport_factory"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument>null</argument>
+      <argument type="service" id="http_client" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
     </service>
     <service id="mailer.transport_factory.smtp" class="Symfony\Component\Mailer\Transport\Smtp\EsmtpTransportFactory">
       <tag name="mailer.transport_factory" priority="-100"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument>null</argument>
+      <argument type="service" id="http_client" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
     </service>
     <service id="mailer.transport_factory.native" class="Symfony\Component\Mailer\Transport\NativeTransportFactory">
       <tag name="mailer.transport_factory"/>
       <argument type="service" id="debug.event_dispatcher"/>
-      <argument>null</argument>
+      <argument type="service" id="http_client" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
     </service>
     <service id="debug.debug_handlers_listener" class="Symfony\Component\HttpKernel\EventListener\DebugHandlersListener">
@@ -1996,7 +2036,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.1kSOiFW"/>
+      <argument type="service" id=".service_locator.qc0Zh5n"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -2152,7 +2192,7 @@
     </service>
     <service id="validator.not_compromised_password" class="Symfony\Component\Validator\Constraints\NotCompromisedPasswordValidator">
       <tag name="validator.constraint_validator" alias="Symfony\Component\Validator\Constraints\NotCompromisedPasswordValidator"/>
-      <argument>null</argument>
+      <argument type="service" id="http_client" on-invalid="null"/>
       <argument>UTF-8</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -4264,6 +4304,9 @@
       <argument type="service" id="vich_uploader.metadata_reader"/>
       <argument type="service" id="vich_uploader.upload_handler"/>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ContactController" class="App\Controller\ContactController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CrudTripController" class="App\Controller\CrudTripController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CrudTripController" class="App\Controller\CrudTripController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CrudTripController" class="App\Controller\CrudTripController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4279,6 +4322,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TripController" class="App\Controller\TripController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TripController" class="App\Controller\TripController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TripController" class="App\Controller\TripController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\RegistrationFormType" class="App\Form\RegistrationFormType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\TripCreationType" class="App\Form\TripCreationType" autowire="true" abstract="true"/>
@@ -4606,6 +4651,13 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.xUrKPVU.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.jrLxc7I" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="mailer" type="service_closure" id="mailer.mailer"/>
+        <argument key="notification" type="service_closure" id="App\Notification\ContactNotification"/>
+      </argument>
+    </service>
     <service id=".service_locator.H2TsYNw" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4652,9 +4704,10 @@
         <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.GNjO6AO" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.wp6n43p" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\ContactController::contact" type="service_closure" id=".service_locator.jrLxc7I"/>
         <argument key="App\Controller\CrudTripController::delete" type="service_closure" id=".service_locator.pJlD2Ny"/>
         <argument key="App\Controller\CrudTripController::edit" type="service_closure" id=".service_locator.pJlD2Ny"/>
         <argument key="App\Controller\CrudTripController::index" type="service_closure" id=".service_locator.H2TsYNw"/>
@@ -4670,6 +4723,7 @@
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.xUrKPVU"/>
         <argument key="kernel::terminate" type="service_closure" id=".service_locator.bRdave9"/>
+        <argument key="App\Controller\ContactController:contact" type="service_closure" id=".service_locator.jrLxc7I"/>
         <argument key="App\Controller\CrudTripController:delete" type="service_closure" id=".service_locator.pJlD2Ny"/>
         <argument key="App\Controller\CrudTripController:edit" type="service_closure" id=".service_locator.pJlD2Ny"/>
         <argument key="App\Controller\CrudTripController:index" type="service_closure" id=".service_locator.H2TsYNw"/>
@@ -4743,9 +4797,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.1kSOiFW" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.qc0Zh5n" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\ContactType" type="service_closure" id="App\Form\ContactType"/>
         <argument key="App\Form\RegistrationFormType" type="service_closure" id="App\Form\RegistrationFormType"/>
         <argument key="App\Form\TripCreationType" type="service_closure" id="App\Form\TripCreationType"/>
         <argument key="App\Form\TripType" type="service_closure" id="App\Form\TripType"/>
@@ -4829,6 +4884,12 @@
         <argument key="security.token_storage" type="service_closure" id="security.token_storage" on-invalid="ignore"/>
         <argument key="twig" type="service_closure" id="twig" on-invalid="ignore"/>
       </argument>
+    </service>
+    <service id=".service_locator.jIxfAsi.App\Controller\ContactController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ContactController"/>
+      <argument>App\Controller\ContactController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.jIxfAsi" method="withContext"/>
     </service>
     <service id=".service_locator.jIxfAsi.App\Controller\CrudTripController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\CrudTripController"/>
@@ -4989,12 +5050,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.GNjO6AO"/>
+      <argument type="service" id=".service_locator.wp6n43p"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.GNjO6AO"/>
+      <argument type="service" id=".service_locator.wp6n43p"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -5588,6 +5649,7 @@
     <service id="Symfony\Contracts\Cache\CacheInterface" alias="cache.app"/>
     <service id="Symfony\Contracts\Cache\TagAwareCacheInterface" alias="cache.app.taggable"/>
     <service id="Symfony\Component\Asset\Packages" alias="assets.packages"/>
+    <service id="Symfony\Contracts\HttpClient\HttpClientInterface" alias="http_client"/>
     <service id="mailer" alias="mailer.mailer"/>
     <service id="Symfony\Component\Mailer\MailerInterface" alias="mailer.mailer"/>
     <service id="Symfony\Component\Mailer\Transport\TransportInterface" alias="mailer.default_transport"/>
@@ -5691,16 +5753,16 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.GNjO6AO"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.wp6n43p"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.XDGmiR3" alias=".1_ServiceLocator~IXjVqwn"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
     <service id=".service_locator.uNbyJK2" alias=".service_locator.spC.Z_T"/>
-    <service id=".service_locator.d_KP_Qr" alias=".service_locator.GNjO6AO"/>
+    <service id=".service_locator.J3KSQDJ" alias=".service_locator.wp6n43p"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
-    <service id=".service_locator.vKoQwOz" alias=".service_locator.1kSOiFW"/>
+    <service id=".service_locator.1Ybs1vV" alias=".service_locator.qc0Zh5n"/>
     <service id=".service_locator.IWt0f7l" alias=".service_locator.k4tvAR5"/>
     <service id=".service_locator._eRAkJb" alias=".service_locator.jIxfAsi"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
@@ -5721,6 +5783,7 @@
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.FatRZu2" alias=".service_locator.bRdave9"/>
     <service id=".service_locator.uo5c0SP" alias=".service_locator.xUrKPVU"/>
+    <service id=".service_locator.c960nYd" alias=".service_locator.jrLxc7I"/>
     <service id=".service_locator._Pxhok9" alias=".service_locator.H2TsYNw"/>
     <service id=".service_locator.YUxHU06" alias=".service_locator.YQY7QL9"/>
     <service id=".service_locator.WI8oFk9" alias=".service_locator.pJlD2Ny"/>

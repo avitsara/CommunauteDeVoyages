@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'libphonenumber\\' => array($vendorDir . '/giggsey/libphonenumber-for-php/src'),
     'Vich\\UploaderBundle\\' => array($vendorDir . '/vich/uploader-bundle/src'),
     'Twig\\Extra\\TwigExtraBundle\\' => array($vendorDir . '/twig/extra-bundle'),
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
@@ -20,6 +21,7 @@ return array(
     'Symfony\\Flex\\' => array($vendorDir . '/symfony/flex/src'),
     'Symfony\\Contracts\\Translation\\' => array($vendorDir . '/symfony/translation-contracts'),
     'Symfony\\Contracts\\Service\\' => array($vendorDir . '/symfony/service-contracts'),
+    'Symfony\\Contracts\\HttpClient\\' => array($vendorDir . '/symfony/http-client-contracts'),
     'Symfony\\Contracts\\EventDispatcher\\' => array($vendorDir . '/symfony/event-dispatcher-contracts'),
     'Symfony\\Contracts\\Cache\\' => array($vendorDir . '/symfony/cache-contracts'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
@@ -38,9 +40,11 @@ return array(
     'Symfony\\Component\\PasswordHasher\\' => array($vendorDir . '/symfony/password-hasher'),
     'Symfony\\Component\\OptionsResolver\\' => array($vendorDir . '/symfony/options-resolver'),
     'Symfony\\Component\\Mime\\' => array($vendorDir . '/symfony/mime'),
+    'Symfony\\Component\\Mailer\\Bridge\\Mailchimp\\' => array($vendorDir . '/symfony/mailchimp-mailer'),
     'Symfony\\Component\\Mailer\\' => array($vendorDir . '/symfony/mailer'),
     'Symfony\\Component\\HttpKernel\\' => array($vendorDir . '/symfony/http-kernel'),
     'Symfony\\Component\\HttpFoundation\\' => array($vendorDir . '/symfony/http-foundation'),
+    'Symfony\\Component\\HttpClient\\' => array($vendorDir . '/symfony/http-client'),
     'Symfony\\Component\\Form\\' => array($vendorDir . '/symfony/form'),
     'Symfony\\Component\\Finder\\' => array($vendorDir . '/symfony/finder'),
     'Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
@@ -66,8 +70,10 @@ return array(
     'Psr\\Cache\\' => array($vendorDir . '/psr/cache/src'),
     'ProxyManager\\' => array($vendorDir . '/friendsofphp/proxy-manager-lts/src/ProxyManager'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
+    'Nepada\\PhoneNumberDoctrine\\' => array($vendorDir . '/nepada/phone-number-doctrine/src/PhoneNumberDoctrine'),
     'Metadata\\' => array($vendorDir . '/jms/metadata/src'),
     'Laminas\\Code\\' => array($vendorDir . '/laminas/laminas-code/src'),
+    'Giggsey\\Locale\\' => array($vendorDir . '/giggsey/locale/src'),
     'Faker\\' => array($vendorDir . '/fakerphp/faker/src/Faker'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/src'),
     'Doctrine\\SqlFormatter\\' => array($vendorDir . '/doctrine/sql-formatter/src'),
@@ -85,6 +91,7 @@ return array(
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib/Doctrine/Common', $vendorDir . '/doctrine/event-manager/lib/Doctrine/Common', $vendorDir . '/doctrine/persistence/lib/Doctrine/Common'),
     'Doctrine\\Bundle\\MigrationsBundle\\' => array($vendorDir . '/doctrine/doctrine-migrations-bundle'),
     'Doctrine\\Bundle\\DoctrineBundle\\' => array($vendorDir . '/doctrine/doctrine-bundle'),
+    'Brick\\PhoneNumber\\' => array($vendorDir . '/brick/phonenumber/src'),
     'App\\Tests\\' => array($baseDir . '/tests'),
     'App\\' => array($baseDir . '/src'),
 );

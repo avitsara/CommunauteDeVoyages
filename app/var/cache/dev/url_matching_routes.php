@@ -8,6 +8,7 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::contact'], null, null, null, false, false, null]],
         '/crud/trip' => [[['_route' => 'app_crud_trip_index', '_controller' => 'App\\Controller\\CrudTripController::index'], null, ['GET' => 0], null, true, false, null]],
         '/crud/trip/new' => [[['_route' => 'app_crud_trip_new', '_controller' => 'App\\Controller\\CrudTripController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
