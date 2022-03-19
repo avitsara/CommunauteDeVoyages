@@ -131,9 +131,12 @@ class Trip
      */
     private $tripDestinationRegion;
 
-    
- 
-  
+    /**
+     * @ORM\ManyToOne(targetEntity=Contact::class, inversedBy="trip")
+     */
+    private $contact;
+
+
 
     public function getId(): ?int
     {
@@ -329,6 +332,22 @@ class Trip
 
         return $this;
     }
+
+    public function getContact(): ?Contact
+    {
+        return $this->contact;
+    }
+
+    public function setContact(?Contact $contact): self
+    {
+        $this->contact = $contact;
+
+        return $this;
+    }
+
+  
+
+  
 
   
 

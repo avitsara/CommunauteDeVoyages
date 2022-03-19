@@ -74,7 +74,7 @@ class __TwigTemplate_54f1db8a6eb8442447e95559ad0f0023 extends Template
         // line 6
         echo "<link href=\"https://unpkg.com/maplibre-gl@2.1.7/dist/maplibre-gl.css\" rel=\"stylesheet\" /><style>
 
-\t#map {  width: 100%; }
+\t#map {  width: 50%; height:100% }
   #fly {
 position: relative;
 margin: 0px auto;
@@ -351,7 +351,7 @@ window.onload = function(){
 {% block stylesheet %}
 <link href=\"https://unpkg.com/maplibre-gl@2.1.7/dist/maplibre-gl.css\" rel=\"stylesheet\" /><style>
 
-\t#map {  width: 100%; }
+\t#map {  width: 50%; height:100% }
   #fly {
 position: relative;
 margin: 0px auto;
