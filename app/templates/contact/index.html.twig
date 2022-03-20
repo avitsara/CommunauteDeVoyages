@@ -5,7 +5,7 @@
 {% block body %}
 {{ include('menu.html.twig')}}
 
-<div class="container">
+<div class='form-row' style="margin-left:70px">
     {{ form_start(contactForm) }}
     <br>
             {{ form_row(contactForm.firstname,{'attr':{'class':'form-control','id':'exampleInputEmail1','data-form-type':'email'}}) }}
@@ -16,7 +16,8 @@
 
     {{ form_end(contactForm) }}
 
-    <button type="submit" class="btn btn-primary"> Submit </button>
 
 </div>
+    <button type="submit" class="btn btn-primary" style="margin-left:70px"> Submit </button>
+
 {% endblock %}

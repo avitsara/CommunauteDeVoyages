@@ -29,13 +29,7 @@ class User
      */
     private $email;
 
-    /**
-     * @var array
-     *
-     * @ORM\Column(name="roles", type="json", nullable=false)
-     */
-    private $roles;
-
+  
     /**
      * @var string
      *

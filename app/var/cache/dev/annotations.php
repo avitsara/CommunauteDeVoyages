@@ -54,6 +54,10 @@ return [[
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%23addLink' => 1,
 'Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 0,
 '[C]Symfony%5CBundle%5CFrameworkBundle%5CController%5CAbstractController%24container' => 1,
+'App%5CController%5CAboutController' => 0,
+'[C]App%5CController%5CAboutController' => 1,
+'App%5CController%5CAboutController%23index' => 0,
+'[C]App%5CController%5CAboutController%23index' => 1,
 'App%5CController%5CContactController' => 0,
 '[C]App%5CController%5CContactController' => 1,
 'App%5CController%5CContactController%23contact' => 0,
@@ -88,6 +92,10 @@ return [[
 '[C]App%5CController%5CTripController' => 1,
 'App%5CController%5CTripController%23create' => 0,
 '[C]App%5CController%5CTripController%23create' => 1,
+'App%5CController%5CTripSearchController' => 0,
+'[C]App%5CController%5CTripSearchController' => 1,
+'App%5CController%5CTripSearchController%23searchCar' => 0,
+'[C]App%5CController%5CTripSearchController%23searchCar' => 1,
 'App%5CEntity%5CContact' => 2,
 '[C]App%5CEntity%5CContact' => 1,
 'App%5CEntity%5CContact%23__construct' => 0,
@@ -202,6 +210,8 @@ return [[
 '[C]App%5CEntity%5CTrip%23getContact' => 1,
 'App%5CEntity%5CTrip%23setContact' => 0,
 '[C]App%5CEntity%5CTrip%23setContact' => 1,
+'App%5CEntity%5CTrip%23__toString' => 0,
+'[C]App%5CEntity%5CTrip%23__toString' => 1,
 'App%5CEntity%5CTrip%24id' => 9,
 '[C]App%5CEntity%5CTrip%24id' => 1,
 'App%5CEntity%5CTrip%24departure' => 10,
@@ -236,7 +246,31 @@ return [[
 '[C]App%5CEntity%5CTrip%24tripDestinationRegion' => 1,
 'App%5CEntity%5CTrip%24contact' => 24,
 '[C]App%5CEntity%5CTrip%24contact' => 1,
-'App%5CEntity%5CUser' => 25,
+'App%5CEntity%5CTripSearch' => 25,
+'[C]App%5CEntity%5CTripSearch' => 1,
+'App%5CEntity%5CTripSearch%23getId' => 0,
+'[C]App%5CEntity%5CTripSearch%23getId' => 1,
+'App%5CEntity%5CTripSearch%23getDeparture' => 0,
+'[C]App%5CEntity%5CTripSearch%23getDeparture' => 1,
+'App%5CEntity%5CTripSearch%23setDeparture' => 0,
+'[C]App%5CEntity%5CTripSearch%23setDeparture' => 1,
+'App%5CEntity%5CTripSearch%23getDestination' => 0,
+'[C]App%5CEntity%5CTripSearch%23getDestination' => 1,
+'App%5CEntity%5CTripSearch%23setDestination' => 0,
+'[C]App%5CEntity%5CTripSearch%23setDestination' => 1,
+'App%5CEntity%5CTripSearch%23getTravelCompanionNumber' => 0,
+'[C]App%5CEntity%5CTripSearch%23getTravelCompanionNumber' => 1,
+'App%5CEntity%5CTripSearch%23setTravelCompanionNumber' => 0,
+'[C]App%5CEntity%5CTripSearch%23setTravelCompanionNumber' => 1,
+'App%5CEntity%5CTripSearch%24id' => 3,
+'[C]App%5CEntity%5CTripSearch%24id' => 1,
+'App%5CEntity%5CTripSearch%24departure' => 4,
+'[C]App%5CEntity%5CTripSearch%24departure' => 1,
+'App%5CEntity%5CTripSearch%24destination' => 4,
+'[C]App%5CEntity%5CTripSearch%24destination' => 1,
+'App%5CEntity%5CTripSearch%24travelCompanionNumber' => 4,
+'[C]App%5CEntity%5CTripSearch%24travelCompanionNumber' => 1,
+'App%5CEntity%5CUser' => 26,
 '[C]App%5CEntity%5CUser' => 1,
 'App%5CEntity%5CUser%23getId' => 0,
 '[C]App%5CEntity%5CUser%23getId' => 1,
@@ -278,10 +312,8 @@ return [[
 '[C]App%5CEntity%5CUser%23setDateOfBirth' => 1,
 'App%5CEntity%5CUser%24id' => 9,
 '[C]App%5CEntity%5CUser%24id' => 1,
-'App%5CEntity%5CUser%24email' => 26,
+'App%5CEntity%5CUser%24email' => 27,
 '[C]App%5CEntity%5CUser%24email' => 1,
-'App%5CEntity%5CUser%24roles' => 27,
-'[C]App%5CEntity%5CUser%24roles' => 1,
 'App%5CEntity%5CUser%24password' => 28,
 '[C]App%5CEntity%5CUser%24password' => 1,
 'App%5CEntity%5CUser%24firstname' => 29,
@@ -802,7 +834,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1647722549,
+1 => 1647818775,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -1458,6 +1490,25 @@ return [[
 25 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
+            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'repositoryClass' => [
+                    'App\\Repository\\TripSearchRepository',
+                ],
+            ],
+        ],
+        [
+            $o[0],
+        ],
+        []
+    );
+},
+26 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
             clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Table'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Table')),
             clone ($p['Doctrine\\ORM\\Mapping\\UniqueConstraint'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\UniqueConstraint')),
             clone ($p['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
@@ -1488,7 +1539,7 @@ return [[
         []
     );
 },
-26 => static function () {
+27 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
@@ -1504,34 +1555,6 @@ return [[
                 ],
                 'length' => [
                     180,
-                ],
-                'precision' => [
-                    null,
-                ],
-                'scale' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-27 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
-        ],
-        null,
-        [
-            'stdClass' => [
-                'name' => [
-                    'roles',
-                ],
-                'type' => [
-                    'json',
                 ],
                 'precision' => [
                     null,

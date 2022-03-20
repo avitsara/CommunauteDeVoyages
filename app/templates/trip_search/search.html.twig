@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Search your trip {% endblock %}
+{% block stylesheet %}
+
+
+{% endblock %}
+{% block body %}
+{{ include('menu.html.twig')}}
+<br>
+<h1>  Search your trip </h1>
+<br>
+
+    <div class='form-row' style="margin-left:70px"> 
+           {{ form_start(tripSearchForm) }}
+        
+            {{ form_row(tripSearchForm.departure,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripSearchForm.destination,{'attr':{'class':'form-control'}})}}
+            {{ form_row(tripSearchForm.travelCompanionNumber,{'attr':{'class':'form-control'}})}}
+    <br>
+    <button type="submit" class="btn btn-primary"> Search </button>
+    
+    </div>
+ 
+
+        {{ form_end(tripSearchForm) }}
+
+<h4 class=" text-center"> Your results </h4>
+
+<div class="card" width="100%">
+  <div class="row flex">                        
+  {% for trip in trips %}
+
+    <div class="col-5">  
+            <div class="card text-center" style="width: 15rem;" >
+              <div class="card body">
+                 <h5 class="card-title">
+                 {## On affiche les voyages de l'utilisateur ####}
+                 <h4>   {{ trip.title }} </h4>
+                 </h5>
+              <img class='img-thumbnail rounded mx-auto d-block' src="{{ vich_uploader_asset(trip, 'imageFile') }}" width="60%"/>
+               
+                  <p class="card-text"> 
+                    Départ : {{ trip.departure }}
+                  </p>
+
+                    <p class="card-text"> 
+                    Destination : {{ trip.destination }}
+                  </p>
+
+                     <p class="card-text"> 
+                   Date de départ : {{ trip.beginDate|date('Y-m-d') }}
+                  </p>
+
+                      <p class="card-text"> 
+                   Date de retour:  {{ trip.endDate|date('Y-m-d') }}
+                  </p>
+                  <p class="card-text"> 
+                   Nombre de voyageurs :  {{ trip.travelCompanionNumber}}
+                  </p>
+                     <p class="card-text"> 
+                   Moyen de transport :  {{ trip.transportation}}
+                  </p>
+                  <br>
+            
+                 <br>
+                      {##  
+                      <p class="card-text"> 
+                    {{ trip.description }}
+                  </p> ##}
+              </div>
+            </div>
+        </div>
+                    {% endfor %}
+        </div>
+   </div>
+{% endblock %}

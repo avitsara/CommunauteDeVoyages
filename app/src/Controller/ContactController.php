@@ -29,7 +29,7 @@ class ContactController extends AbstractController
             $contactFormData = $form->getData();
             /// On notifie le contact 
             /// de l'envoi de l'email 
-            $notification->notify($contact,$mailer,$user);
+          ///  $notification->notify($contact,$mailer,$user);
             /// On construit le message que l'on veut envoyer
             $message = (new Email())
             ->from($contactFormData['email']) // expéditeur 

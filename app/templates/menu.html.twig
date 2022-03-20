@@ -4,19 +4,29 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home
+          <a class="nav-link active" href={{ path('home') }}>Home
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href={{ path('login') }}> Log in </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" href={{ path('register')}}> Create account </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href={{ path('about')}}>About</a>
         </li>
-      
+
+     
+        <li class="nav-item dropdown">
+          <button class="btn btn-primary dropdown-toggle"  id="navbarColor01" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Trips </button>
+
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href={{ path('search')}}>Search for a trip</a>
+            <a class="dropdown-item" href={{ path('trip')}}> New trip</a>
+            <a class="dropdown-item"  href={{ path('index')}} > Show trips </a>
+         
+        </li>
       </ul>
     
     </div>

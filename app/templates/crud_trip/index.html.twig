@@ -35,8 +35,8 @@
                 <td>{{ trip.description }}</td>
                 <td>{{ trip.title }}</td>
                 <td>
-                    <a href="{{ path('app_crud_trip_show', {'id': trip.id}) }}">show</a>
-                    <a href="{{ path('app_crud_trip_edit', {'id': trip.id}) }}">edit</a>
+                    <a href="{{ path('show', {'id': trip.id}) }}">show</a>
+                    <a href="{{ path('edit', {'id': trip.id}) }}">edit</a>
                 </td>
             </tr>
         {% else %}
@@ -47,5 +47,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_crud_trip_new') }}">Create new</a>
+    <a href="{{ path('new') }}">Create new</a>
 {% endblock %}

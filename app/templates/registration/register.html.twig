@@ -8,7 +8,7 @@ Register
 {{ include('menu.html.twig')}}
 <br>
     <h1> Register as a new user </h1>
-<div class="container">
+<div class='form-row' style="margin-left:70px">
     {{ form_start(registrationForm) }}
     
         {{ form_row(registrationForm.email,{'attr':{'class':'form-control','id':'exampleInputEmail1','data-form-type':'email'}}) }}

@@ -14,7 +14,7 @@ use App\Form\TripCreationType;
 #[Route('/crud/trip')]
 class CrudTripController extends AbstractController
 {
-    #[Route('/', name: 'app_crud_trip_index', methods: ['GET'])]
+    #[Route('/', name: 'index', methods: ['GET'])]
     public function index(TripRepository $tripRepository): Response
     {
         return $this->render('crud_trip/index.html.twig', [
@@ -22,7 +22,7 @@ class CrudTripController extends AbstractController
         ]);
     }
     
-    #[Route('/new', name: 'app_crud_trip_new', methods: ['GET', 'POST'])]
+    #[Route('/new', name: 'new', methods: ['GET', 'POST'])]
     public function new(Request $request, TripRepository $tripRepository): Response
     {
         $trip = new Trip();
@@ -38,7 +38,7 @@ class CrudTripController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_crud_trip_show', methods: ['GET'])]
+    #[Route('/{id}', name: 'show', methods: ['GET'])]
     public function show(Trip $trip): Response
     {
         return $this->render('crud_trip/show.html.twig', [
@@ -46,7 +46,7 @@ class CrudTripController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'app_crud_trip_edit', methods: ['GET', 'POST'])]
+    #[Route('/{id}/edit', name: 'edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Trip $trip, TripRepository $tripRepository): Response
     {
         $form = $this->createForm(TripCreationType::class, $trip);
@@ -68,7 +68,7 @@ class CrudTripController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_crud_trip_delete', methods: ['POST'])]
+    #[Route('/{id}', name: 'delete', methods: ['POST'])]
     public function delete(Request $request, Trip $trip, TripRepository $tripRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$trip->getId(), $request->request->get('_token'))) {

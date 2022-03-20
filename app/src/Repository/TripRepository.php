@@ -7,6 +7,7 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\ORM\OptimisticLockException;
 use Doctrine\ORM\ORMException;
 use Doctrine\Persistence\ManagerRegistry;
+use App\Entity\TripSearch;
 
 /**
  * @method Trip|null find($id, $lockMode = null, $lockVersion = null)
@@ -71,6 +72,26 @@ class TripRepository extends ServiceEntityRepository
         ->getResult() 
     ;
     }
+
+     /**
+     * Méthode qui va renvoyer les voyages 
+     * correspondant à la liste des critères
+     * return Trip[]
+     */
+    public function findSearch(TripSearch $search):array{
+      //  return $this->findAll();
+      $query = $this
+      ->createQueryBuilder('t')
+
+   ///   ->join('trip.departure','d')
+     /// ->join('trip.destination','des')
+      /// tcp = travel comapion number 
+     /// ->join('trip.travelCompanionNumber','tcp')
+      ;
+  
+      return $query->getQuery()->getResult();
+    }
+
     
 
     /*
@@ -84,4 +105,31 @@ class TripRepository extends ServiceEntityRepository
         ;
     }
     */
+    /**
+     * Méthode permettant de faire une recherche 
+     * de voyages en fonction des critères de l'utilisateur 
+     * 
+     */
+    public function searchTrip($criteria){
+       /* return $this
+        ->createQueryBuilder('t')
+        ->leftJoin('t.id','id')
+        ->where('t.departure =:departure')
+        ->setParameter('departure',$criteria['departure'])
+        ->andWhere('t.destination:=destination')
+        ->setParameter('destination',$criteria['destination'])
+        ->andWhere('t.travelCompanionNumber:=travelCompanionNumber')
+        ->setParameter('travelCompanionNumber',$criteria['travelCompanionNumber'])
+        ->getQuery()
+        ->getResult()
+        ;*/
+        $query = $this
+        ->createQueryBuilder('t')
+        ->where('t.departure =:departure')
+        ->setParameter('departure',$criteria['departure'])
+        
+        ;
+        
+        return $query->getQuery()->getResult();
+    }
 }
