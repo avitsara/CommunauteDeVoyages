@@ -1,30 +1,10 @@
-# CommunauteDeVoyages aka My Very Bad Trip  
+# CommunauteDeVoyages 
 
 ## Description  
 Ce projet porte sur le développement d'une application web qui nous permet la planification de futurs voyages virtuels.   
 À cette fin, un site Web doit être développé pour visualiser les voyages à venir sur une carte du monde.   
 L'interface de requête doit permettre aux utilisateurs de parcourir les parcours des utilisateurs dans leur domaine d'intérêt via l'interface graphique et de contacter ensuite le proposant d'un parcours d'intérêt.  
 Google trad | À modifier  
-## Technology 
-
-Symfony version : ?
-
-base de données :  
-- elasticsearch version 7.17.0  
-
-# Deploy  
-```
-docker-compose -f docker-compose.yaml up  
-```
-Et si modifs des conteneurs :  
-```
-docker-compose -f docker-compose.yaml up --force-recreate  
-```
-# Usage  
-Se connecter à l'URL suivante :  
-```
-http://localhost:8080    
-```
 
 # Developpment
 ## Warning   
@@ -32,12 +12,9 @@ http://localhost:8080
 - Toujours vérifier de n'envoyer que les sources sur github.
 - On pourrait voir à envoyer les contenus des bases de données sur un google drive. 
 
-## Accéder au cli symfony  
-ouvrir un terminal et lancer la commande :  
+
 ```
-docker exec -it cm_php_symfony bash  
-```
-## Pousser une feature  
+# Pousser une feature  
 ```
 git checkout -b dev-[USERNAME]-[FEATURE_NAME]  
 git add .  
