@@ -57,7 +57,14 @@ class RegistrationFormType extends AbstractType
                     'Male' => true,
                     'Female' => true,
                 ],
-            ]);
+            ])
+            ->add(
+                'roles',  ChoiceType::class, [
+                    'choices' => ['ROLE_ADMIN' => 'ROLE_ADMIN', 'ROLE_USER' => 'ROLE_USER'],
+                    'expanded' => true,
+                    'multiple' => true,
+                ]
+            )
         ;
     }
     public function configureOptions(OptionsResolver $resolver): void
