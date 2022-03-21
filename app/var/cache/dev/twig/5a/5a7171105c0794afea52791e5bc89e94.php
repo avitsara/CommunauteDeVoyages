@@ -228,84 +228,101 @@ window.onload = function(){
         echo twig_include($this->env, $context, "menu.html.twig");
         echo "
 <br>
-
 ";
-        // line 142
+        // line 140
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 140, $this->source); })()), "user", [], "any", false, false, false, 140)) {
+            // line 141
+            echo "<h1> Hello  ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 141, $this->source); })()), "user", [], "any", false, false, false, 141), "html", null, true);
+            echo " </h1>
+
+<a href=\"";
+            // line 143
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\LogoutUrlExtension']->getLogoutPath("main"), "html", null, true);
+            echo "\" class=\"btn btn-lg btn-primary\">Logout</a>
+<br>
+";
+        }
+        // line 146
+        echo "
+<br>
+";
+        // line 149
         echo "<div class=\"card\" style=\"width: 100%;\">
   <h2> My trips  </h2>
   <div class=\"row flex\" width=\"100%\">
       ";
-        // line 145
+        // line 152
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["trips"]) || array_key_exists("trips", $context) ? $context["trips"] : (function () { throw new RuntimeError('Variable "trips" does not exist.', 145, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["trips"]) || array_key_exists("trips", $context) ? $context["trips"] : (function () { throw new RuntimeError('Variable "trips" does not exist.', 152, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["trip"]) {
-            // line 146
+            // line 153
             echo "     
         <div class=\"col-3\">  
             <div class=\"card text-center\" style=\"width: 15rem;\" >
               <div class=\"card body\">
                  <h5 class=\"card-title\">
                  ";
-            // line 152
+            // line 159
             echo "                 <h4>   ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "title", [], "any", false, false, false, 152), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "title", [], "any", false, false, false, 159), "html", null, true);
             echo " </h4>
                  </h5>
               <img class='img-thumbnail rounded mx-auto d-block' src=\"";
-            // line 154
+            // line 161
             echo twig_escape_filter($this->env, $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset($context["trip"], "imageFile"), "html", null, true);
             echo "\" width=\"60%\"/>
                
                   <p class=\"card-text\"> 
                     Départ : ";
-            // line 157
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "departure", [], "any", false, false, false, 157), "html", null, true);
+            // line 164
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "departure", [], "any", false, false, false, 164), "html", null, true);
             echo "
                   </p>
 
                     <p class=\"card-text\"> 
                     Destination : ";
-            // line 161
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "destination", [], "any", false, false, false, 161), "html", null, true);
+            // line 168
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "destination", [], "any", false, false, false, 168), "html", null, true);
             echo "
                   </p>
 
                      <p class=\"card-text\"> 
                    Date de départ : ";
-            // line 165
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "beginDate", [], "any", false, false, false, 165), "Y-m-d"), "html", null, true);
+            // line 172
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "beginDate", [], "any", false, false, false, 172), "Y-m-d"), "html", null, true);
             echo "
                   </p>
 
                       <p class=\"card-text\"> 
                    Date de retour:  ";
-            // line 169
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 169), "Y-m-d"), "html", null, true);
+            // line 176
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "endDate", [], "any", false, false, false, 176), "Y-m-d"), "html", null, true);
             echo "
                   </p>
                   <p class=\"card-text\"> 
                    Nombre de voyageurs :  ";
-            // line 172
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "travelCompanionNumber", [], "any", false, false, false, 172), "html", null, true);
+            // line 179
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "travelCompanionNumber", [], "any", false, false, false, 179), "html", null, true);
             echo "
                   </p>
                      <p class=\"card-text\"> 
                    Moyen de transport :  ";
-            // line 175
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 175), "html", null, true);
+            // line 182
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["trip"], "transportation", [], "any", false, false, false, 182), "html", null, true);
             echo "
                   </p>
                   <br>
                  <p class=\"card-text\"> 
 
                   <a  href='";
-            // line 180
+            // line 187
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
             echo "' class=\"btn btn-primary btn-sm\" role=\"button\"> Contact User </a>
                   </p>
                  <br>
                       ";
-            // line 187
+            // line 194
             echo "              </div>
             </div>
         </div>
@@ -314,7 +331,7 @@ window.onload = function(){
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['trip'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 191
+        // line 198
         echo "
 
 
@@ -346,7 +363,7 @@ window.onload = function(){
 
     public function getDebugInfo()
     {
-        return array (  318 => 191,  309 => 187,  303 => 180,  295 => 175,  289 => 172,  283 => 169,  276 => 165,  269 => 161,  262 => 157,  256 => 154,  250 => 152,  243 => 146,  239 => 145,  234 => 142,  228 => 138,  221 => 137,  107 => 27,  100 => 26,  75 => 6,  68 => 5,  55 => 3,  38 => 1,);
+        return array (  335 => 198,  326 => 194,  320 => 187,  312 => 182,  306 => 179,  300 => 176,  293 => 172,  286 => 168,  279 => 164,  273 => 161,  267 => 159,  260 => 153,  256 => 152,  251 => 149,  247 => 146,  241 => 143,  235 => 141,  233 => 140,  228 => 138,  221 => 137,  107 => 27,  100 => 26,  75 => 6,  68 => 5,  55 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -490,7 +507,14 @@ window.onload = function(){
 {% block body %}
 {{ include('menu.html.twig')}}
 <br>
+{% if app.user %}
+<h1> Hello  {{ app.user }} </h1>
 
+<a href=\"{{ logout_path('main') }}\" class=\"btn btn-lg btn-primary\">Logout</a>
+<br>
+{% endif %}
+
+<br>
 {# LISTE DES VOYAGES CRÉÉS PAR L'UTILISATEUR #}
 <div class=\"card\" style=\"width: 100%;\">
   <h2> My trips  </h2>

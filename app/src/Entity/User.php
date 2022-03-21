@@ -34,7 +34,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @var array
      *
-     * @ORM\Column(name="roles", type="json", nullable=false)
+     * @ORM\Column(name="roles", type="json", nullable=true)
      */
     private $roles;
 
@@ -209,7 +209,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return null;
     }
 
-   
+   public function __toString(){
+       return $this->firstname;
+   }
   
 
 

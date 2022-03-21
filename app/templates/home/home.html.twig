@@ -137,7 +137,14 @@ window.onload = function(){
 {% block body %}
 {{ include('menu.html.twig')}}
 <br>
+{% if app.user %}
+<h1> Hello  {{ app.user }} </h1>
 
+<a href="{{ logout_path('main') }}" class="btn btn-lg btn-primary">Logout</a>
+<br>
+{% endif %}
+
+<br>
 {# LISTE DES VOYAGES CRÉÉS PAR L'UTILISATEUR #}
 <div class="card" style="width: 100%;">
   <h2> My trips  </h2>
