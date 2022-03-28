@@ -12,7 +12,7 @@ return [
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\ContactController::contact'], null, null, null, false, false, null]],
         '/crud/trip' => [[['_route' => 'index', '_controller' => 'App\\Controller\\CrudTripController::index'], null, ['GET' => 0], null, true, false, null]],
         '/crud/trip/new' => [[['_route' => 'new', '_controller' => 'App\\Controller\\CrudTripController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+        '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginFormController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\LoginFormController::logout'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],

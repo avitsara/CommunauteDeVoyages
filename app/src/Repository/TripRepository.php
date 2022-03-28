@@ -111,18 +111,7 @@ class TripRepository extends ServiceEntityRepository
      * 
      */
     public function searchTrip($criteria){
-       /* return $this
-        ->createQueryBuilder('t')
-        ->leftJoin('t.id','id')
-        ->where('t.departure =:departure')
-        ->setParameter('departure',$criteria['departure'])
-        ->andWhere('t.destination:=destination')
-        ->setParameter('destination',$criteria['destination'])
-        ->andWhere('t.travelCompanionNumber:=travelCompanionNumber')
-        ->setParameter('travelCompanionNumber',$criteria['travelCompanionNumber'])
-        ->getQuery()
-        ->getResult()
-        ;*/
+    
         $query = $this
         ->createQueryBuilder('t')
         ->where('t.departure =:departure')

@@ -47,19 +47,19 @@ class __TwigTemplate_96a5a548a1252073763c2c25a368f0ac extends Template
         ";
         // line 4
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 9
+        // line 17
         echo "     ";
         $this->displayBlock('javascript', $context, $blocks);
-        // line 15
+        // line 23
         echo "        <title>";
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
     </head>
     <body>
         ";
-        // line 18
+        // line 26
         $this->displayBlock('body', $context, $blocks);
-        // line 19
+        // line 27
         echo "    </body>
 </html>
 ";
@@ -78,15 +78,23 @@ class __TwigTemplate_96a5a548a1252073763c2c25a368f0ac extends Template
         // line 5
         echo "    ";
         // line 6
-        echo "    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
-   
+        echo "    ";
+        // line 8
+        echo " 
+    <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
+   <style>
+    body {
+        width:100%;
+        heigth:100%;
+    }
+   </style>
     ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
 
     }
 
-    // line 9
+    // line 17
     public function block_javascript($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -94,7 +102,7 @@ class __TwigTemplate_96a5a548a1252073763c2c25a368f0ac extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascript"));
 
         echo " 
-        
+    
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
@@ -104,7 +112,7 @@ class __TwigTemplate_96a5a548a1252073763c2c25a368f0ac extends Template
 
     }
 
-    // line 15
+    // line 23
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -116,7 +124,7 @@ class __TwigTemplate_96a5a548a1252073763c2c25a368f0ac extends Template
 
     }
 
-    // line 18
+    // line 26
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -135,7 +143,7 @@ class __TwigTemplate_96a5a548a1252073763c2c25a368f0ac extends Template
 
     public function getDebugInfo()
     {
-        return array (  120 => 18,  108 => 15,  90 => 9,  81 => 6,  79 => 5,  72 => 4,  63 => 19,  61 => 18,  54 => 15,  51 => 9,  49 => 4,  44 => 1,);
+        return array (  128 => 26,  116 => 23,  98 => 17,  83 => 8,  81 => 6,  79 => 5,  72 => 4,  63 => 27,  61 => 26,  54 => 23,  51 => 17,  49 => 4,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -145,11 +153,19 @@ class __TwigTemplate_96a5a548a1252073763c2c25a368f0ac extends Template
         <meta charset=\"UTF-8\">
         {% block stylesheets %}
     {## THÈME = SPACELAB ###}
+    {##
+
+##} 
     <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/spacelab/bootstrap.min.css\" />
-   
+   <style>
+    body {
+        width:100%;
+        heigth:100%;
+    }
+   </style>
     {% endblock %}
      {%  block javascript %} 
-        
+    
 <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>

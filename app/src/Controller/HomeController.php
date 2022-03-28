@@ -10,7 +10,7 @@ use App\Repository\TripRepository;
 
 class HomeController extends AbstractController
 {
-    #[Route('/home', name: 'home')]
+    #[Route('/', name: 'home')]
     public function index(TripRepository $repository ): Response
     {
         /// On récupère l'entité trip

@@ -11,7 +11,7 @@ return [
     'show' => [['id'], ['_controller' => 'App\\Controller\\CrudTripController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/crud/trip']], [], [], []],
     'edit' => [['id'], ['_controller' => 'App\\Controller\\CrudTripController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/crud/trip']], [], [], []],
     'delete' => [['id'], ['_controller' => 'App\\Controller\\CrudTripController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/crud/trip']], [], [], []],
-    'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/home']], [], [], []],
+    'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\LoginFormController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\LoginFormController::logout'], [], [['text', '/logout']], [], [], []],
     'register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
